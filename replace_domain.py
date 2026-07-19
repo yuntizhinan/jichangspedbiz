@@ -5,7 +5,8 @@ files_to_update = [
     'generate_final_site.py',
     'write_final_pages.py',
     'generate_articles.py',
-    'generate_articles.js'
+    'generate_articles.js',
+    'robots.txt'
 ]
 
 for filename in files_to_update:
