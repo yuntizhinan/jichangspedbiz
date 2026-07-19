@@ -19,11 +19,11 @@ def write_index():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>机场速递 (jichangsped.biz) - 2026稳定安全高速便宜机场推荐与官网订阅评测</title>
+  <title>机场速递 (jichangspeed.biz) - 2026稳定安全高速便宜机场推荐与官网订阅评测</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="机场速递 (jichangsped.biz) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
-  <meta name="keywords" content="极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, 机场推荐, 稳定机场, 安全翻墙, 高速中转, jichangsped.biz">
+  <meta name="description" content="机场速递 (jichangspeed.biz) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
+  <meta name="keywords" content="极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, 机场推荐, 稳定机场, 安全翻墙, 高速中转, jichangspeed.biz">
   <meta name="robots" content="index, follow">
   
   <!-- GEO Tags -->
@@ -693,7 +693,7 @@ def write_index():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangsped.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         
         <div class="footer-links-col">
@@ -725,13 +725,13 @@ def write_index():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangsped.biz</li>
+            <li>邮箱: support@jichangspeed.biz</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 机场速递 (jichangsped.biz) 保留所有权利。</p>
+        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
         <div class="footer-bottom-links">
           <a href="sitemap.xml" class="footer-link">网站地图</a>
           <a href="robots.txt" class="footer-link">Robots.txt</a>
@@ -754,11 +754,11 @@ def write_about():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我们 - 机场速递博客 (jichangsped.biz)</title>
+  <title>关于我们 - 机场速递博客 (jichangspeed.biz)</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="关于机场速递 (jichangsped.biz) —— 我们的定位、测速准则、核心价值与联系方式。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等高品质专线梯子官网入口。">
-  <meta name="keywords" content="关于我们, 机场速递, 机场评测, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangsped.biz">
+  <meta name="description" content="关于机场速递 (jichangspeed.biz) —— 我们的定位、测速准则、核心价值与联系方式。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等高品质专线梯子官网入口。">
+  <meta name="keywords" content="关于我们, 机场速递, 机场评测, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
   <meta name="robots" content="index, follow">
   
   <link rel="stylesheet" href="css/style.css">
@@ -809,7 +809,7 @@ def write_about():
         </div>
 
         <div class="article-body">
-          <p>欢迎来到 <strong>机场速递 (jichangsped.biz)</strong>。我们是一个专注于网络技术交流、加速网络优化、以及优质专线网络服务评测的独立媒体。</p>
+          <p>欢迎来到 <strong>机场速递 (jichangspeed.biz)</strong>。我们是一个专注于网络技术交流、加速网络优化、以及优质专线网络服务评测的独立媒体。</p>
 
           <h2>一、我们的使命</h2>
           <p>安全、高速、平稳地获取海外学术信息与商用数据是每一位开发者、设计师、跨境电商以及外贸从业者的刚需。我们致力于通过真实、透明的评估测试，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
@@ -855,7 +855,7 @@ def write_about():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangsped.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         
         <div class="footer-links-col">
@@ -887,13 +887,13 @@ def write_about():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangsped.biz</li>
+            <li>邮箱: support@jichangspeed.biz</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 机场速递 (jichangsped.biz) 保留所有权利。</p>
+        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
       </div>
     </div>
   </footer>
@@ -912,11 +912,11 @@ def write_vpn_guide():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>网络订阅配置与下载指南 - 机场速递博客 (jichangsped.biz)</title>
+  <title>网络订阅配置与下载指南 - 机场速递博客 (jichangspeed.biz)</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="科学上网配置购买一站式指南。涵盖电脑客户端、安卓客户端与iOS苹果客户端下载与通用一键订阅导入教程，推荐使用极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅服务。">
-  <meta name="keywords" content="配置配置, 订阅下载, 客户端导入, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangsped.biz">
+  <meta name="keywords" content="配置配置, 订阅下载, 客户端导入, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
   <meta name="robots" content="index, follow">
   
   <link rel="stylesheet" href="css/style.css">
@@ -1020,7 +1020,7 @@ def write_vpn_guide():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangsped.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云, 瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云, 瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         
         <div class="footer-links-col">
@@ -1052,13 +1052,13 @@ def write_vpn_guide():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangsped.biz</li>
+            <li>邮箱: support@jichangspeed.biz</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 机场速递 (jichangsped.biz) 保留所有权利。</p>
+        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
       </div>
     </div>
   </footer>
@@ -1075,98 +1075,98 @@ def write_sitemap():
     xml = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jichangsped.biz/</loc>
+    <loc>https://jichangspeed.biz/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/about.html</loc>
+    <loc>https://jichangspeed.biz/about.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/vpn-guide.html</loc>
+    <loc>https://jichangspeed.biz/vpn-guide.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- 13 Articles -->
   <url>
-    <loc>https://jichangsped.biz/articles/jilianyun-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/jilianyun-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/guangnianti-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/guangnianti-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/edge-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/edge-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/kuaili-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/kuaili-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/guangshuyun-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/guangshuyun-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/globalyun-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/globalyun-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/shunyun-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/shunyun-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/huanyuyun-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/huanyuyun-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/sujie-review.html</loc>
+    <loc>https://jichangspeed.biz/articles/sujie-review.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/best-airports-2026.html</loc>
+    <loc>https://jichangspeed.biz/articles/best-airports-2026.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/cheap-airports.html</loc>
+    <loc>https://jichangspeed.biz/articles/cheap-airports.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/premium-airports.html</loc>
+    <loc>https://jichangspeed.biz/articles/premium-airports.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jichangsped.biz/articles/subscription-guide.html</loc>
+    <loc>https://jichangspeed.biz/articles/subscription-guide.html</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

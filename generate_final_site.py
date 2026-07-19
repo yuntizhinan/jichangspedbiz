@@ -971,11 +971,11 @@ def generate_article_html(article, index):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{article['title']} - 机场速递博客 (jichangsped.biz)</title>
+  <title>{article['title']} - 机场速递博客 (jichangspeed.biz)</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="{article['excerpt']}">
-  <meta name="keywords" content="{', '.join(article['tags'])}, 稳定, 安全, 高速, 便宜, 高性价比, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangsped.biz">
+  <meta name="keywords" content="{', '.join(article['tags'])}, 稳定, 安全, 高速, 便宜, 高性价比, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
   <meta name="robots" content="index, follow">
   
   <!-- GEO Tags -->
@@ -986,10 +986,10 @@ def generate_article_html(article, index):
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jichangsped.biz/articles/{article['slug']}.html">
+  <meta property="og:url" content="https://jichangspeed.biz/articles/{article['slug']}.html">
   <meta property="og:title" content="{article['title']}">
   <meta property="og:description" content="{article['excerpt']}">
-  <meta property="og:image" content="https://jichangsped.biz/images/og-share.jpg">
+  <meta property="og:image" content="https://jichangspeed.biz/images/og-share.jpg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
@@ -1116,7 +1116,7 @@ def generate_article_html(article, index):
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangsped.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         
         <div class="footer-links-col">
@@ -1148,13 +1148,13 @@ def generate_article_html(article, index):
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangsped.biz</li>
+            <li>邮箱: support@jichangspeed.biz</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 机场速递 (jichangsped.biz) 保留所有权利。</p>
+        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
         <div class="footer-bottom-links">
           <a href="../sitemap.xml" class="footer-link">网站地图</a>
           <a href="../robots.txt" class="footer-link">Robots.txt</a>

@@ -589,11 +589,11 @@ def generate_article_html(article, index):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{article['title']} - 机场速递博客 (jichangsped.biz)</title>
+  <title>{article['title']} - 机场速递博客 (jichangspeed.biz)</title>
   
   <!-- SEO Meta Tags -->
   <meta name="description" content="{article['excerpt']}">
-  <meta name="keywords" content="{', '.join(article['tags'])}, 稳定, 安全, 高速, 便宜, 高性价比, IPLC专线, 流媒体解锁, 全平台支持, jichangsped.biz">
+  <meta name="keywords" content="{', '.join(article['tags'])}, 稳定, 安全, 高速, 便宜, 高性价比, IPLC专线, 流媒体解锁, 全平台支持, jichangspeed.biz">
   <meta name="robots" content="index, follow">
   
   <!-- GEO Tags -->
@@ -604,14 +604,14 @@ def generate_article_html(article, index):
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jichangsped.biz/articles/{article['slug']}.html">
+  <meta property="og:url" content="https://jichangspeed.biz/articles/{article['slug']}.html">
   <meta property="og:title" content="{article['title']}">
   <meta property="og:description" content="{article['excerpt']}">
-  <meta property="og:image" content="https://jichangsped.biz/images/og-share.jpg">
+  <meta property="og:image" content="https://jichangspeed.biz/images/og-share.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://jichangsped.biz/articles/{article['slug']}.html">
+  <meta property="twitter:url" content="https://jichangspeed.biz/articles/{article['slug']}.html">
   <meta property="twitter:title" content="{article['title']}">
   <meta property="twitter:description" content="{article['excerpt']}">
 
@@ -754,7 +754,7 @@ def generate_article_html(article, index):
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangsped.biz 是一家专注于网络加速、科学上网、机场测速及翻墙服务评测的专业博客。我们秉承客观、独立、深度的原则，为您甄选高速稳定、性价比卓越的 IPLC/IEPL 专线网络通道。</p>
+          <p>jichangspeed.biz 是一家专注于网络加速、科学上网、机场测速及翻墙服务评测的专业博客。我们秉承客观、独立、深度的原则，为您甄选高速稳定、性价比卓越的 IPLC/IEPL 专线网络通道。</p>
         </div>
         
         <div class="footer-links-col">
@@ -782,13 +782,13 @@ def generate_article_html(article, index):
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">如有商务合作、投稿或侵权处理，请通过以下方式联系：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
             <li>电报: @jichangsped_admin</li>
-            <li>邮箱: support@jichangsped.biz</li>
+            <li>邮箱: support@jichangspeed.biz</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 机场速递 (jichangsped.biz) 保留所有权利。内容仅用于网络技术交流，请遵守当地法律法规。</p>
+        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。内容仅用于网络技术交流，请遵守当地法律法规。</p>
         <div class="footer-bottom-links">
           <a href="../sitemap.xml" class="footer-link">网站地图</a>
           <a href="../robots.txt" class="footer-link">Robots.txt</a>
