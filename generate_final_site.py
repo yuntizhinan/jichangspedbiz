@@ -1177,14 +1177,11 @@ def generate_article_html(article, index):
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
             <li><a href="{links['极连云']}" target="_blank" class="footer-link">极连云官网 ↗</a></li>
+            <li><a href="{links['边缘']}" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
             <li><a href="{links['光年梯']}" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
-            <li><a href="{links['边缘']}" target="_blank" class="footer-link">边缘官网 ↗</a></li>
             <li><a href="{links['快狸']}" target="_blank" class="footer-link">快狸官网 ↗</a></li>
-            <li><a href="{links['光速云']}" target="_blank" class="footer-link">光速云官网 ↗</a></li>
-            <li><a href="{links['全球云']}" target="_blank" class="footer-link">全球云官网 ↗</a></li>
-            <li><a href="{links['瞬云']}" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
-            <li><a href="{links['寰宇云']}" target="_blank" class="footer-link">寰宇云官网 ↗</a></li>
             <li><a href="{links['速界']}" target="_blank" class="footer-link">速界官网 ↗</a></li>
+            <li><a href="{links['瞬云']}" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
           </ul>
         </div>
 
