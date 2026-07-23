@@ -1715,10 +1715,10 @@ body {
   border-color: var(--accent-primary);
 }
 
-/* Search Box design updates - overlap banner */
+/* Search Box design updates - spacing adjustment */
 .search-container {
   margin-top: 40px !important;
-  margin-bottom: -44px !important;
+  margin-bottom: 25px !important;
   position: relative;
   z-index: 10;
   max-width: 600px !important;

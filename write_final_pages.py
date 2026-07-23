@@ -132,7 +132,7 @@ def write_index():
 
     <!-- Interactive Search Bar -->
     <div class="search-container">
-      <input type="text" id="search-input" class="search-input" placeholder="输入关键字搜索，例如：极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界...">
+      <input type="text" id="search-input" class="search-input" placeholder="搜索机场、评测、资讯，例如：极连云, 便宜机场, 测速排行...">
       <div class="search-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </div>
