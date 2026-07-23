@@ -1473,7 +1473,15 @@ body {
 
 /* Sidebar Position Adjustment for Homepage */
 #articles-feed-section.main-layout {
-  grid-template-columns: 320px 1fr !important;
+  grid-template-columns: 1fr 320px !important;
+}
+#articles-feed-section .sidebar {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+#articles-feed-section .content-feed {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
 }
 
 /* Horizontal Article Card Overrides */
