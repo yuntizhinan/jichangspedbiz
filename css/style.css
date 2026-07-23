@@ -450,7 +450,7 @@ ul, ol {
 .card-badge {
   position: absolute;
   top: 12px;
-  right: 12px;
+  left: 12px;
   background-color: rgba(15, 23, 42, 0.8);
   color: #ffffff;
   padding: 4px 10px;
@@ -622,8 +622,6 @@ ul, ol {
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  flex-direction: row-reverse;
-  justify-content: space-between;
 }
 
 .featured-item-img {
@@ -639,7 +637,6 @@ ul, ol {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  flex-grow: 1;
 }
 
 .featured-item-title {
@@ -1489,18 +1486,18 @@ body {
 
 /* Horizontal Article Card Overrides */
 .article-card {
-  grid-template-columns: 1fr 240px !important;
+  grid-template-columns: 240px 1fr !important;
   gap: 24px !important;
   padding: 8px !important;
   border-radius: var(--radius-lg) !important;
 }
 .card-content {
-  grid-column: 1 !important;
+  grid-column: 2 !important;
   grid-row: 1 !important;
   padding: 24px 20px !important;
 }
 .card-image-wrap {
-  grid-column: 2 !important;
+  grid-column: 1 !important;
   grid-row: 1 !important;
   height: 100% !important;
   min-height: 200px !important;
