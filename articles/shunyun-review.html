@@ -41,13 +41,60 @@
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
       
       <nav class="nav" id="nav-menu">
-        <a href="cheap-airports.html" class="nav-link">便宜机场推荐</a>
-        <a href="premium-airports.html" class="nav-link">优质机场推荐</a>
-        <a href="kuaili-review.html" class="nav-link">老牌机场推荐</a>
-        <a href="best-airports-2026.html" class="nav-link">精选汇总</a>
-        <a href="../vpn-guide.html" class="nav-link">科学上网</a>
-        <a href="../about.html" class="nav-link">关于我们</a>
-        
+        <!-- Item 1: 机场推荐 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场推荐 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="cheap-airports.html" class="dropdown-item">便宜机场推荐</a>
+            <a href="premium-airports.html" class="dropdown-item">优质机场推荐</a>
+            <a href="kuaili-review.html" class="dropdown-item">老牌机场推荐</a>
+          </div>
+        </div>
+
+        <!-- Item 2: 机场资讯 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场资讯 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="best-airports-2026.html" class="dropdown-item">精选汇总</a>
+            <a href="../vpn-guide.html" class="dropdown-item">科学上网</a>
+          </div>
+        </div>
+
+        <!-- Item 3: 更多 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">更多 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="../index.html#articles-feed-section" class="dropdown-item">文章归档</a>
+            <a href="../about.html" class="dropdown-item">关于我们</a>
+            <a href="#" class="dropdown-item" onclick="showFriendsModal(); return false;">友情链接</a>
+          </div>
+        </div>
+
+        <!-- Item 4: 搜索图标 (Dropdown Search overlay) -->
+        <div class="nav-item dropdown search-dropdown">
+          <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <div class="dropdown-menu search-dropdown-menu" id="search-dropdown-menu">
+            <div class="nav-search-box">
+              <input type="text" id="nav-search-input" class="nav-search-input" placeholder="输入关键字搜索机场...">
+              <div class="hot-search">
+                <span class="hot-search-title">热门搜索：</span>
+                <div class="hot-search-tags">
+                  <span class="hot-tag" onclick="performNavSearch('极连云')">极连云</span>
+                  <span class="hot-tag" onclick="performNavSearch('光年梯')">光年梯</span>
+                  <span class="hot-tag" onclick="performNavSearch('边缘')">边缘</span>
+                  <span class="hot-tag" onclick="performNavSearch('快狸')">快狸</span>
+                  <span class="hot-tag" onclick="performNavSearch('速界')">速界</span>
+                  <span class="hot-tag" onclick="performNavSearch('瞬云')">瞬云</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>

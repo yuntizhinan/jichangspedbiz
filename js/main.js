@@ -273,4 +273,126 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  // ==========================================
+  // NAVIGATION SEARCH DROPDOWN TOGGLE & LOGIC
+  // ==========================================
+  const navSearchBtn = document.getElementById('nav-search-btn');
+  const searchDropdownMenu = document.getElementById('search-dropdown-menu');
+  const navSearchInput = document.getElementById('nav-search-input');
+
+  if (navSearchBtn && searchDropdownMenu) {
+    navSearchBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      searchDropdownMenu.classList.toggle('show');
+      if (searchDropdownMenu.classList.contains('show') && navSearchInput) {
+        navSearchInput.focus();
+      }
+    });
+
+    // Close search dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!searchDropdownMenu.contains(e.target) && e.target !== navSearchBtn && !navSearchBtn.contains(e.target)) {
+        searchDropdownMenu.classList.remove('show');
+      }
+    });
+
+    // Handle enter key on navbar search input
+    if (navSearchInput) {
+      navSearchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          performNavSearch(navSearchInput.value.trim());
+        }
+      });
+    }
+  }
+
+  // Handle Global Search Parameter on Load
+  const searchParam = urlParams.get('search');
+  if (searchParam) {
+    const mainSearchInput = document.getElementById('search-input');
+    if (mainSearchInput) {
+      mainSearchInput.value = searchParam;
+      // Trigger search filter
+      const event = new Event('input', { bubbles: true });
+      mainSearchInput.dispatchEvent(event);
+      // Also sync navbar search input
+      if (navSearchInput) navSearchInput.value = searchParam;
+    }
+  }
 });
+
+// ==========================================
+// GLOBAL NAVIGATION ACTIONS (SEARCH & FRIENDS MODAL)
+// ==========================================
+window.performNavSearch = function(term) {
+  if (!term) return;
+  const mainSearchInput = document.getElementById('search-input');
+  if (mainSearchInput) {
+    // Already on homepage
+    mainSearchInput.value = term;
+    const event = new Event('input', { bubbles: true });
+    mainSearchInput.dispatchEvent(event);
+    
+    // Sync navbar search input
+    const navSearchInput = document.getElementById('nav-search-input');
+    if (navSearchInput) navSearchInput.value = term;
+    
+    // Close dropdown
+    const searchDropdown = document.getElementById('search-dropdown-menu');
+    if (searchDropdown) searchDropdown.classList.remove('show');
+    
+    // Scroll to articles feed section
+    const articlesSection = document.getElementById('articles-feed-section');
+    if (articlesSection) {
+      articlesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  } else {
+    // On subpage, redirect to index with query
+    const isSubpage = window.location.pathname.includes('/articles/');
+    const redirectUrl = isSubpage ? '../index.html' : 'index.html';
+    window.location.href = `${redirectUrl}?search=${encodeURIComponent(term)}`;
+  }
+}
+
+window.showFriendsModal = function() {
+  let modal = document.getElementById('friends-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'friends-modal';
+    modal.className = 'friends-modal-overlay';
+    modal.innerHTML = `
+      <div class="friends-modal-content">
+        <h3 class="friends-modal-title">友情链接</h3>
+        <p class="friends-modal-desc">欢迎各大网络技术、科学上网、极客分享博客交换友链。申请请发送邮件至：support@jichangspeed.biz</p>
+        <div class="friends-links-grid">
+          <a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="friend-link-item">极连云官网</a>
+          <a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="friend-link-item">光年梯官网</a>
+          <a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="friend-link-item">边缘节点</a>
+          <a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="friend-link-item">快狸官网</a>
+          <a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="friend-link-item">速界官网</a>
+          <a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank" class="friend-link-item">瞬云官网</a>
+        </div>
+        <button class="friends-modal-close" onclick="closeFriendsModal()">关闭</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    
+    // Allow closing on clicking overlay backdrop
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeFriendsModal();
+      }
+    });
+  }
+  // Force reflow
+  modal.offsetHeight;
+  modal.classList.add('active');
+}
+
+window.closeFriendsModal = function() {
+  const modal = document.getElementById('friends-modal');
+  if (modal) {
+    modal.classList.remove('active');
+  }
+}
