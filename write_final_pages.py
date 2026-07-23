@@ -1400,13 +1400,11 @@ def write_archives():
   </header>
 
   <!-- Archives Page Main Layout -->
-  <main class="container main-layout" id="archives-layout-section" style="margin-top: 40px;">
+  <main class="container article-page main-layout" id="archives-layout-section" style="margin-top: 40px;">
     <!-- Left Column: Archive list -->
-    <section class="content-feed">
-      <div class="sidebar-widget archive-box">
-        {year_blocks_html}
-      </div>
-    </section>
+    <article class="content-feed archive-box">
+      {year_blocks_html}
+    </article>
 
     <!-- Right Column: Sidebar -->
     <aside class="sidebar">

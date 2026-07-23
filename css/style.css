@@ -1444,6 +1444,8 @@ ul, ol {
   --bg-primary-gradient: linear-gradient(135deg, rgba(253, 251, 247, 0.85) 0%, rgba(244, 238, 225, 0.92) 100%);
   --bg-secondary: rgba(255, 255, 255, 0.55);
   --bg-dropdown: #FAF8F5;
+  --bg-solid-card: #FDFBF7;
+  --bg-table-header: #F4EEE1;
   --bg-tertiary: rgba(245, 239, 225, 0.6);
   --border-color: rgba(230, 220, 200, 0.5);
   --card-shadow: 0 12px 40px -10px rgba(139, 92, 26, 0.08);
@@ -1463,6 +1465,8 @@ ul, ol {
   --bg-primary-gradient: linear-gradient(135deg, rgba(18, 15, 12, 0.65) 0%, rgba(18, 15, 12, 0.85) 100%);
   --bg-secondary: rgba(15, 21, 35, 0.55);
   --bg-dropdown: #1A202C;
+  --bg-solid-card: #181512;
+  --bg-table-header: #241D17;
   --bg-tertiary: rgba(31, 41, 55, 0.4);
   --border-color: rgba(255, 255, 255, 0.08);
   --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.45);
@@ -2188,5 +2192,37 @@ body {
 .shortcut-label {
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+/* ========================================================
+   OPAQUE CONTENT FEED & OPAQUE TABLE STYLES
+   ======================================================== */
+
+.article-page .content-feed {
+  background-color: var(--bg-solid-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 40px !important;
+  box-shadow: var(--card-shadow) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.article-body th {
+  background-color: var(--bg-table-header) !important;
+}
+
+.article-body tr:nth-child(even) td {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+[data-theme="dark"] .article-body tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+@media (max-width: 768px) {
+  .article-page .content-feed {
+    padding: 20px !important;
+  }
 }
 
