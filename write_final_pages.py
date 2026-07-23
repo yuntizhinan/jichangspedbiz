@@ -214,7 +214,7 @@ def write_index():
           <a href="https://t.me/yuntizhinan" target="_blank" title="Telegram 频道" class="social-btn">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/></svg>
           </a>
-          <a href="mailto:support@jichangspeed.biz" title="联系邮箱" class="social-btn">
+          <a href="mailto:1962952406@qq.com" title="联系邮箱" class="social-btn">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
         </div>
@@ -721,7 +721,7 @@ def write_index():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangspeed.biz</li>
+            <li>邮箱: 1962952406@qq.com</li>
           </ul>
         </div>
       </div>
@@ -928,7 +928,7 @@ def write_about():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangspeed.biz</li>
+            <li>邮箱: 1962952406@qq.com</li>
           </ul>
         </div>
       </div>
@@ -1138,7 +1138,7 @@ def write_vpn_guide():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangspeed.biz</li>
+            <li>邮箱: 1962952406@qq.com</li>
           </ul>
         </div>
       </div>
@@ -1449,7 +1449,7 @@ def write_archives():
           <a href="https://t.me/jichangspeed" target="_blank" class="social-btn" aria-label="Telegram">
             <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.28 7.68-6.92c.34-.3-.07-.46-.52-.18L7.69 12.3 3.58 11c-.9-.28-.9-.9.18-1.32L19.9 3.5c.73-.28 1.38.18 1.14 1.3l-2.76 13.52c-.22 1.02-.83 1.27-1.7.77l-4.22-3.18-2.03 2.04c-.22.22-.4.4-.75.4z"/></svg>
           </a>
-          <a href="mailto:support@jichangspeed.biz" class="social-btn" aria-label="Email">
+          <a href="mailto:1962952406@qq.com" class="social-btn" aria-label="Email">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
         </div>
@@ -1510,7 +1510,7 @@ def write_archives():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: support@jichangspeed.biz</li>
+            <li>邮箱: 1962952406@qq.com</li>
           </ul>
         </div>
       </div>

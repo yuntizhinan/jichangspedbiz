@@ -776,7 +776,7 @@ function generateArticleHTML(article, index) {
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">如有商务合作、投稿或侵权处理，请通过以下方式联系：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
             <li>电报: @jichangsped_admin</li>
-            <li>邮箱: support@jichangspeed.biz</li>
+            <li>邮箱: 1962952406@qq.com</li>
           </ul>
         </div>
       </div>
