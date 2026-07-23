@@ -1734,6 +1734,18 @@ body {
   font-size: 1rem !important;
   color: var(--text-primary) !important;
 }
+[data-theme="dark"] .search-input {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3) !important;
+}
+[data-theme="dark"] .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+[data-theme="dark"] .search-icon {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
 .search-input:focus {
   border-color: var(--accent-primary) !important;
   box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.15) !important;
