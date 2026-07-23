@@ -2236,6 +2236,12 @@ body {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
+/* Disable text-shadow on gradient text to prevent shadow bleed in transparent backgrounds */
+[data-theme="dark"] .text-gradient,
+[data-theme="dark"] .hero-title span {
+  text-shadow: none !important;
+}
+
 /* Clickable Frosted Core Feature Cards Styles */
 a.core-feature-card {
   text-decoration: none !important;
