@@ -622,6 +622,8 @@ ul, ol {
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 .featured-item-img {
@@ -637,6 +639,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex-grow: 1;
 }
 
 .featured-item-title {
