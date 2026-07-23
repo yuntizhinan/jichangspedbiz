@@ -199,7 +199,7 @@ ul, ol {
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-fast), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .theme-toggle:hover {
@@ -1877,14 +1877,32 @@ body {
   border-radius: var(--radius-full);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: visible; /* To allow the dropdown popup to be seen */
+  margin-right: 0;
 }
 
 /* When expanded */
 .nav-search-container.active {
-  width: 220px; /* Grows in width, pushing day/night button to the right */
+  width: 220px; /* Grows in width */
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   padding-right: 12px;
+  margin-right: -180px; /* Layout width remains 40px, keeping left side anchored! */
+}
+
+/* Push theme toggle to the right */
+.nav-search-container.active ~ .theme-toggle {
+  transform: translateX(180px);
+}
+
+/* Mobile responsive fix for small phone screens */
+@media (max-width: 480px) {
+  .nav-search-container.active {
+    width: 170px;
+    margin-right: -130px;
+  }
+  .nav-search-container.active ~ .theme-toggle {
+    transform: translateX(130px);
+  }
 }
 
 [data-theme="dark"] .nav-search-container.active {
