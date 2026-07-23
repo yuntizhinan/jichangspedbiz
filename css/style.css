@@ -42,18 +42,18 @@
 
 [data-theme="dark"] {
   /* Colors - Dark Theme */
-  --bg-primary: #121214;
-  --bg-secondary: #1C1C1E;
-  --bg-tertiary: #2C2C2E;
+  --bg-primary: #0D112D;
+  --bg-secondary: #12245C;
+  --bg-tertiary: #1E427F;
   
   --text-primary: #ffffff;
   --text-secondary: #e4e4e7;
   --text-muted: #a1a1aa;
   
-  --accent-primary: #10B981;
-  --accent-secondary: #34D399;
-  --accent-gradient: linear-gradient(135deg, #10B981 0%, #34D399 100%);
-  --accent-soft: rgba(16, 185, 129, 0.12);
+  --accent-primary: #818cf8;
+  --accent-secondary: #c084fc;
+  --accent-gradient: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  --accent-soft: rgba(129, 140, 248, 0.12);
   
   --success: #34d399;
   --success-soft: rgba(52, 211, 153, 0.12);
@@ -1461,24 +1461,24 @@ ul, ol {
 }
 
 [data-theme="dark"] {
-  /* Frosted Charcoal Sunset Dark Mode (Inspired by Figure 1) */
-  --bg-primary-gradient: linear-gradient(135deg, rgba(15, 15, 15, 0.45) 0%, rgba(25, 20, 15, 0.6) 100%);
-  --bg-secondary: rgba(15, 15, 20, 0.55);
-  --bg-dropdown: #1C1C1E;
-  --bg-solid-card: rgba(15, 15, 20, 0.75);
-  --bg-table-header: #2C2C2E;
-  --bg-tertiary: rgba(44, 44, 46, 0.25);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.55);
+  /* Frosted Starry Night Dark Mode (DopelyColors palette) */
+  --bg-primary-gradient: linear-gradient(135deg, rgba(13, 17, 45, 0.25) 0%, rgba(18, 36, 92, 0.4) 100%);
+  --bg-secondary: rgba(13, 17, 45, 0.55);
+  --bg-dropdown: #0D112D;
+  --bg-solid-card: rgba(13, 17, 45, 0.75);
+  --bg-table-header: #12245C;
+  --bg-tertiary: rgba(30, 66, 127, 0.25);
+  --border-color: rgba(108, 148, 184, 0.12);
+  --card-shadow: 0 12px 40px -10px rgba(13, 17, 45, 0.45);
   
   --text-primary: #ffffff;      /* Pure White for high contrast */
   --text-secondary: #e4e4e7;    /* Bright zinc grey */
   --text-muted: #a1a1aa;        /* Muted zinc grey */
   
-  --accent-primary: #10B981;    /* Emerald Green */
-  --accent-secondary: #34D399;  /* Mint Green */
-  --accent-gradient: linear-gradient(135deg, #10B981 0%, #34D399 100%);
-  --accent-soft: rgba(16, 185, 129, 0.12);
+  --accent-primary: #818cf8;    /* Vibrant Indigo-Blue */
+  --accent-secondary: #c084fc;  /* Neon Violet-Purple */
+  --accent-gradient: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  --accent-soft: rgba(129, 140, 248, 0.12);
 }
 
 body {
@@ -1489,9 +1489,9 @@ body {
   transition: background-image 0.5s ease-in-out, background-color var(--transition-normal);
 }
 
-/* Beautiful Yosemite Sunset Forest for Dark Mode (Frosted glass inspired by Figure 1) */
+/* Beautiful Misty Pines for Dark Mode */
 [data-theme="dark"] body {
-  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1470246973918-29a93221c455?q=80&w=1600&auto=format&fit=crop') !important;
+  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1600&auto=format&fit=crop') !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
