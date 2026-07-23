@@ -42,18 +42,18 @@
 
 [data-theme="dark"] {
   /* Colors - Dark Theme */
-  --bg-primary: #12245C;
-  --bg-secondary: #1E427F;
-  --bg-tertiary: #2C609C;
+  --bg-primary: #121214;
+  --bg-secondary: #1C1C1E;
+  --bg-tertiary: #2C2C2E;
   
   --text-primary: #ffffff;
-  --text-secondary: #f1f5f9;
-  --text-muted: #b0c2d6;
+  --text-secondary: #e4e4e7;
+  --text-muted: #a1a1aa;
   
-  --accent-primary: #60a5fa;
-  --accent-secondary: #2C609C;
-  --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #ffffff 100%);
-  --accent-soft: rgba(108, 148, 184, 0.12);
+  --accent-primary: #fbbf24;
+  --accent-secondary: #f59e0b;
+  --accent-gradient: linear-gradient(135deg, #fbbf24 0%, #ff7e40 100%);
+  --accent-soft: rgba(251, 191, 36, 0.12);
   
   --success: #34d399;
   --success-soft: rgba(52, 211, 153, 0.12);
@@ -1461,24 +1461,24 @@ ul, ol {
 }
 
 [data-theme="dark"] {
-  /* Frosted Starry Night Dark Mode (DopelyColors palette) */
-  --bg-primary-gradient: linear-gradient(135deg, rgba(18, 36, 92, 0.45) 0%, rgba(30, 66, 127, 0.6) 100%);
-  --bg-secondary: rgba(18, 36, 92, 0.55);
-  --bg-dropdown: #12245C;
-  --bg-solid-card: rgba(18, 36, 92, 0.72);
-  --bg-table-header: #1E427F;
-  --bg-tertiary: rgba(30, 66, 127, 0.25);
-  --border-color: rgba(108, 148, 184, 0.15);
-  --card-shadow: 0 12px 40px -10px rgba(18, 36, 92, 0.45);
+  /* Frosted Charcoal Sunset Dark Mode (Inspired by Figure 1) */
+  --bg-primary-gradient: linear-gradient(135deg, rgba(15, 15, 15, 0.45) 0%, rgba(25, 20, 15, 0.6) 100%);
+  --bg-secondary: rgba(15, 15, 20, 0.55);
+  --bg-dropdown: #1C1C1E;
+  --bg-solid-card: rgba(15, 15, 20, 0.75);
+  --bg-table-header: #2C2C2E;
+  --bg-tertiary: rgba(44, 44, 46, 0.25);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.55);
   
-  --text-primary: #ffffff;      /* Pure White for high readability */
-  --text-secondary: #f1f5f9;    /* Bright Ice Blue */
-  --text-muted: #b0c2d6;        /* Lighter Steel Blue */
+  --text-primary: #ffffff;      /* Pure White for high contrast */
+  --text-secondary: #e4e4e7;    /* Bright zinc grey */
+  --text-muted: #a1a1aa;        /* Muted zinc grey */
   
-  --accent-primary: #60a5fa;    /* Bright Sky Blue */
-  --accent-secondary: #2C609C;  /* Lighter steel blue */
-  --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #ffffff 100%);
-  --accent-soft: rgba(108, 148, 184, 0.12);
+  --accent-primary: #fbbf24;    /* Amber Gold */
+  --accent-secondary: #f59e0b;  /* Sunset Orange */
+  --accent-gradient: linear-gradient(135deg, #fbbf24 0%, #ff7e40 100%);
+  --accent-soft: rgba(251, 191, 36, 0.12);
 }
 
 body {
@@ -1489,9 +1489,9 @@ body {
   transition: background-image 0.5s ease-in-out, background-color var(--transition-normal);
 }
 
-/* Beautiful Misty Pines for Dark Mode */
+/* Beautiful Yosemite Sunset Forest for Dark Mode (Frosted glass inspired by Figure 1) */
 [data-theme="dark"] body {
-  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1600&auto=format&fit=crop') !important;
+  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1470246973918-29a93221c455?q=80&w=1600&auto=format&fit=crop') !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
