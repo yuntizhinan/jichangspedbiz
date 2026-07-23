@@ -2,15 +2,15 @@
 import os
 
 links = {
-    '极连云': 'https://haozevpn.jlyvipaff.com/#/?code=KUKfOY13',
-    '光年梯': 'https://gnt001.gntvipaff.cc/#/?code=j1ufpE44',
-    '边缘': 'https://zoio.edgenovaaff.cc/#/register?code=Oy1wZvzJ',
-    '快狸': 'https://varnexa.kuailitttt.homes/#/register?code=G56QwHto',
+    '极连云': 'https://ugewe.jilianat.homes/#/?code=9ygBtCN8',
+    '光年梯': 'https://hjbesu8d.fazuttt.club/#/?code=AixFrykO',
+    '边缘': 'https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU',
+    '快狸': 'https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n',
     '光速云': 'https://kjlq01.gsyvipaff.cc/#/?code=b1OTkTeL',
     '全球云': 'https://haozevpn.gcvipaff.cc/#/?code=WRQJc2v4',
-    '瞬云': 'https://ccc.jichang.best/#/register?code=o4I4kToe',
+    '瞬云': 'https://aaa.jichang.best/#/register?code=ClNa0zPm',
     '寰宇云': 'https://vip3.huanyuyunbest.com/#/register?code=K6h5VWw2',
-    '速界': 'https://lqy001.speedworldaff.com/#/register?code=sjEEJb8I'
+    '速界': 'https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl'
 }
 
 def write_index():
