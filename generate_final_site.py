@@ -636,6 +636,12 @@ article_list = [
             <td>突破流媒体解锁，全专线保障，高性价比</td>
           </tr>
           <tr>
+            <td><a href="{links['速界']}" target="_blank"><strong>速界 ↗</strong></a></td>
+            <td>¥25.00/月起</td>
+            <td>50GB - 250GB</td>
+            <td>不限速且不限制设备数量，提供自研一键连接客户端</td>
+          </tr>
+          <tr>
             <td><a href="{links['边缘']}" target="_blank"><strong>边缘 ↗</strong></a></td>
             <td>¥15.00/月起</td>
             <td>55GB - 1000GB</td>
@@ -663,19 +669,13 @@ article_list = [
             <td><a href="{links['瞬云']}" target="_blank"><strong>瞬云 ↗</strong></a></td>
             <td>¥20.00/月起</td>
             <td>59GB - 300GB</td>
-            <td>Anycast高速高吞吐节点，大流量三年付折25%</td>
+            <td>Anycast高速高吞吐节点，大流量三年付折 25%</td>
           </tr>
           <tr>
             <td><a href="{links['寰宇云']}" target="_blank"><strong>寰宇云 ↗</strong></a></td>
             <td>¥18.00/月起</td>
             <td>60GB - 300GB</td>
-            <td>完全不限设备数量，原生IP全面解锁流媒体与AI</td>
-          </tr>
-          <tr>
-            <td><a href="{links['速界']}" target="_blank"><strong>速界 ↗</strong></a></td>
-            <td>¥25.00/月起</td>
-            <td>50GB - 250GB</td>
-            <td>不限速且不限制设备数量，提供自研一键连接客户端</td>
+            <td>完全不限设备数量，原生 IP 全面解锁流媒体与 AI</td>
           </tr>
         </tbody>
       </table>
