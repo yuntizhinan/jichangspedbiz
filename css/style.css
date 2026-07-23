@@ -1715,30 +1715,30 @@ body {
   border-color: var(--accent-primary);
 }
 
-/* Search Box design updates - spacing adjustment */
+/* Search Box design updates - refined to compact style */
 .search-container {
-  margin-top: 40px !important;
+  margin-top: 25px !important;
   margin-bottom: 25px !important;
   position: relative;
   z-index: 10;
-  max-width: 600px !important;
+  max-width: 420px !important;
 }
 .search-input {
   background-color: var(--bg-secondary) !important;
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(15px) !important;
-  border: 2px solid var(--border-color) !important;
+  border: 1.5px solid var(--border-color) !important;
   border-radius: var(--radius-full) !important;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05) !important;
-  padding: 16px 24px 16px 54px !important;
-  font-size: 1rem !important;
+  box-shadow: 0 8px 24px -5px rgba(0, 0, 0, 0.05) !important;
+  padding: 11px 18px 11px 44px !important;
+  font-size: 0.9rem !important;
   color: var(--text-primary) !important;
 }
 [data-theme="dark"] .search-input {
   background-color: rgba(255, 255, 255, 0.12) !important;
   border-color: rgba(255, 255, 255, 0.22) !important;
   color: #ffffff !important;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 8px 24px -5px rgba(0, 0, 0, 0.3) !important;
 }
 [data-theme="dark"] .search-input::placeholder {
   color: rgba(255, 255, 255, 0.6) !important;
@@ -1748,10 +1748,14 @@ body {
 }
 .search-input:focus {
   border-color: var(--accent-primary) !important;
-  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.15) !important;
+  box-shadow: 0 8px 24px -5px rgba(99, 102, 241, 0.15) !important;
 }
 .search-icon {
-  left: 20px !important;
+  left: 15px !important;
+}
+.search-icon svg {
+  width: 16px !important;
+  height: 16px !important;
 }
 
 /* Mobile responsive fixes */
