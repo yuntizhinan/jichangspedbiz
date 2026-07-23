@@ -18,6 +18,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://jichangspeed.biz/archives.html</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- 13 Articles -->
   <url>
     <loc>https://jichangspeed.biz/articles/jilianyun-review.html</loc>

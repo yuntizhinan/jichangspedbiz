@@ -3,11 +3,7 @@ import os
 import shutil
 import urllib.parse
 
-# 1. Re-create articles directory
 articles_dir = os.path.join(os.path.dirname(__file__), 'articles')
-if os.path.exists(articles_dir):
-    shutil.rmtree(articles_dir)
-os.makedirs(articles_dir)
 
 # Affiliate URLs
 links = {
@@ -1032,7 +1028,7 @@ def generate_article_html(article, index):
         <div class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" onclick="return false;">更多 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
           <div class="dropdown-menu">
-            <a href="../index.html#articles-feed-section" class="dropdown-item">文章归档</a>
+            <a href="../archives.html" class="dropdown-item">文章归档</a>
             <a href="../about.html" class="dropdown-item">关于我们</a>
             <a href="#" class="dropdown-item" onclick="showFriendsModal(); return false;">友情链接</a>
           </div>
@@ -1214,12 +1210,18 @@ def generate_article_html(article, index):
 </body>
 </html>"""
 
-# Generate article files
-for index, article in enumerate(article_list):
-    file_path = os.path.join(articles_dir, f"{article['slug']}.html")
-    html = generate_article_html(article, index)
-    with open(file_path, 'w', encoding='utf-8') as f:
-        f.write(html)
-    print(f"Generated: {file_path}")
+if __name__ == '__main__':
+    # Re-create articles directory
+    if os.path.exists(articles_dir):
+        shutil.rmtree(articles_dir)
+    os.makedirs(articles_dir)
 
-print("All new articles generated successfully.")
+    # Generate article files
+    for index, article in enumerate(article_list):
+        file_path = os.path.join(articles_dir, f"{article['slug']}.html")
+        html = generate_article_html(article, index)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f"Generated: {file_path}")
+
+    print("All new articles generated successfully.")
