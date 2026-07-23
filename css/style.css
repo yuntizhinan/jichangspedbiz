@@ -1866,82 +1866,115 @@ body {
   color: var(--accent-primary) !important;
 }
 
-/* Search Dropdown Specifics */
-.search-dropdown {
+/* Navigation Expandable Search Box */
+.nav-search-container {
   position: relative;
+  display: flex;
+  align-items: center;
+  width: 40px; /* Initially collapsed, only showing the button */
+  height: 40px;
+  background-color: transparent;
+  border-radius: var(--radius-full);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible; /* To allow the dropdown popup to be seen */
+}
+
+/* When expanded */
+.nav-search-container.active {
+  width: 220px; /* Grows in width, pushing day/night button to the right */
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding-right: 12px;
+}
+
+[data-theme="dark"] .nav-search-container.active {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .nav-search-btn {
   background: none;
   border: none;
   color: var(--text-secondary);
-  padding: 8px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   cursor: pointer;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .nav-search-btn:hover {
-  background-color: var(--bg-tertiary);
+  background-color: rgba(0, 0, 0, 0.05);
   color: var(--accent-primary);
 }
 
+[data-theme="dark"] .nav-search-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .search-icon-svg {
-  width: 20px;
-  height: 20px;
-}
-
-.search-dropdown-menu {
-  left: auto !important;
-  right: 0 !important;
-  transform: translateY(10px) !important;
-  min-width: 320px !important;
-  padding: 16px !important;
-  display: block !important; /* Managed by show class */
-}
-
-/* Override hover behaviors for search dropdown */
-.search-dropdown:hover .dropdown-menu.search-dropdown-menu {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px) !important;
-}
-
-.dropdown-menu.search-dropdown-menu.show {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateY(0) !important;
-}
-
-.nav-search-box {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  width: 18px;
+  height: 18px;
 }
 
 .nav-search-input {
-  width: 100% !important;
-  padding: 10px 14px !important;
-  border: 1px solid var(--border-color) !important;
-  border-radius: var(--radius-sm) !important;
-  background-color: var(--bg-tertiary) !important;
+  width: 0;
+  opacity: 0;
+  border: none !important;
+  background: transparent !important;
   color: var(--text-primary) !important;
-  font-size: 0.88rem !important;
+  font-size: 0.85rem !important;
+  padding: 0 !important;
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+  z-index: 1;
 }
 
-.nav-search-input:focus {
-  outline: none;
-  border-color: var(--accent-primary) !important;
-  box-shadow: 0 0 0 2px var(--accent-soft) !important;
+.nav-search-container.active .nav-search-input {
+  width: 100%;
+  opacity: 1;
+  padding: 8px 4px !important;
+  outline: none !important;
 }
 
-.hot-search {
+/* Popup Hot Search list under input */
+.hot-search-popup {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  width: 260px;
+  padding: 14px;
+  background-color: var(--bg-dropdown);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+}
+
+[data-theme="dark"] .hot-search-popup {
+  background-color: rgba(13, 17, 45, 0.95);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Trigger popup when input is hovered OR focused when container is active */
+.nav-search-container.active:hover .hot-search-popup,
+.nav-search-container.active .nav-search-input:focus ~ .hot-search-popup,
+.hot-search-popup:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .hot-search-title {
@@ -1958,8 +1991,8 @@ body {
 }
 
 .hot-tag {
-  font-size: 0.75rem;
-  padding: 4px 10px;
+  font-size: 0.72rem;
+  padding: 4px 8px;
   background-color: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);

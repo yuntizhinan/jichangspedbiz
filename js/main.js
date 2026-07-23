@@ -348,36 +348,49 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // NAVIGATION SEARCH DROPDOWN TOGGLE & LOGIC
+  // NAVIGATION SEARCH CONTAINER EXPAND & LOGIC
   // ==========================================
+  const navSearchContainer = document.getElementById('nav-search-container');
   const navSearchBtn = document.getElementById('nav-search-btn');
-  const searchDropdownMenu = document.getElementById('search-dropdown-menu');
   const navSearchInput = document.getElementById('nav-search-input');
 
-  if (navSearchBtn && searchDropdownMenu) {
+  if (navSearchBtn && navSearchContainer && navSearchInput) {
     navSearchBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      searchDropdownMenu.classList.toggle('show');
-      if (searchDropdownMenu.classList.contains('show') && navSearchInput) {
+      const isActive = navSearchContainer.classList.contains('active');
+      if (!isActive) {
+        navSearchContainer.classList.add('active');
         navSearchInput.focus();
+      } else {
+        const query = navSearchInput.value.trim();
+        if (query) {
+          performNavSearch(query);
+        } else {
+          navSearchContainer.classList.remove('active');
+        }
       }
+    });
+
+    navSearchInput.addEventListener('click', (e) => {
+      e.stopPropagation();
     });
 
     // Close search dropdown when clicking outside
     document.addEventListener('click', (e) => {
-      if (!searchDropdownMenu.contains(e.target) && e.target !== navSearchBtn && !navSearchBtn.contains(e.target)) {
-        searchDropdownMenu.classList.remove('show');
+      if (!navSearchContainer.contains(e.target) && navSearchContainer.classList.contains('active')) {
+        const query = navSearchInput.value.trim();
+        if (!query) {
+          navSearchContainer.classList.remove('active');
+        }
       }
     });
 
     // Handle enter key on navbar search input
-    if (navSearchInput) {
-      navSearchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-          performNavSearch(navSearchInput.value.trim());
-        }
-      });
-    }
+    navSearchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        performNavSearch(navSearchInput.value.trim());
+      }
+    });
   }
 
   // Handle Global Search Parameter on Load

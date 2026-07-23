@@ -1035,27 +1035,23 @@ def generate_article_html(article, index):
           </div>
         </div>
 
-        <!-- Item 4: 搜索图标 (Dropdown Search overlay) -->
-        <div class="nav-item dropdown search-dropdown">
+        <!-- Item 4: 伸缩搜索框 (Expandable Navbar Search) -->
+        <div class="nav-search-container" id="nav-search-container">
           <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
             <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </button>
-          <div class="dropdown-menu search-dropdown-menu" id="search-dropdown-menu">
-            <div class="nav-search-box">
-              <input type="text" id="nav-search-input" class="nav-search-input" placeholder="输入关键字搜索机场...">
-              <div class="hot-search">
-                <span class="hot-search-title">热门搜索：</span>
-                <div class="hot-search-tags">
-                  <span class="hot-tag" onclick="performNavSearch('极连云')">极连云</span>
-                  <span class="hot-tag" onclick="performNavSearch('光年梯')">光年梯</span>
-                  <span class="hot-tag" onclick="performNavSearch('边缘')">边缘</span>
-                  <span class="hot-tag" onclick="performNavSearch('快狸')">快狸</span>
-                  <span class="hot-tag" onclick="performNavSearch('速界')">速界</span>
-                  <span class="hot-tag" onclick="performNavSearch('瞬云')">瞬云</span>
-                </div>
-              </div>
+          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="输入关键字搜索机场...">
+          <div class="hot-search-popup" id="hot-search-popup">
+            <span class="hot-search-title">热门搜索：</span>
+            <div class="hot-search-tags">
+              <span class="hot-tag" onclick="performNavSearch('极连云')">极连云</span>
+              <span class="hot-tag" onclick="performNavSearch('边缘节点')">边缘节点</span>
+              <span class="hot-tag" onclick="performNavSearch('光年梯')">光年梯</span>
+              <span class="hot-tag" onclick="performNavSearch('快狸')">快狸</span>
+              <span class="hot-tag" onclick="performNavSearch('速界')">速界</span>
+              <span class="hot-tag" onclick="performNavSearch('瞬云')">瞬云</span>
             </div>
           </div>
         </div>
