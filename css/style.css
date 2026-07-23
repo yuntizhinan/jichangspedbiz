@@ -2236,3 +2236,40 @@ body {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
+/* Clickable Frosted Core Feature Cards Styles */
+a.core-feature-card {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
+
+.core-feature-card {
+  background-color: var(--bg-secondary) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+  border-radius: var(--radius-lg) !important;
+  transition: all var(--transition-normal) !important;
+}
+
+.core-feature-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 15px 30px -5px rgba(18, 36, 92, 0.25) !important;
+}
+
+.core-feature-icon {
+  transition: all var(--transition-fast) !important;
+}
+
+.core-feature-card:hover .core-feature-icon {
+  transform: scale(1.1) rotate(5deg) !important;
+  background: var(--accent-gradient) !important;
+  color: #fff !important;
+}
+
+.core-feature-card:hover .core-feature-title {
+  color: var(--accent-primary) !important;
+}
+
