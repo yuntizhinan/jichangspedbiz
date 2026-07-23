@@ -1433,39 +1433,74 @@ ul, ol {
 }
 
 /* ==========================================
-   GLASSMORPHISM & BLOG HOME BEAUTIFICATION
+   GLASSMORPHISM & COZY SCENIC BLOG HOME BEAUTIFICATION
    ========================================== */
 :root {
-  --bg-primary-gradient: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 50%, #e0e7ff 100%);
-  --bg-secondary: rgba(255, 255, 255, 0.45);
-  --border-color: rgba(255, 255, 255, 0.4);
-  --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  
+  /* Cozy Creamy Light Mode (Inspired by Figure 2 & 3) */
+  --bg-primary-gradient: linear-gradient(135deg, #fdfbf7 0%, #f4eee1 50%, #eae2cf 100%);
+  --bg-secondary: rgba(255, 255, 255, 0.55);
+  --bg-tertiary: rgba(245, 239, 225, 0.6);
+  --border-color: rgba(230, 220, 200, 0.5);
+  --card-shadow: 0 12px 40px -10px rgba(139, 92, 26, 0.08);
+  
+  --text-primary: #3d2f26;      /* Warm dark brown for readable tech content */
+  --text-secondary: #605147;    /* Elegant middle brown */
+  --text-muted: #8c7d72;        /* Muted brown */
+  
+  --accent-primary: #6366f1;    /* Violet Indigo tint */
+  --accent-secondary: #f97316;  /* Soft Warm Amber */
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  --accent-soft: rgba(99, 102, 241, 0.08);
 }
 
 [data-theme="dark"] {
-  --bg-primary-gradient: linear-gradient(135deg, #070a13 0%, #0e1222 50%, #171226 100%);
-  --bg-secondary: rgba(15, 23, 42, 0.45);
-  --border-color: rgba(255, 255, 255, 0.06);
-  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+  /* Frosted Scenery Dark Mode (Inspired by Figure 1) */
+  --bg-primary-gradient: linear-gradient(rgba(11, 15, 25, 0.68), rgba(11, 15, 25, 0.88));
+  --bg-secondary: rgba(15, 21, 35, 0.55);
+  --bg-tertiary: rgba(31, 41, 55, 0.4);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.45);
+  
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --text-muted: #9ca3af;
+  
+  --accent-primary: #818cf8;
+  --accent-secondary: #fb923c;
+  --accent-gradient: linear-gradient(135deg, #818cf8 0%, #f472b6 100%);
+  --accent-soft: rgba(129, 140, 248, 0.12);
 }
 
 body {
   background: var(--bg-primary-gradient) !important;
+  background-attachment: fixed !important;
+  transition: background-image 0.5s ease-in-out, background-color var(--transition-normal);
+}
+
+/* Beautiful Yosemite Landscape under Starry Sunset for Dark Mode (Figure 1) */
+[data-theme="dark"] body {
+  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop') !important;
+  background-size: cover !important;
+  background-position: center !important;
   background-attachment: fixed !important;
 }
 
 /* Apply Glassmorphic Blur to header, widgets, cards */
 .header {
   background-color: var(--bg-secondary) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
   border-bottom: 1px solid var(--border-color) !important;
 }
 
 .sidebar-widget, .article-card, .reviews-section, .faq-item, .hero-section {
   background-color: var(--bg-secondary) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
   border: 1px solid var(--border-color) !important;
   box-shadow: var(--card-shadow) !important;
   border-radius: var(--radius-lg) !important;
@@ -1474,6 +1509,7 @@ body {
 /* Sidebar Position Adjustment for Homepage */
 #articles-feed-section.main-layout {
   grid-template-columns: 1fr 320px !important;
+  padding-top: 70px !important; /* Spacing for overlapping search input */
 }
 #articles-feed-section .sidebar {
   grid-column: 2 !important;
@@ -1490,6 +1526,15 @@ body {
   gap: 24px !important;
   padding: 8px !important;
   border-radius: var(--radius-lg) !important;
+  transition: all var(--transition-normal) !important;
+}
+.article-card:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.15) !important;
+}
+[data-theme="dark"] .article-card:hover {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6) !important;
 }
 .card-content {
   grid-column: 2 !important;
@@ -1508,6 +1553,7 @@ body {
 .profile-card {
   text-align: center;
   padding: 30px 20px !important;
+  border: 1px solid var(--border-color) !important;
 }
 .profile-header {
   margin-bottom: 16px;
@@ -1521,7 +1567,10 @@ body {
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.25);
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--bg-tertiary);
-  border: 2px solid var(--border-color);
+  border: 3px solid rgba(255, 255, 255, 0.6) !important;
+}
+[data-theme="dark"] .profile-avatar {
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
 .profile-avatar:hover {
   transform: rotate(360deg) scale(1.05);
@@ -1554,8 +1603,8 @@ body {
 .profile-stats {
   display: flex;
   justify-content: space-around;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  border-top: 1px dashed var(--border-color) !important;
+  border-bottom: 1px dashed var(--border-color) !important;
   padding: 16px 0;
   margin-bottom: 24px;
 }
@@ -1642,6 +1691,47 @@ body {
   color: #fff !important;
   border-color: transparent !important;
   box-shadow: 0 4px 10px rgba(99, 102, 241, 0.15);
+}
+
+/* Featured lists layout updates */
+.featured-item {
+  border-radius: var(--radius-md);
+  padding: 8px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+.featured-item:hover {
+  transform: translateY(-2px);
+  background-color: var(--bg-secondary);
+  border-color: var(--accent-primary);
+}
+
+/* Search Box design updates - overlap banner */
+.search-container {
+  margin-top: 40px !important;
+  margin-bottom: -44px !important;
+  position: relative;
+  z-index: 10;
+  max-width: 600px !important;
+}
+.search-input {
+  background-color: var(--bg-secondary) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05) !important;
+  padding: 16px 24px 16px 54px !important;
+  font-size: 1rem !important;
+  color: var(--text-primary) !important;
+}
+.search-input:focus {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.15) !important;
+}
+.search-icon {
+  left: 20px !important;
 }
 
 /* Mobile responsive fixes */
