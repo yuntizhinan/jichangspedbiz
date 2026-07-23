@@ -695,7 +695,7 @@ article_list = [
   },
   {
     'slug': 'cheap-airports',
-    'title': '便宜机场推荐：10元左右高性价比机场首选（光年梯与快狸）',
+    'title': '便宜机场推荐：10元左右高性价比机场首选',
     'date': '2026-07-05',
     'readTime': 10,
     'views': 2090,
@@ -771,7 +771,7 @@ article_list = [
   },
   {
     'slug': 'premium-airports',
-    'title': '优质机场推荐：适合4K视频与办公的稳定专线机场推荐（极连云与边缘）',
+    'title': '优质机场推荐：适合4K视频与办公的稳定专线机场推荐',
     'date': '2026-07-02',
     'readTime': 10,
     'views': 1520,
