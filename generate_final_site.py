@@ -879,6 +879,10 @@ article_list = [
             <td>流媒体解锁出色，价格低廉，月付极具诱惑力。</td>
           </tr>
           <tr>
+            <td><a href="{links['速界']}" target="_blank"><strong>速界官网 ↗</strong></a></td>
+            <td>所有套餐完全不限速、不限设备，提供60+全球节点及自研客户端。</td>
+          </tr>
+          <tr>
             <td><a href="{links['边缘']}" target="_blank"><strong>边缘官网 ↗</strong></a></td>
             <td>隐私安全最高，配备自研一键接入软件。</td>
           </tr>
@@ -901,10 +905,6 @@ article_list = [
           <tr>
             <td><a href="{links['寰宇云']}" target="_blank"><strong>寰宇云官网 ↗</strong></a></td>
             <td>不限连接客户端数量，原生IP全面解锁流媒体，价格低至¥79/年。</td>
-          </tr>
-          <tr>
-            <td><a href="{links['速界']}" target="_blank"><strong>速界官网 ↗</strong></a></td>
-            <td>所有套餐完全不限速、不限设备，提供60+全球节点及自研客户端。</td>
           </tr>
         </tbody>
       </table>
