@@ -7,16 +7,16 @@
   /* Colors - Light Theme */
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
+  --bg-tertiary: #e2ecf5;
   
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --text-primary: #0D112D;
+  --text-secondary: #1E427F;
+  --text-muted: #6C94B8;
   
-  --accent-primary: #ea580c;
-  --accent-secondary: #d97706;
-  --accent-gradient: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
-  --accent-soft: rgba(234, 88, 12, 0.08);
+  --accent-primary: #1E427F;
+  --accent-secondary: #2C609C;
+  --accent-gradient: linear-gradient(135deg, #12245C 0%, #2C609C 100%);
+  --accent-soft: rgba(30, 66, 127, 0.08);
   
   --success: #10b981;
   --success-soft: rgba(16, 185, 129, 0.08);
@@ -42,18 +42,18 @@
 
 [data-theme="dark"] {
   /* Colors - Dark Theme */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --bg-tertiary: #1f2937;
+  --bg-primary: #0D112D;
+  --bg-secondary: #12245C;
+  --bg-tertiary: #1E427F;
   
-  --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
-  --text-muted: #9ca3af;
+  --text-primary: #f0f4f8;
+  --text-secondary: #d9e2ec;
+  --text-muted: #9fb3c8;
   
-  --accent-primary: #fb923c;
-  --accent-secondary: #f59e0b;
-  --accent-gradient: linear-gradient(135deg, #fb923c 0%, #f59e0b 100%);
-  --accent-soft: rgba(251, 146, 60, 0.12);
+  --accent-primary: #6C94B8;
+  --accent-secondary: #2C609C;
+  --accent-gradient: linear-gradient(135deg, #1E427F 0%, #6C94B8 100%);
+  --accent-soft: rgba(108, 148, 184, 0.12);
   
   --success: #34d399;
   --success-soft: rgba(52, 211, 153, 0.12);
@@ -1440,58 +1440,58 @@ ul, ol {
   --radius-md: 16px;
   --radius-lg: 28px;
   
-  /* Cozy Creamy Light Mode (Inspired by Figure 2 & 3) */
-  --bg-primary-gradient: linear-gradient(135deg, rgba(253, 251, 247, 0.85) 0%, rgba(244, 238, 225, 0.92) 100%);
-  --bg-secondary: rgba(255, 255, 255, 0.55);
-  --bg-dropdown: #FAF8F5;
-  --bg-solid-card: #FDFBF7;
-  --bg-table-header: #F4EEE1;
-  --bg-tertiary: rgba(245, 239, 225, 0.6);
-  --border-color: rgba(230, 220, 200, 0.5);
-  --card-shadow: 0 12px 40px -10px rgba(139, 92, 26, 0.08);
+  /* Cozy Ice Blue Light Mode (DopelyColors palette) */
+  --bg-primary-gradient: linear-gradient(135deg, rgba(240, 244, 248, 0.85) 0%, rgba(217, 226, 236, 0.92) 100%);
+  --bg-secondary: rgba(255, 255, 255, 0.65);
+  --bg-dropdown: #FAFBFD;
+  --bg-solid-card: #FFFFFF;
+  --bg-table-header: #E2ECF5;
+  --bg-tertiary: rgba(217, 226, 236, 0.5);
+  --border-color: rgba(108, 148, 184, 0.25);
+  --card-shadow: 0 12px 40px -10px rgba(18, 36, 92, 0.08);
   
-  --text-primary: #3d2f26;      /* Warm dark brown for readable tech content */
-  --text-secondary: #605147;    /* Elegant middle brown */
-  --text-muted: #8c7d72;        /* Muted brown */
+  --text-primary: #0D112D;      /* Deep Midnight Navy for high readability */
+  --text-secondary: #1E427F;    /* Classic Blue */
+  --text-muted: #6C94B8;        /* Soft Muted Steel Blue */
   
-  --accent-primary: #ea580c;    /* Sunset Orange */
-  --accent-secondary: #d97706;  /* Golden Amber */
-  --accent-gradient: linear-gradient(135deg, #ea580c 0%, #d97706 100%);
-  --accent-soft: rgba(234, 88, 12, 0.08);
+  --accent-primary: #1E427F;    /* Classic Blue */
+  --accent-secondary: #2C609C;  /* Lighter steel blue */
+  --accent-gradient: linear-gradient(135deg, #12245C 0%, #2C609C 100%);
+  --accent-soft: rgba(30, 66, 127, 0.08);
 }
 
 [data-theme="dark"] {
-  /* Frosted Scenery Dark Mode (Inspired by Figure 1) */
-  --bg-primary-gradient: linear-gradient(135deg, rgba(18, 15, 12, 0.65) 0%, rgba(18, 15, 12, 0.85) 100%);
-  --bg-secondary: rgba(15, 21, 35, 0.55);
-  --bg-dropdown: #1A202C;
-  --bg-solid-card: #181512;
-  --bg-table-header: #241D17;
-  --bg-tertiary: rgba(31, 41, 55, 0.4);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --card-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.45);
+  /* Frosted Starry Night Dark Mode (DopelyColors palette) */
+  --bg-primary-gradient: linear-gradient(135deg, rgba(13, 17, 45, 0.75) 0%, rgba(18, 36, 92, 0.9) 100%);
+  --bg-secondary: rgba(18, 36, 92, 0.35);
+  --bg-dropdown: #0D112D;
+  --bg-solid-card: #0D112D;
+  --bg-table-header: #12245C;
+  --bg-tertiary: rgba(30, 66, 127, 0.3);
+  --border-color: rgba(108, 148, 184, 0.15);
+  --card-shadow: 0 12px 40px -10px rgba(13, 17, 45, 0.6);
   
-  --text-primary: #f9fafb;
-  --text-secondary: #e5e7eb;
-  --text-muted: #9ca3af;
+  --text-primary: #F0F4F8;      /* Light Ice Blue */
+  --text-secondary: #D9E2EC;    /* Soft Ice Blue */
+  --text-muted: #9FB3C8;        /* Muted Steel Blue */
   
-  --accent-primary: #fb923c;
-  --accent-secondary: #f59e0b;
-  --accent-gradient: linear-gradient(135deg, #fb923c 0%, #f59e0b 100%);
-  --accent-soft: rgba(251, 146, 60, 0.12);
+  --accent-primary: #6C94B8;    /* Soft Slate Blue */
+  --accent-secondary: #2C609C;  /* Lighter steel blue */
+  --accent-gradient: linear-gradient(135deg, #1E427F 0%, #6C94B8 100%);
+  --accent-soft: rgba(108, 148, 184, 0.12);
 }
 
 body {
-  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop') !important;
+  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=1600&auto=format&fit=crop') !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
   transition: background-image 0.5s ease-in-out, background-color var(--transition-normal);
 }
 
-/* Beautiful Warm Dusk Scenery for Dark Mode (Frosted glass inspired by Figure 1) */
+/* Beautiful Misty Pines for Dark Mode */
 [data-theme="dark"] body {
-  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1470246973918-29a93221c455?q=80&w=1600&auto=format&fit=crop') !important;
+  background-image: var(--bg-primary-gradient), url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1600&auto=format&fit=crop') !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
