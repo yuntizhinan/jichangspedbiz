@@ -503,15 +503,31 @@ ul, ol {
   align-items: center !important;
 }
 
-/* Add icons using pseudo-elements */
-.card-meta span:first-child::before {
-  content: "📅 ";
-  font-size: 0.85rem;
+/* Ensure SVG icons inside card-meta are styled properly in article details */
+.card-meta svg {
+  width: 14px !important;
+  height: 14px !important;
+  fill: currentColor !important;
+  vertical-align: middle !important;
+  margin-right: 4px !important;
 }
 
-.card-meta span:nth-child(2)::before {
+.card-meta span {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Add icons using pseudo-elements ONLY for homepage list article-card */
+.article-card .card-meta span:first-child::before {
+  content: "📅 ";
+  font-size: 0.85rem;
+  margin-right: 4px;
+}
+
+.article-card .card-meta span:nth-child(2)::before {
   content: "👁️ ";
   font-size: 0.85rem;
+  margin-right: 4px;
 }
 
 .card-excerpt {
