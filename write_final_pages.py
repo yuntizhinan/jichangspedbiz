@@ -373,7 +373,35 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 3: 边缘 -->
+      <!-- Card 3: 速界 -->
+      <article class="article-card" data-categories="premium,cheap,established" data-tags="机场评测,一键翻墙,如何订阅购买,速界">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            速界<br>千兆不限速设备
+          </div>
+          <span class="card-badge">不限速设备</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-03</span>
+            <span>阅读 (1950)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h3>
+          <p class="card-excerpt">速界提供不限速、不限制连接的设备数的专线网络加速。年付仅¥90起，60+节点全覆盖，支持一键自研软件使用。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">速界</span>
+              <span class="card-tag">机场评测</span>
+            </div>
+            <a href="articles/sujie-review.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4: 边缘 -->
       <article class="article-card" data-categories="premium,established" data-tags="机场评测,最新节点分享,一键翻墙,边缘">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #1e293b 0%, #475569 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -401,7 +429,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 4: 快狸 -->
+      <!-- Card 5: 快狸 -->
       <article class="article-card" data-categories="established,cheap" data-tags="机场评测,不限时长,如何订阅购买,快狸">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -429,7 +457,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 5: 光速云 -->
+      <!-- Card 6: 光速云 -->
       <article class="article-card" data-categories="premium,cheap" data-tags="机场评测,最新节点分享,科学下载,光速云">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -457,7 +485,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 6: 全球云 -->
+      <!-- Card 7: 全球云 -->
       <article class="article-card" data-categories="premium,established" data-tags="不限时长,一键翻墙,如何订阅购买,全球云">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -485,7 +513,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 7: 瞬云 -->
+      <!-- Card 8: 瞬云 -->
       <article class="article-card" data-categories="cheap,established" data-tags="机场评测,不限时长,科学下载,瞬云">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -513,7 +541,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 8: 寰宇云 -->
+      <!-- Card 9: 寰宇云 -->
       <article class="article-card" data-categories="premium,established" data-tags="一键翻墙,如何订阅购买,最新节点分享,寰宇云">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -541,33 +569,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 9: 速界 -->
-      <article class="article-card" data-categories="premium,cheap,established" data-tags="机场评测,一键翻墙,如何订阅购买,速界">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            速界<br>千兆不限速设备
-          </div>
-          <span class="card-badge">不限速设备</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-03</span>
-            <span>阅读 (1950)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h3>
-          <p class="card-excerpt">速界提供不限速、不限制连接的设备数的专线网络加速。年付仅¥90起，60+节点全覆盖，支持一键自研软件使用。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">速界</span>
-              <span class="card-tag">机场评测</span>
-            </div>
-            <a href="articles/sujie-review.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
+
 
       <!-- Card 10: 精选汇总 -->
       <article class="article-card" data-categories="curated" data-tags="机场评测,最新节点分享,如何订阅购买,不限时长,极连云,光年梯,边缘,快狸,光速云,全球云,瞬云,寰宇云,速界">
