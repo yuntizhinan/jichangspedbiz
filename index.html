@@ -106,7 +106,140 @@
 
   <!-- Main Content Layout -->
   <main class="container main-layout" id="articles-feed-section">
-    <!-- Left Column: Articles Feed -->
+    <!-- Left Column: Sidebar -->
+    <aside class="sidebar">
+      <!-- Widget 0: Profile Card -->
+      <div class="sidebar-widget profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar">
+            <svg viewBox="0 0 100 100">
+              <defs>
+                <linearGradient id="avatar-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="100%" stop-color="#6366f1" />
+                </linearGradient>
+              </defs>
+              <circle cx="50" cy="50" r="45" fill="url(#avatar-glow)" />
+              <path d="M50 20 L65 50 L80 50 L55 60 L60 80 L50 75 L40 80 L45 60 L20 50 L35 50 Z" fill="#fff" />
+            </svg>
+          </div>
+          <h3 class="profile-name">机场速递</h3>
+          <span class="profile-domain">jichangspeed.biz</span>
+        </div>
+        <p class="profile-motto">2026年最新稳定安全高速便宜专线中继机场推荐，专注于为您提供高性价比的科学上网通道。</p>
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-num">13</span>
+            <span class="stat-label">评测文章</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">16</span>
+            <span class="stat-label">热门标签</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">99+</span>
+            <span class="stat-label">日均访问</span>
+          </div>
+        </div>
+        <div class="profile-social">
+          <a href="https://t.me/yuntizhinan" target="_blank" title="Telegram 频道" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .24z"/></svg>
+          </a>
+          <a href="mailto:support@jichangspeed.biz" title="联系邮箱" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <a href="sitemap.xml" title="网站地图" class="social-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Widget 1: Announcement Card -->
+      <div class="sidebar-widget announcement-card">
+        <h3 class="widget-title">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z"/></svg>
+          公告栏
+        </h3>
+        <div class="announcement-content">
+          <p>📢 欢迎来到机场速递！</p>
+          <p>我们坚持“客观独立测试、长效连通性监测、真实晚高峰测速”的硬核原则，为您排雷和精选稳定、便宜的高端 IPLC/IEPL 专线中继机场订阅官网。</p>
+          <p class="announcement-highlight">建议按 Ctrl+D 收藏本站，获取最新机场官网入口！</p>
+        </div>
+      </div>
+
+      <!-- Widget 2: Popular Airport Tags -->
+      <div class="sidebar-widget">
+        <h3 class="widget-title">
+          <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 8.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75S6.47 8.25 5.5 8.25z"/></svg>
+          热门标签
+        </h3>
+        <div class="tags-cloud">
+          <a href="#" class="sidebar-tag" data-tag="机场评测">机场评测</a>
+          <a href="#" class="sidebar-tag" data-tag="不限时长">不限时长</a>
+          <a href="#" class="sidebar-tag" data-tag="科学下载">科学下载</a>
+          <a href="#" class="sidebar-tag" data-tag="最新节点分享">最新节点分享</a>
+          <a href="#" class="sidebar-tag" data-tag="免费vpn">免费vpn</a>
+          <a href="#" class="sidebar-tag" data-tag="一键翻墙">一键翻墙</a>
+          <a href="#" class="sidebar-tag" data-tag="如何订阅购买">如何订阅购买</a>
+          <a href="#" class="sidebar-tag" data-tag="极连云">极连云</a>
+          <a href="#" class="sidebar-tag" data-tag="光年梯">光年梯</a>
+          <a href="#" class="sidebar-tag" data-tag="边缘">边缘</a>
+          <a href="#" class="sidebar-tag" data-tag="快狸">快狸</a>
+          <a href="#" class="sidebar-tag" data-tag="光速云">光速云</a>
+          <a href="#" class="sidebar-tag" data-tag="全球云">全球云</a>
+          <a href="#" class="sidebar-tag" data-tag="瞬云">瞬云</a>
+          <a href="#" class="sidebar-tag" data-tag="寰宇云">寰宇云</a>
+          <a href="#" class="sidebar-tag" data-tag="速界">速界</a>
+        </div>
+      </div>
+
+      <!-- Widget 3: Featured Articles -->
+      <div class="sidebar-widget">
+        <h3 class="widget-title">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          精选文章
+        </h3>
+        <div class="featured-list">
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">JL</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
+              <span class="featured-item-date">2026-07-18</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
+              <span class="featured-item-date">2026-07-16</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
+              <span class="featured-item-date">2026-07-03</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SY</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
+              <span class="featured-item-date">2026-07-06</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">HY</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/huanyuyun-review.html">寰宇云 机场评测：不限在线设备与原生 IP 解锁的专线选择</a></h4>
+              <span class="featured-item-date">2026-07-04</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Articles Feed -->
     <section class="content-feed">
       <div class="feed-header">
         <h2 class="feed-title">最新专线测速与购买订阅评测</h2>
@@ -483,80 +616,6 @@
       </article>
 
     </section>
-
-    <!-- Right Column: Sidebar -->
-    <aside class="sidebar">
-      <!-- Widget 1: Popular Airport Tags -->
-      <div class="sidebar-widget">
-        <h3 class="widget-title">
-          <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 8.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75S6.47 8.25 5.5 8.25z"/></svg>
-          热门标签
-        </h3>
-        <div class="tags-cloud">
-          <a href="#" class="sidebar-tag" data-tag="机场评测">机场评测</a>
-          <a href="#" class="sidebar-tag" data-tag="不限时长">不限时长</a>
-          <a href="#" class="sidebar-tag" data-tag="科学下载">科学下载</a>
-          <a href="#" class="sidebar-tag" data-tag="最新节点分享">最新节点分享</a>
-          <a href="#" class="sidebar-tag" data-tag="免费vpn">免费vpn</a>
-          <a href="#" class="sidebar-tag" data-tag="一键翻墙">一键翻墙</a>
-          <a href="#" class="sidebar-tag" data-tag="如何订阅购买">如何订阅购买</a>
-          <a href="#" class="sidebar-tag" data-tag="极连云">极连云</a>
-          <a href="#" class="sidebar-tag" data-tag="光年梯">光年梯</a>
-          <a href="#" class="sidebar-tag" data-tag="边缘">边缘</a>
-          <a href="#" class="sidebar-tag" data-tag="快狸">快狸</a>
-          <a href="#" class="sidebar-tag" data-tag="光速云">光速云</a>
-          <a href="#" class="sidebar-tag" data-tag="全球云">全球云</a>
-          <a href="#" class="sidebar-tag" data-tag="瞬云">瞬云</a>
-          <a href="#" class="sidebar-tag" data-tag="寰宇云">寰宇云</a>
-          <a href="#" class="sidebar-tag" data-tag="速界">速界</a>
-        </div>
-      </div>
-
-      <!-- Widget 2: Featured Articles -->
-      <div class="sidebar-widget">
-        <h3 class="widget-title">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          精选文章
-        </h3>
-        <div class="featured-list">
-          <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">JL</div>
-            <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
-              <span class="featured-item-date">2026-07-18</span>
-            </div>
-          </div>
-          <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
-            <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
-              <span class="featured-item-date">2026-07-16</span>
-            </div>
-          </div>
-          <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
-            <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
-              <span class="featured-item-date">2026-07-03</span>
-            </div>
-          </div>
-          <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SY</div>
-            <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
-              <span class="featured-item-date">2026-07-06</span>
-            </div>
-          </div>
-          <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">HY</div>
-            <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/huanyuyun-review.html">寰宇云 机场评测：不限在线设备与原生 IP 解锁的专线选择</a></h4>
-              <span class="featured-item-date">2026-07-04</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
   </main>
 
   <!-- User Reviews / Testimonials Section -->
