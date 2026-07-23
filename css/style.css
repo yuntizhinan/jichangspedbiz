@@ -450,7 +450,7 @@ ul, ol {
 .card-badge {
   position: absolute;
   top: 12px;
-  left: 12px;
+  right: 12px;
   background-color: rgba(15, 23, 42, 0.8);
   color: #ffffff;
   padding: 4px 10px;
