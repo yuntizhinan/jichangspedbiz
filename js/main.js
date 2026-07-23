@@ -82,9 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
     value: ''
   };
 
+  let isFeedExpanded = false;
+
   function updateArticlesVisibility() {
     let visibleCount = 0;
+    let totalMatches = 0;
     const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    const isHomepage = !!document.querySelector('.hero-section');
 
     articleCards.forEach(card => {
       const cardCategories = card.dataset.categories ? card.dataset.categories.split(',') : [];
@@ -111,12 +115,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Final decision
       if (matchesFilter && matchesSearch) {
-        card.style.display = 'grid';
-        visibleCount++;
+        totalMatches++;
+        // Limit on homepage when not filtering and not expanded
+        if (isHomepage && currentFilter.type === 'all' && !searchVal && !isFeedExpanded) {
+          if (totalMatches <= 5) {
+            card.style.display = 'grid';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        } else {
+          card.style.display = 'grid';
+          visibleCount++;
+        }
       } else {
         card.style.display = 'none';
       }
     });
+
+    // Update Expand Button UI
+    const expandContainer = document.getElementById('expand-btn-container');
+    if (isHomepage && currentFilter.type === 'all' && !searchVal) {
+      if (expandContainer) {
+        expandContainer.style.display = 'flex';
+        const expandBtn = document.getElementById('expand-articles-btn');
+        if (expandBtn) {
+          if (isFeedExpanded) {
+            expandBtn.innerHTML = `收起文章列表 <svg class="expand-chevron" style="transform: rotate(180deg);" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>`;
+          } else {
+            const hiddenCount = Math.max(0, totalMatches - 5);
+            expandBtn.innerHTML = `展开全部 ${totalMatches} 篇文章 <svg class="expand-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>`;
+          }
+        }
+      }
+    } else {
+      if (expandContainer) {
+        expandContainer.style.display = 'none';
+      }
+    }
 
     // Update filter UI indicator
     if (filterIndicator && filterLabel) {
@@ -254,8 +290,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterParam = urlParams.get('filter');
   const tagParam = urlParams.get('tag');
 
-  // Only apply URL params if we have article cards on this page (i.e. we are on the homepage index)
+  // Only apply URL parameters or default visibility if we are on index
   if (articleCards.length > 0) {
+    const isHomepage = !!document.querySelector('.hero-section');
+    const contentFeed = document.querySelector('.content-feed');
+    if (isHomepage && contentFeed) {
+      const expandBtnContainer = document.createElement('div');
+      expandBtnContainer.id = 'expand-btn-container';
+      expandBtnContainer.className = 'expand-btn-container';
+      expandBtnContainer.innerHTML = `
+        <button class="expand-articles-btn" id="expand-articles-btn">
+          展开全部文章
+          <svg class="expand-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+        </button>
+      `;
+      contentFeed.appendChild(expandBtnContainer);
+      
+      const expandArticlesBtn = document.getElementById('expand-articles-btn');
+      if (expandArticlesBtn) {
+        expandArticlesBtn.addEventListener('click', () => {
+          isFeedExpanded = !isFeedExpanded;
+          updateArticlesVisibility();
+          
+          // If collapsing, scroll smoothly back to the top of feed section
+          if (!isFeedExpanded) {
+            const feedSection = document.getElementById('articles-feed-section');
+            if (feedSection) {
+              const headerOffset = 80;
+              const elementPosition = feedSection.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = elementPosition - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      }
+    }
+
     if (filterParam) {
       setBlogFilter('category', filterParam);
     } else if (tagParam) {

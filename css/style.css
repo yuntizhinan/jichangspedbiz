@@ -2275,6 +2275,55 @@ a.core-feature-card {
   color: #fff !important;
 }
 
+/* Homepage Article Feed Expand Button styles */
+.expand-btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0 15px;
+  width: 100%;
+}
+
+.expand-articles-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: var(--bg-secondary);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.expand-articles-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 24px -6px rgba(59, 130, 246, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .expand-articles-btn:hover {
+  box-shadow: 0 8px 24px -6px rgba(129, 140, 248, 0.2);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.expand-articles-btn:active {
+  transform: translateY(0);
+}
+
+.expand-chevron {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-normal);
+}
+
 .core-feature-card:hover .core-feature-title {
   color: var(--accent-primary) !important;
 }
