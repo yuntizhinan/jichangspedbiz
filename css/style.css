@@ -1441,14 +1441,14 @@ ul, ol {
   --radius-lg: 28px;
   
   /* Cozy Ice Blue Light Mode (DopelyColors palette) */
-  --bg-primary-gradient: linear-gradient(135deg, rgba(240, 244, 248, 0.85) 0%, rgba(217, 226, 236, 0.92) 100%);
-  --bg-secondary: rgba(255, 255, 255, 0.65);
+  --bg-primary-gradient: linear-gradient(135deg, rgba(240, 244, 248, 0.45) 0%, rgba(217, 226, 236, 0.6) 100%);
+  --bg-secondary: rgba(255, 255, 255, 0.6);
   --bg-dropdown: #FAFBFD;
-  --bg-solid-card: #FFFFFF;
+  --bg-solid-card: rgba(255, 255, 255, 0.85);
   --bg-table-header: #E2ECF5;
-  --bg-tertiary: rgba(217, 226, 236, 0.5);
+  --bg-tertiary: rgba(217, 226, 236, 0.4);
   --border-color: rgba(108, 148, 184, 0.25);
-  --card-shadow: 0 12px 40px -10px rgba(18, 36, 92, 0.08);
+  --card-shadow: 0 12px 40px -10px rgba(18, 36, 92, 0.06);
   
   --text-primary: #0D112D;      /* Deep Midnight Navy for high readability */
   --text-secondary: #1E427F;    /* Classic Blue */
@@ -1462,14 +1462,14 @@ ul, ol {
 
 [data-theme="dark"] {
   /* Frosted Starry Night Dark Mode (DopelyColors palette) */
-  --bg-primary-gradient: linear-gradient(135deg, rgba(13, 17, 45, 0.75) 0%, rgba(18, 36, 92, 0.9) 100%);
-  --bg-secondary: rgba(18, 36, 92, 0.35);
+  --bg-primary-gradient: linear-gradient(135deg, rgba(13, 17, 45, 0.4) 0%, rgba(18, 36, 92, 0.55) 100%);
+  --bg-secondary: rgba(18, 36, 92, 0.45);
   --bg-dropdown: #0D112D;
-  --bg-solid-card: #0D112D;
+  --bg-solid-card: rgba(18, 36, 92, 0.65);
   --bg-table-header: #12245C;
-  --bg-tertiary: rgba(30, 66, 127, 0.3);
+  --bg-tertiary: rgba(30, 66, 127, 0.25);
   --border-color: rgba(108, 148, 184, 0.15);
-  --card-shadow: 0 12px 40px -10px rgba(13, 17, 45, 0.6);
+  --card-shadow: 0 12px 40px -10px rgba(13, 17, 45, 0.45);
   
   --text-primary: #F0F4F8;      /* Light Ice Blue */
   --text-secondary: #D9E2EC;    /* Soft Ice Blue */
@@ -2204,8 +2204,8 @@ body {
   border-radius: var(--radius-lg) !important;
   padding: 40px !important;
   box-shadow: var(--card-shadow) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
 }
 
 .article-body th {
