@@ -46,13 +46,13 @@
   --bg-secondary: #12245C;
   --bg-tertiary: #1E427F;
   
-  --text-primary: #f0f4f8;
-  --text-secondary: #d9e2ec;
-  --text-muted: #9fb3c8;
+  --text-primary: #ffffff;
+  --text-secondary: #f1f5f9;
+  --text-muted: #b0c2d6;
   
-  --accent-primary: #6C94B8;
+  --accent-primary: #60a5fa;
   --accent-secondary: #2C609C;
-  --accent-gradient: linear-gradient(135deg, #6C94B8 0%, #E2ECF5 100%);
+  --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #ffffff 100%);
   --accent-soft: rgba(108, 148, 184, 0.12);
   
   --success: #34d399;
@@ -1462,22 +1462,22 @@ ul, ol {
 
 [data-theme="dark"] {
   /* Frosted Starry Night Dark Mode (DopelyColors palette) */
-  --bg-primary-gradient: linear-gradient(135deg, rgba(13, 17, 45, 0.65) 0%, rgba(18, 36, 92, 0.8) 100%);
-  --bg-secondary: rgba(13, 17, 45, 0.85);
+  --bg-primary-gradient: linear-gradient(135deg, rgba(13, 17, 45, 0.45) 0%, rgba(18, 36, 92, 0.6) 100%);
+  --bg-secondary: rgba(18, 36, 92, 0.55);
   --bg-dropdown: #0D112D;
-  --bg-solid-card: rgba(13, 17, 45, 0.95);
+  --bg-solid-card: rgba(18, 36, 92, 0.72);
   --bg-table-header: #12245C;
   --bg-tertiary: rgba(30, 66, 127, 0.25);
   --border-color: rgba(108, 148, 184, 0.15);
   --card-shadow: 0 12px 40px -10px rgba(13, 17, 45, 0.45);
   
-  --text-primary: #F0F4F8;      /* Light Ice Blue */
-  --text-secondary: #D9E2EC;    /* Soft Ice Blue */
-  --text-muted: #9FB3C8;        /* Muted Steel Blue */
+  --text-primary: #ffffff;      /* Pure White for high readability */
+  --text-secondary: #f1f5f9;    /* Bright Ice Blue */
+  --text-muted: #b0c2d6;        /* Lighter Steel Blue */
   
-  --accent-primary: #6C94B8;    /* Soft Slate Blue */
+  --accent-primary: #60a5fa;    /* Bright Sky Blue */
   --accent-secondary: #2C609C;  /* Lighter steel blue */
-  --accent-gradient: linear-gradient(135deg, #6C94B8 0%, #E2ECF5 100%);
+  --accent-gradient: linear-gradient(135deg, #60a5fa 0%, #ffffff 100%);
   --accent-soft: rgba(108, 148, 184, 0.12);
 }
 
@@ -2224,5 +2224,15 @@ body {
   .article-page .content-feed {
     padding: 20px !important;
   }
+}
+
+/* Add Text-Shadow Separation for readability under transparent backdrops */
+[data-theme="dark"] .hero-title, 
+[data-theme="dark"] .hero-subtitle, 
+[data-theme="dark"] .feed-title, 
+[data-theme="dark"] .widget-title, 
+[data-theme="dark"] .card-title, 
+[data-theme="dark"] .article-title-large {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
