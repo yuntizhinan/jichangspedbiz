@@ -892,9 +892,9 @@ def generate_article_html(article, index):
     # Featured articles
     featured_items = [
         {'slug': 'jilianyun-review', 'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐', 'date': '2026-07-18', 'label': 'JL', 'color': 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)'},
-        {'slug': 'guangnianti-review', 'title': '光年梯 机场评测：稳定解锁流媒体与高可用线路方案', 'date': '2026-07-16', 'label': 'GN', 'color': 'linear-gradient(135deg, #10b981 0%, #059669 100%)'},
-        {'slug': 'edge-review', 'title': '边缘 机场（EdgeNova）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'color': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'},
         {'slug': 'sujie-review', 'title': '速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐', 'date': '2026-07-03', 'label': 'SJ', 'color': 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)'},
+        {'slug': 'edge-review', 'title': '边缘 机场（EdgeNova）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'color': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'},
+        {'slug': 'guangnianti-review', 'title': '光年梯 机场评测：稳定解锁流媒体与高可用线路方案', 'date': '2026-07-16', 'label': 'GN', 'color': 'linear-gradient(135deg, #10b981 0%, #059669 100%)'},
         {'slug': 'shunyun-review', 'title': '瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案', 'date': '2026-07-06', 'label': 'SY', 'color': 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'}
     ]
     featured_items_html = "\n".join([

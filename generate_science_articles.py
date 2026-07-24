@@ -23,10 +23,10 @@ def replace_text_globally():
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="{prefix}guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
-              <span class="featured-item-date">2026-07-16</span>
+              <h4 class="featured-item-title"><a href="{prefix}sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
+              <span class="featured-item-date">2026-07-03</span>
             </div>
           </div>
           <div class="featured-item">
@@ -37,10 +37,10 @@ def replace_text_globally():
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="{prefix}sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
-              <span class="featured-item-date">2026-07-03</span>
+              <h4 class="featured-item-title"><a href="{prefix}guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
+              <span class="featured-item-date">2026-07-16</span>
             </div>
           </div>
           <div class="featured-item">
@@ -112,10 +112,10 @@ def replace_text_globally():
               </div>
             </div>
             <div class="featured-item">
-              <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
+              <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
               <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="{prefix}guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
-                <span class="featured-item-date">2026-07-16</span>
+                <h4 class="featured-item-title"><a href="{prefix}sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
+                <span class="featured-item-date">2026-07-03</span>
               </div>
             </div>
             <div class="featured-item">
@@ -126,10 +126,10 @@ def replace_text_globally():
               </div>
             </div>
             <div class="featured-item">
-              <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
+              <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
               <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="{prefix}sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
-                <span class="featured-item-date">2026-07-03</span>
+                <h4 class="featured-item-title"><a href="{prefix}guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
+                <span class="featured-item-date">2026-07-16</span>
               </div>
             </div>
             <div class="featured-item">
