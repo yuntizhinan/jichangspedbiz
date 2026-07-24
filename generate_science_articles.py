@@ -68,6 +68,38 @@ def replace_text_globally():
             return content
         return content.replace("</head>", style_block + "\n</head>")
 
+    def remove_footer_links(content):
+        content_norm = content.replace("\r\n", "\n")
+        block1 = """          <div class="footer-links">
+            <a href="sitemap.xml" class="footer-link">网站地图</a>
+            <a href="robots.txt" class="footer-link">Robots.txt</a>
+          </div>"""
+        content_norm = content_norm.replace(block1, "")
+        
+        block1_alt = """      <div class="footer-links">
+        <a href="sitemap.xml" class="footer-link">网站地图</a>
+        <a href="robots.txt" class="footer-link">Robots.txt</a>
+      </div>"""
+        content_norm = content_norm.replace(block1_alt, "")
+
+        block2 = """          <div class="footer-links">
+            <a href="../sitemap.xml" class="footer-link">网站地图</a>
+            <a href="../robots.txt" class="footer-link">Robots.txt</a>
+          </div>"""
+        content_norm = content_norm.replace(block2, "")
+        
+        block2_alt = """      <div class="footer-links">
+        <a href="../sitemap.xml" class="footer-link">网站地图</a>
+        <a href="../robots.txt" class="footer-link">Robots.txt</a>
+      </div>"""
+        content_norm = content_norm.replace(block2_alt, "")
+
+        content_norm = content_norm.replace('<a href="sitemap.xml" class="footer-link">网站地图</a>', '')
+        content_norm = content_norm.replace('<a href="robots.txt" class="footer-link">Robots.txt</a>', '')
+        content_norm = content_norm.replace('<a href="../sitemap.xml" class="footer-link">网站地图</a>', '')
+        content_norm = content_norm.replace('<a href="../robots.txt" class="footer-link">Robots.txt</a>', '')
+        return content_norm.replace("\n", os.linesep)
+
     def update_featured_list_in_html(content, is_subpage=False):
         content_norm = content.replace("\r\n", "\n")
         prefix = "" if is_subpage else "articles/"
@@ -149,6 +181,7 @@ def replace_text_globally():
         content = add_cache_busting_version(content)
         content = update_featured_list_in_html(content, is_subpage=False)
         content = inject_dark_logo_style_for_python(content)
+        content = remove_footer_links(content)
         
         with open("write_final_pages.py", "w", encoding="utf-8") as f:
             f.write(content)
@@ -179,6 +212,7 @@ def replace_text_globally():
         content = update_logo_content(content)
         content = add_cache_busting_version(content)
         content = inject_dark_logo_style_for_python(content)
+        content = remove_footer_links(content)
         
         with open("generate_final_site.py", "w", encoding="utf-8") as f:
             f.write(content)
@@ -208,6 +242,7 @@ def replace_text_globally():
                 html = add_cache_busting_version(html)
                 html = update_featured_list_in_html(html, is_subpage=True)
                 html = inject_dark_logo_style_for_html(html)
+                html = remove_footer_links(html)
                 
                 with open(fpath, "w", encoding="utf-8") as f:
                     f.write(html)
