@@ -187,7 +187,7 @@ def write_index():
         <p class="profile-motto">2026年最新稳定安全高速便宜专线中继机场推荐，专注于为您提供高性价比的科学上网通道。</p>
         <div class="profile-stats">
           <div class="stat-item">
-            <span class="stat-num">13</span>
+            <span class="stat-num">36</span>
             <span class="stat-label">评测文章</span>
           </div>
           <div class="stat-item">
@@ -1546,7 +1546,7 @@ def write_archives():
         <p class="profile-motto">2026年最新稳定安全高速便宜专线中继机场推荐，专注于为您提供高性价比的科学上网通道。</p>
         <div class="profile-stats">
           <div class="stat-item">
-            <span class="stat-num">{total_count}</span>
+            <span class="stat-num">36</span>
             <span class="stat-label">评测文章</span>
           </div>
           <div class="stat-item">
