@@ -280,13 +280,6 @@ def write_index():
         </h3>
         <div class="featured-list">
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">JL</div>
-            <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
-              <span class="featured-item-date">2026-07-18</span>
-            </div>
-          </div>
-          <div class="featured-item">
             <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
             <div class="featured-item-content">
               <h4 class="featured-item-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
@@ -298,6 +291,13 @@ def write_index():
             <div class="featured-item-content">
               <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
               <span class="featured-item-date">2026-07-14</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">JL</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
+              <span class="featured-item-date">2026-07-18</span>
             </div>
           </div>
           <div class="featured-item">
@@ -352,33 +352,6 @@ def write_index():
           </div>
         </div>
       </article>
-      <!-- Card 1: 极连云 -->
-      <article class="article-card" data-categories="premium,cheap" data-tags="机场评测,最新节点分享,如何订阅购买,极连云">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            极连云<br>IEPL专线评测
-          </div>
-          <span class="card-badge">IEPL专线</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-18</span>
-            <span>阅读 (2180)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h3>
-          <p class="card-excerpt">极连云是一家提供超高性价比 IEPL 专线的网络加速机场。所有节点均为 x1 倍率，晚高峰不限速，并且不限制同时在线的客户端数。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">极连云</span>
-              <span class="card-tag">机场评测</span>
-            </div>
-            <a href="articles/jilianyun-review.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
       <!-- Card 3: 速界 -->
       <article class="article-card" data-categories="premium,cheap,established" data-tags="机场评测,一键翻墙,如何订阅购买,速界">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);">
@@ -427,6 +400,33 @@ def write_index():
               <span class="card-tag">一键翻墙</span>
             </div>
             <a href="articles/edge-review.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- Card 1: 极连云 -->
+      <article class="article-card" data-categories="premium,cheap" data-tags="机场评测,最新节点分享,如何订阅购买,极连云">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            极连云<br>IEPL专线评测
+          </div>
+          <span class="card-badge">IEPL专线</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-18</span>
+            <span>阅读 (2180)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h3>
+          <p class="card-excerpt">极连云是一家提供超高性价比 IEPL 专线的网络加速机场。所有节点均为 x1 倍率，晚高峰不限速，并且不限制同时在线的客户端数。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">极连云</span>
+              <span class="card-tag">机场评测</span>
+            </div>
+            <a href="articles/jilianyun-review.html" class="read-more">
               阅读全文 
               <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
             </a>
