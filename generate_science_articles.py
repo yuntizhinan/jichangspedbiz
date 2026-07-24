@@ -5,7 +5,6 @@ import re
 def replace_text_globally():
     # 替换 LOGO 的通用子函数
     def update_logo_content(content):
-        # 归一化换行符为 \n 方便多行匹配
         content_norm = content.replace("\r\n", "\n")
         
         old_svg = """<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,42 +17,63 @@ def replace_text_globally():
           <path d="M12 6L18 13L14 12.5L14.5 17L12 15L9.5 17L10 12.5 L6 13Z" fill="#ffffff" />
         </svg>"""
         
-        # 尝试标准缩进替换
         content_norm = content_norm.replace(old_svg, new_svg)
         
-        # 尝试少两个空格缩进的替换
         old_svg_alt = """<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12 22V12M12 12L4 7.5M12 12l8-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>"""
         content_norm = content_norm.replace(old_svg_alt, new_svg)
-        
-        # 将归一化后的换行符还原为系统默认
         return content_norm.replace("\n", os.linesep)
 
     def add_cache_busting_version(content):
-        # 先回退，以防重复追加
         content = content.replace('js/main.js?v=20260724', 'js/main.js')
         content = content.replace('../js/main.js?v=20260724', '../js/main.js')
         content = content.replace('css/style.css?v=20260724', 'css/style.css')
         content = content.replace('../css/style.css?v=20260724', '../css/style.css')
         
-        # 加上最新的版本号
         content = content.replace('js/main.js', 'js/main.js?v=20260724')
         content = content.replace('../js/main.js', '../js/main.js?v=20260724')
         content = content.replace('css/style.css', 'css/style.css?v=20260724')
         content = content.replace('../css/style.css', '../css/style.css?v=20260724')
         return content
 
-    # 替换精选文章列表的子函数
+    def inject_dark_logo_style_for_python(content):
+        # Python 脚本的多行 f-string 模板，必须使用双大括号逃逸 CSS 大括号
+        style_block = """  <style>
+    /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
+    [data-theme="dark"] .logo span {{
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: #ffffff !important;
+      color: #ffffff !important;
+    }}
+  </style>"""
+        if "强力保证夜间模式下 Logo span 文本" in content:
+            return content
+        return content.replace("</head>", style_block + "\n</head>")
+
+    def inject_dark_logo_style_for_html(content):
+        # 普通静态 HTML 页面中，使用正常单大括号
+        style_block = """  <style>
+    /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
+    [data-theme="dark"] .logo span {
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: #ffffff !important;
+      color: #ffffff !important;
+    }
+  </style>"""
+        if "强力保证夜间模式下 Logo span 文本" in content:
+            return content
+        return content.replace("</head>", style_block + "\n</head>")
+
     def update_featured_list_in_html(content, is_subpage=False):
         content_norm = content.replace("\r\n", "\n")
         prefix = "" if is_subpage else "articles/"
         
         while '<div class="featured-list">' in content_norm:
-            # 找到当前组件 featured-list 头部
             idx = content_norm.find('<div class="featured-list">')
-            # 找到组件结束标志 aside 容器
             end_idx = content_norm.find('</aside>', idx)
             if end_idx == -1:
                 break
@@ -97,12 +117,9 @@ def replace_text_globally():
         </div>
       </div>"""
             
-            # 用新版块完整覆盖旧 featured-list 到 aside 闭合前的这一整个脏代码区
             content_norm = content_norm[:idx] + new_featured_html + content_norm[end_idx:]
-            # 暂时将已替换的组件标记，防止无限死循环
             content_norm = content_norm.replace('<div class="featured-list">', '<div class="featured-list-done">', 1)
             
-        # 还原标记
         content_norm = content_norm.replace('<div class="featured-list-done">', '<div class="featured-list">')
         return content_norm.replace("\n", os.linesep)
 
@@ -111,7 +128,6 @@ def replace_text_globally():
         with open("write_final_pages.py", "r", encoding="utf-8") as f:
             content = f.read()
         
-        # 替换普通文本与下拉菜单
         content = content.replace("科学上网</a>", "科普专栏</a>")
         content = content.replace("<span>科学上网</span>", "<span>科普专栏</span>")
         content = content.replace("三、科学上网", "三、科普专栏")
@@ -120,21 +136,19 @@ def replace_text_globally():
         content = content.replace("软路由科学上网", "软路由科普")
         content = content.replace("motto\">2026稳定安全高速便宜机场推荐与官网订阅评测", "motto\">2026稳定安全高速便宜机场推荐与官网订阅评测")
         
-        # 将 motto 里的“科学上网”换为“科普专栏”
         content = content.replace("提供低门槛的科学上网科普", "提供低门槛 of 科普专栏")
         content = content.replace("科学上网一站式指南", "科普专栏一站式指南")
         content = content.replace("科学上网配置购买", "科普专栏配置购买")
         
-        # 文章定义里也有科学上网
         content = content.replace("OpenWrt科学上网教程", "OpenWrt科普教程")
         content = content.replace("科学上网订阅地址", "网络订阅地址")
         content = content.replace("软路由科学上网深度", "软路由技术科普")
         content = content.replace("自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？", "自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？")
         
-        # 替换 LOGO & 版本号 & 精选侧边栏
         content = update_logo_content(content)
         content = add_cache_busting_version(content)
         content = update_featured_list_in_html(content, is_subpage=False)
+        content = inject_dark_logo_style_for_python(content)
         
         with open("write_final_pages.py", "w", encoding="utf-8") as f:
             f.write(content)
@@ -150,7 +164,6 @@ def replace_text_globally():
         content = content.replace("提供低门槛的科学上网科普", "提供低门槛的科普专栏")
         content = content.replace("所属版块: 科学上网", "所属版块: 科普专栏")
         
-        # 精准替换 generate_final_site.py 中的 featured_items 数组定义
         old_array_pattern = r"featured_items\s*=\s*\[.*?\]"
         new_array_str = """featured_items = [
         {'slug': 'jilianyun-review', 'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐', 'date': '2026-07-18', 'label': 'JL', 'color': 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)'},
@@ -159,14 +172,13 @@ def replace_text_globally():
         {'slug': 'sujie-review', 'title': '速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐', 'date': '2026-07-03', 'label': 'SJ', 'color': 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)'},
         {'slug': 'shunyun-review', 'title': '瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案', 'date': '2026-07-06', 'label': 'SY', 'color': 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'}
     ]"""
-        # 归一化换行进行正则替换
         content_norm = content.replace("\r\n", "\n")
         content_norm = re.sub(old_array_pattern, new_array_str, content_norm, flags=re.DOTALL)
         content = content_norm.replace("\n", os.linesep)
         
-        # 替换 LOGO & 版本号
         content = update_logo_content(content)
         content = add_cache_busting_version(content)
+        content = inject_dark_logo_style_for_python(content)
         
         with open("generate_final_site.py", "w", encoding="utf-8") as f:
             f.write(content)
@@ -181,7 +193,6 @@ def replace_text_globally():
                 with open(fpath, "r", encoding="utf-8") as f:
                     html = f.read()
                 
-                # 面包屑、所属版块和导航项
                 html = html.replace("科学上网</a>", "科普专栏</a>")
                 html = html.replace("<span>科学上网</span>", "<span>科普专栏</span>")
                 html = html.replace("科学上网科普", "科普专栏")
@@ -193,10 +204,10 @@ def replace_text_globally():
                 html = html.replace("软路由科学上网", "软路由技术")
                 html = html.replace("科学上网订阅地址", "网络订阅地址")
                 
-                # 替换 LOGO & 版本号 & 精选侧边栏
                 html = update_logo_content(html)
                 html = add_cache_busting_version(html)
                 html = update_featured_list_in_html(html, is_subpage=True)
+                html = inject_dark_logo_style_for_html(html)
                 
                 with open(fpath, "w", encoding="utf-8") as f:
                     f.write(html)
@@ -204,4 +215,3 @@ def replace_text_globally():
 
 if __name__ == '__main__':
     replace_text_globally()
-
