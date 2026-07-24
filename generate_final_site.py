@@ -160,19 +160,19 @@ article_list = [
   },
   {
     'slug': 'edge-review',
-    'title': '边缘 机场（极界）深度评测：无日志与极速数据中转',
+    'title': '边缘 机场（EdgeNova）深度评测：无日志与极速数据中转',
     'date': '2026-07-14',
     'readTime': 12,
     'views': 1560,
     'categories': ['premium', 'established'],
     'tags': ['机场评测', '最新节点分享', '一键翻墙', '边缘'],
-    'excerpt': '边缘机场（又称极界）是一家主打安全防护与隐私保护的高端网络中继商。其多设备支持与流媒体AI完美兼容是其核心卖点。',
+    'excerpt': '边缘机场（又称EdgeNova）是一家主打安全防护与隐私保护的高端网络中继商。其多设备支持与流媒体AI完美兼容是其核心卖点。',
     'content': f"""
-      <p>在全球信息化和互联网监管日趋严格的环境中，用户个人隐私保护与数据传输的安全性已被提到了前所未有的高度。特别是对于日常需要开发涉外加密商务往来、进行跨国远程开发提交源码、或者运行量化交易分析的极客群体而言，普通的不加密网络中继极易遭遇中间人劫持与流量指纹分析。今天我们要进行深度测速与机制测评的 <strong>边缘 机场</strong>（又称极界），就是一款主打无日志读写、高度隐私安全、且全线标配自研专属客户端的高端专线中继网络平台。</p>
+      <p>在全球信息化和互联网监管日趋严格的环境中，用户个人隐私保护与数据传输的安全性已被提到了前所未有的高度。特别是对于日常需要开发涉外加密商务往来、进行跨国远程开发提交源码、或者运行量化交易分析的极客群体而言，普通的不加密网络中继极易遭遇中间人劫持与流量指纹分析。今天我们要进行深度测速与机制测评的 <strong>边缘 机场</strong>（又称EdgeNova），就是一款主打无日志读写、高度隐私安全、且全线标配自研专属客户端的高端专线中继网络平台。</p>
       <h2>一、只读内存与零日志 (Zero-Log) 的隐私安全壁垒</h2>
       <p>边缘机场自成立之初，就将“极客隐私防护”作为产品的第一核心定位。它的所有网络专线节点均部署在只读内存（RAM-only）架构的独立服务器上。当您的网络请求经过边缘机场的专线通道时，所有数据流量均在只读内存中进行中转，不在本地硬盘中保留任何用户的登录 IP 地址、访问轨迹、数据长度等隐私指纹。一旦服务器遭遇异常抖动或断电，内存数据将瞬间全部清空，从物理机制上杜绝了数据外泄的可能。同时，全节点全链路采用强混淆隧道加密，能够完全防范大流量深度数据报检测，为极客和外贸商户提供了最安心的无缝防屏蔽网络防护。</p>
       <h2>二、自研一键连接客户端彻底告别繁琐参数</h2>
-      <p>很多购买了科学上网服务的用户，往往在“下载第三方软件、手动设置代理端口、复制转换订阅文件”等第一步就卡住甚至被黑客钓鱼网站欺骗。为了将使用门槛降低至零，边缘机场（极界）投入资金针对 Windows, macOS, Android 平台自研并推出了其专属的 <strong>自研一键连接客户端软件</strong>。用户在官网注册购买后，只需直接进入后台面板下载软件并运行登录您的注册账户，客户端便会自动在后台拉取最优专线配置列表并自动寻址，一键开启起飞，省去了手动复制订阅的烦恼，对新手十分照顾。</p>
+      <p>很多购买了科学上网服务的用户，往往在“下载第三方软件、手动设置代理端口、复制转换订阅文件”等第一步就卡住甚至被黑客钓鱼网站欺骗。为了将使用门槛降低至零，边缘机场（EdgeNova）投入资金针对 Windows, macOS, Android 平台自研并推出了其专属的 <strong>自研一键连接客户端软件</strong>。用户在官网注册购买后，只需直接进入后台面板下载软件并运行登录您的注册账户，客户端便会自动在后台拉取最优专线配置列表并自动寻址，一键开启起飞，省去了手动复制订阅的烦恼，对新手十分照顾。</p>
       <h2>三、边缘 订阅套餐价格表</h2>
       <p>点击下方表格中的套餐名称即可直接前往官网订阅（季付享95折，半年付9折，年付85折）：</p>
       <table>
@@ -198,25 +198,25 @@ article_list = [
             <td>超高折合性价比，适合年付党</td>
           </tr>
           <tr>
-            <td><a href="{links['边缘']}" target="_blank"><strong>极界·标准套餐 ↗</strong></a></td>
+            <td><a href="{links['边缘']}" target="_blank"><strong>EdgeNova·标准套餐 ↗</strong></a></td>
             <td>¥25.00/月</td>
             <td>120GB/月</td>
             <td>高速无日志，多设备同时在线无压力</td>
           </tr>
           <tr>
-            <td><a href="{links['边缘']}" target="_blank"><strong>极界·进阶套餐 ↗</strong></a></td>
+            <td><a href="{links['边缘']}" target="_blank"><strong>EdgeNova·进阶套餐 ↗</strong></a></td>
             <td>¥50.00/月</td>
             <td>250GB/月</td>
             <td>专为中重度外贸/科研用户配置，重置9折</td>
           </tr>
           <tr>
-            <td><a href="{links['边缘']}" target="_blank"><strong>极界·高级套餐 ↗</strong></a></td>
+            <td><a href="{links['边缘']}" target="_blank"><strong>EdgeNova·高级套餐 ↗</strong></a></td>
             <td>¥100.00/月</td>
             <td>500GB/月</td>
             <td>支持团队高并发，极速下载通道</td>
           </tr>
           <tr>
-            <td><a href="{links['边缘']}" target="_blank"><strong>极界·极限套餐 ↗</strong></a></td>
+            <td><a href="{links['边缘']}" target="_blank"><strong>EdgeNova·极限套餐 ↗</strong></a></td>
             <td>¥200.00/月</td>
             <td>1000GB/月</td>
             <td>超大规模高带宽，1千GB巨量空间</td>
@@ -224,7 +224,7 @@ article_list = [
         </tbody>
       </table>
       <h2>四、解锁流媒体与 AI 应用的表现评估</h2>
-      <p>在 IP 解锁层面，边缘机场拥有 60+ 覆盖全球的高清节点。实测表明，其主力节点（港/台/日/新/美）均支持完美解锁 ChatGPT, Claude, Midjourney，并且完美播放 Netflix 独家片源和 Disney+，无任何卡顿报错问题。售后工单系统由资深运维工程师全天候实时响应处理，如果在使用过程中由于本地路由配置抖动导致连不上，后台客服团队会火速为您在线排查。总体来看，边缘机场（极界）是一款在高隐私安全和易用性上都做到顶尖水平的商务/极客主力首选加速服务。</p>
+      <p>在 IP 解锁层面，边缘机场拥有 60+ 覆盖全球的高清节点。实测表明，其主力节点（港/台/日/新/美）均支持完美解锁 ChatGPT, Claude, Midjourney，并且完美播放 Netflix 独家片源和 Disney+，无任何卡顿报错问题。售后工单系统由资深运维工程师全天候实时响应处理，如果在使用过程中由于本地路由配置抖动导致连不上，后台客服团队会火速为您在线排查。总体来看，边缘机场（EdgeNova）是一款在高隐私安全和易用性上都做到顶尖水平的商务/极客主力首选加速服务。</p>
       <p style="text-align: center; margin-top: 30px;">
         <a href="{links['边缘']}" target="_blank" class="feature-badge" style="background:var(--accent-gradient); color:#fff; padding:12px 30px; font-weight:700; font-size:1.05rem; border:none; display:inline-flex; border-radius:var(--radius-md);">前往边缘官网订阅购买 ↗</a>
       </p>
@@ -637,7 +637,7 @@ article_list = [
       <h2>二、根据您的实际使用场景做出最理性决策</h2>
       <ul>
         <li><strong>第一顺位选择（追求晚高峰 4K/8K 极致播放与极速下载）：</strong> 推荐优先选购 <strong><a href="jilianyun-review.html">极连云</a></strong> 或是 <strong><a href="guangshuyun-review.html">光速云</a></strong>。两家均全链路搭载了隔离公网的跨国物理专线，晚高峰实测零丢包，延迟低。</li>
-        <li><strong>注重隐私防护与数据加密安全（外贸及程序员极客）：</strong> 首选 <strong><a href="edge-review.html">边缘（极界）</a></strong>。全节点内存读写，无任何日志驻存，并且配备了方便一键连接的自研定制化客户端软件，抗深度数据报匹配能力顶尖。</li>
+        <li><strong>注重隐私防护与数据加密安全（外贸及程序员极客）：</strong> 首选 <strong><a href="edge-review.html">边缘（EdgeNova）</a></strong>。全节点内存读写，无任何日志驻存，并且配备了方便一键连接的自研定制化客户端软件，抗深度数据报匹配能力顶尖。</li>
         <li><strong>学生党或追求极低成本开销：</strong> 推荐 <strong><a href="huanyuyun-review.html">寰宇云限定年包 (¥79/年)</a></strong> 或 <strong><a href="guangnianti-review.html">光年梯年付套餐 (¥89/年)</a></strong>，折合每个月仅需几元钱即可获得高连通专线流量。</li>
         <li><strong>长效防断连备用（不限时流量包）：</strong> 强烈建议拥有重要外事业务的用户购买 <strong><a href="globalyun-review.html">全球云不限时标准包 (¥360一次性)</a></strong>。流量永久有效不置零，只要不耗尽就终身可用，是网络容灾高可用性备用的终极方案。</li>
         <li><strong>不限速不限设备（多终端共享加速）：</strong> 推荐选择 <strong><a href="sujie-review.html">速界</a></strong> 或 <strong><a href="huanyuyun-review.html">寰宇云</a></strong>。极速千兆带宽跑满，设备客户端数均不锁，配合自研客户端更安全。</li>
@@ -750,7 +750,7 @@ article_list = [
           </tr>
           <tr>
             <td><a href="{links['边缘']}" target="_blank"><strong>边缘 ↗</strong></a></td>
-            <td>极界·标准套餐</td>
+            <td>EdgeNova·标准套餐</td>
             <td>¥25.00/月</td>
             <td>120GB/月</td>
           </tr>
@@ -777,7 +777,7 @@ article_list = [
       <h2>二、商务研发环境首选这几家品牌的原因</h2>
       <ul>
         <li><strong><a href="jilianyun-review.html">极连云 (物理IEPL)</a>：</strong> 真正意义上的国际以太网专线，数据包在跨国传输层直接点对点物理穿透，不经公网骨干，将晚高峰丢包概率死死压在 0.1% 以下。其不限制同时在线客户端数，适合多机协同开发。</li>
-        <li><strong><a href="edge-review.html">边缘极界 (零日志隐私)</a>：</strong> 安全防指纹识别的终极方案。全节点运行在只读内存（RAM-only）只读架构中，不记录任何用户的登录 IP 或访问指纹。支持其专属定制客户端一键直连，抗深度特征探测功能优秀。</li>
+        <li><strong><a href="edge-review.html">边缘EdgeNova (零日志隐私)</a>：</strong> 安全防指纹识别的终极方案。全节点运行在只读内存（RAM-only）只读架构中，不记录任何用户的登录 IP 或访问指纹。支持其专属定制客户端一键直连，抗深度特征探测功能优秀。</li>
         <li><strong><a href="sujie-review.html">速界 (千兆不限速)</a>：</strong> 所有节点一律千兆不对称高连通不限速，设备客户端在线数完全不限，BGP智能优化，拥有60+全球节点。</li>
         <li><strong><a href="huanyuyun-review.html">寰宇云 (原生广播IP)</a>：</strong> 完全放开多设备在线限制，全节点搭载大厂住宅原生 IP 广播。非常适合跨境商铺的多账号管理，或者大型视频直播团队，不容易触发海外 AI 工具（ChatGPT 等）的 IP 风控封锁报错。</li>
         <li><strong><a href="globalyun-review.html">全球云 (终身不重置流量包)</a>：</strong> 容灾防断网核心备份。不限时套餐解决了每个月按时清空流量的问题。花 360 元购买的 400G 标准包可以在后台长久存放，是关键商务备份的最佳理财方案。</li>
@@ -803,7 +803,7 @@ article_list = [
         <li><strong>专属链接安全注册：</strong> 优先选择点击本站推荐的专属 referral 跳转链接，进入各大主力机场的官方主站注册账号，能自动绑定首充优惠券或折上折优惠。</li>
         <li><strong>选购账单及充值：</strong> 登录后台控制面板，进入“商店/购买订阅”，按您的月流量、是否需要限制设备数以及预算选择月付/季付或更为省心的年付套餐，并完成安全支付。</li>
         <li><strong>一键同步订阅配置文件：</strong> 支付完毕后返回“用户中心/面板主页”，在快捷菜单中找到“一键导入订阅”。只需轻轻一按，系统会自动跳转并把全部节点列表自动同步导入到您的代理客户端软件中。</li>
-        <li><strong>自研客户端（最省心）：</strong> 如果您选购的是边缘（极界）、快狸（狸机场）或者速界（Speed World），则可以直接在后台“客户端下载”里下载自研打包好的一键直连软件，安装后直接登录账号即可一键使用，免去了第三方配置的繁琐。</li>
+        <li><strong>自研客户端（最省心）：</strong> 如果您选购的是边缘（EdgeNova）、快狸（狸机场）或者速界（Speed World），则可以直接在后台“客户端下载”里下载自研打包好的一键直连软件，安装后直接登录账号即可一键使用，免去了第三方配置的繁琐。</li>
       </ol>
       <h2>二、九大高品质专线加速机场官网订购入口一站式汇总</h2>
       <p>点击下方表格中的机场品牌名称即可直接进入对应官网注册与购买（所有页面 tables 均符合简化版规范）：</p>
@@ -893,7 +893,7 @@ def generate_article_html(article, index):
     featured_items = [
         {'slug': 'jilianyun-review', 'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐', 'date': '2026-07-18', 'label': 'JL', 'color': 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)'},
         {'slug': 'guangnianti-review', 'title': '光年梯 机场评测：稳定解锁流媒体与高可用线路方案', 'date': '2026-07-16', 'label': 'GN', 'color': 'linear-gradient(135deg, #10b981 0%, #059669 100%)'},
-        {'slug': 'edge-review', 'title': '边缘 机场（极界）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'color': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'},
+        {'slug': 'edge-review', 'title': '边缘 机场（EdgeNova）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'color': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'},
         {'slug': 'sujie-review', 'title': '速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐', 'date': '2026-07-03', 'label': 'SJ', 'color': 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)'},
         {'slug': 'shunyun-review', 'title': '瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案', 'date': '2026-07-06', 'label': 'SY', 'color': 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'}
     ]

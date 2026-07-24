@@ -269,7 +269,7 @@ def write_index():
           <div class="featured-item">
             <div class="featured-item-img" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">BY</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（极界）深度评测：无日志与极速数据中转</a></h4>
+              <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
               <span class="featured-item-date">2026-07-14</span>
             </div>
           </div>
@@ -410,7 +410,7 @@ def write_index():
       <article class="article-card" data-categories="premium,established" data-tags="机场评测,最新节点分享,一键翻墙,边缘">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #1e293b 0%, #475569 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            边缘（极界）<br>极速高隐私
+            边缘（EdgeNova）<br>极速高隐私
           </div>
           <span class="card-badge">一键客户端</span>
         </div>
@@ -419,7 +419,7 @@ def write_index():
             <span>2026-07-14</span>
             <span>阅读 (1560)</span>
           </div>
-          <h3 class="card-title"><a href="articles/edge-review.html">边缘 机场（极界）深度评测：无日志与极速数据中转</a></h3>
+          <h3 class="card-title"><a href="articles/edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h3>
           <p class="card-excerpt">边缘机场主打无日志高隐私安全防护，拥有60+节点覆盖，自研客户端一键接入使用，支持重置9折及年付85折优惠。</p>
           <div class="card-footer">
             <div class="card-tags">

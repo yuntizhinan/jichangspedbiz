@@ -9,9 +9,7 @@ def replace_text_globally():
         prefix = "" if is_subpage else "articles/"
         
         while '<div class="featured-list">' in content_norm:
-            # 找到当前组件 featured-list 头部
             idx = content_norm.find('<div class="featured-list">')
-            # 找到组件结束标志 aside 容器
             end_idx = content_norm.find('</aside>', idx)
             if end_idx == -1:
                 break
@@ -34,7 +32,7 @@ def replace_text_globally():
           <div class="featured-item">
             <div class="featured-item-img" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">BY</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="{prefix}edge-review.html">边缘 机场（极界）深度评测：无日志与极速数据中转</a></h4>
+              <h4 class="featured-item-title"><a href="{prefix}edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
               <span class="featured-item-date">2026-07-14</span>
             </div>
           </div>
@@ -117,10 +115,22 @@ def replace_text_globally():
                 # 升级精选文章侧边栏与去除页脚链接
                 html = update_featured_list_in_html(html, is_subpage=True)
                 html = remove_footer_links(html)
+                # 全局替换极界为 EdgeNova
+                html = html.replace("极界", "EdgeNova")
                 
                 with open(fpath, "w", encoding="utf-8") as f:
                     f.write(html)
         print("Updated HTML files in articles directory")
+
+    # 2. 遍历修改主目录下的 parent html 页面
+    for fname in os.listdir('.'):
+        if fname.endswith('.html'):
+            with open(fname, 'r', encoding='utf-8') as f:
+                html = f.read()
+            html = html.replace("极界", "EdgeNova")
+            with open(fname, 'w', encoding='utf-8') as f:
+                f.write(html)
+    print("Updated parent HTML files")
 
 if __name__ == '__main__':
     replace_text_globally()
