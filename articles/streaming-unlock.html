@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是解锁流媒体节点？Netflix/Disney+ 住宅IP分流选择科普与机场推荐 - 机场速递</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="深度科普解锁流媒体节点的底层技术。解析住宅IP广播解锁Netflix/Disney+原理，教你避开封锁警告，选到最佳解锁机场。">
+  <meta name="keywords" content="解锁流媒体节点, Netflix机场, BGP中转, 科学上网, 极连云, 边缘节点, 全球云">
+  <meta name="robots" content="index, follow">
+  
+  <!-- GEO Tags -->
+  <meta name="geo.region" content="CN-GD" />
+  <meta name="geo.placename" content="Guangdong" />
+  <meta name="geo.position" content="23.12908;113.26436" />
+  <meta name="ICBM" content="23.12908, 113.26436" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jichangspeed.biz/articles/cheap-airports.html">
+  <meta property="og:title" content="便宜机场推荐：10元左右高性价比机场首选">
+  <meta property="og:description" content="预算有限？这里有月付 10-20 元左右即可起飞的高性价比便宜机场推荐，详细对比光年梯、快狸、瞬云、寰宇云及速界的低价套餐。">
+  <meta property="og:image" content="https://jichangspeed.biz/images/og-share.jpg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 22V12M12 12L4 7.5M12 12l8-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>机场速递</span>
+      </a>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+      
+      <nav class="nav" id="nav-menu">
+        <a href="../index.html" class="nav-link">主页</a>
+        <!-- Item 1: 机场推荐 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场推荐 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="cheap-airports.html" class="dropdown-item">便宜机场推荐</a>
+            <a href="premium-airports.html" class="dropdown-item">优质机场推荐</a>
+            <a href="kuaili-review.html" class="dropdown-item">老牌机场推荐</a>
+          </div>
+        </div>
+
+        <!-- Item 2: 机场资讯 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场资讯 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="best-airports-2026.html" class="dropdown-item">精选汇总</a>
+            <a href="../vpn-guide.html" class="dropdown-item">科学上网</a>
+          </div>
+        </div>
+
+        <!-- Item 3: 更多 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">更多 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="../archives.html" class="dropdown-item">文章归档</a>
+            <a href="../about.html" class="dropdown-item">关于我们</a>
+            <a href="#" class="dropdown-item" onclick="showFriendsModal(); return false;">友情链接</a>
+          </div>
+        </div>
+
+        <!-- Item 4: 伸缩搜索框 (Expandable Navbar Search) -->
+        <div class="nav-search-container" id="nav-search-container">
+          <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="输入关键字搜索机场...">
+          <div class="hot-search-popup" id="hot-search-popup">
+            <span class="hot-search-title">热门搜索：</span>
+            <div class="hot-search-tags">
+              <span class="hot-tag" onclick="performNavSearch('极连云')">极连云</span>
+              <span class="hot-tag" onclick="performNavSearch('边缘节点')">边缘节点</span>
+              <span class="hot-tag" onclick="performNavSearch('光年梯')">光年梯</span>
+              <span class="hot-tag" onclick="performNavSearch('快狸')">快狸</span>
+              <span class="hot-tag" onclick="performNavSearch('速界')">速界</span>
+              <span class="hot-tag" onclick="performNavSearch('瞬云')">瞬云</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Article Layout -->
+  <main class="container article-page">
+    <div class="breadcrumbs">
+      <a href="../index.html">首页</a>
+      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <a href="../vpn-guide.html">科学上网</a>
+      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>科普教程</span>
+    </div>
+
+    <div class="main-layout">
+      <!-- Left Column: Article Content -->
+      <article class="content-feed">
+        <div class="article-header">
+          <div class="card-meta" style="margin-bottom: 12px;">
+            <span class="card-badge" style="position: static; background: var(--accent-gradient); color: #fff;">
+              科普教程
+            </span>
+            <span>
+              📅 2026-07-23
+            </span>
+            <span>
+              👁 阅读 (2000)
+            </span>
+          </div>
+          <h1 class="article-title-large">什么是解锁流媒体节点？Netflix/Disney+ 住宅IP分流选择科普与机场推荐</h1>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; align-items: center;">
+            <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">所属版块: </span>
+            <a href="../vpn-guide.html" class="card-tag" style="background-color: var(--accent-soft); color: var(--accent-primary); font-weight:600;">科学上网科普</a>
+          </div>
+        </div>
+
+          <h1 class="article-title-large">便宜机场推荐：10元左右高性价比机场首选</h1>
+          
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; align-items: center;">
+            <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">所属版块: </span>
+            <a href="../index.html?filter=cheap" class="card-tag" style="background-color: var(--accent-soft); color: var(--accent-primary); font-weight:600;">便宜机场推荐</a>
+          </div>
+        </div>
+
+        <div class="article-body">
+          
+          <p>许多网民购买科学上网机场的核心目的，就是为了观看 Netflix、Disney+、TikTok 或使用 OpenAI ChatGPT、Claude 等服务。但不少用户在配置好 Clash 或小火箭后发现，虽然能上 Google，但一打开 Netflix 就会报错提示“您正在使用代理”，或者 ChatGPT 提示“您的地区不可用”。这实际上就是由于您的节点不支持<strong>流媒体解锁</strong>导致的。今天我们就深度科普流媒体解锁节点的原理以及推荐机场。</p>
+
+          <h2>一、为什么普通节点无法观看 Netflix 等流媒体</h2>
+          <p>Netflix 等巨头为了保护地区版权，会对所有接入的 IP 地址进行极为严格的风控检测。大部分便宜机场的落地节点部署在各大云服务商（如 AWS、谷歌云、阿里云）的数据中心（IDC）中。这类 IP 具有极高的商业机房特征，Netflix 会直接将这些 IDC IP 段列入黑名单，限制其只能播放自制剧，或者完全不予访问。同理，ChatGPT 也会直接封禁所有公共机房的 IP 段。</p>
+
+          <h2>二、什么是真正的「解锁流媒体节点」？</h2>
+          <p>为了绕过这种封锁，高端机场会购买<strong>海外住宅原生 IP（Residential IP）</strong>，或者使用特殊的解锁技术（如 DNS 住宅解锁分流）：</p>
+          <ul>
+            <li><strong>原生 residential IP：</strong> 该 IP 归属于当地宽带运营商（如香港 HKBN、日本 OCN），在 Netflix 看来，您的流量与当地居民坐在客厅拉宽带看电视完全一致，能够 100% 完美呈现全部地区限定内容。</li>
+            <li><strong>DNS 分流解锁：</strong> 当用户的流量访问 Netflix 域名时，机场的前置中转服务器（如 BGP 中转或 IPLC 专线）会自动把流媒体域名的解析和下行数据强行分配到拥有住宅 IP 的特定解锁落地服务器上，从而实现“既有专线的高速，又有原生IP的解锁通过率”。</li>
+          </ul>
+
+          <h2>三、流媒体与 AI 工具最佳解锁机场推荐</h2>
+          <table class="rank-table">
+            <thead>
+              <tr>
+                <th>机场商</th>
+                <th>Netflix/Disney+ 解锁</th>
+                <th>ChatGPT/AI 解锁</th>
+                <th>晚高峰流畅度</th>
+                <th>核心优势</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong><a href="jilianyun-review.html">极连云</a></strong></td>
+                <td>✅ 完美全解锁</td>
+                <td>✅ 独家纯净住宅IP</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>全 IEPL 企业级专线，支持 1 倍率解锁</td>
+              </tr>
+              <tr>
+                <td><strong><a href="edge-review.html">边缘节点</a></strong></td>
+                <td>✅ 完美全解锁</td>
+                <td>✅ 稳定通过</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>IPLC 高速私网直连，隐私高安全防护</td>
+              </tr>
+              <tr>
+                <td><strong><a href="globalyun-review.html">全球云</a></strong></td>
+                <td>✅ 支持解锁</td>
+                <td>✅ 良好</td>
+                <td>⭐⭐⭐⭐</td>
+                <td>不限时按量付费，流量包永久有效，适合备用</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>四、总结与选购忠告</h2>
+          <p>看流媒体和使用 AI 工具，一定要认准配备了 <strong>解锁流媒体节点</strong> 且拥有 <strong>物理专线中转（IPLC/IEPL）</strong> 的高端服务商。只有这样，才能在高峰期保障 4K HDR 画质无缝加载，避免频繁遭遇地区限制和风控警告。</p>
+        
+        </div>
+
+        <div class="card-footer" style="padding-top: 24px; border-top: 1px solid var(--border-color); margin-top: 20px;">
+          <div class="card-tags">
+            <a href="../index.html?tag=%E8%A7%A3%E9%94%81%E6%B5%81%E5%AA%92%E4%BD%93%E8%8A%82%E7%82%B9" class="card-tag"># 解锁流媒体节点</a> <a href="../index.html?tag=Netflix%E6%9C%BA%E5%9C%BA" class="card-tag"># Netflix机场</a> <a href="../index.html?tag=BGP%E4%B8%AD%E8%BD%AC" class="card-tag"># BGP中转</a> <a href="../index.html?tag=%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91" class="card-tag"># 科学上网</a> <a href="../index.html?tag=%E6%9E%81%E8%BF%9E%E4%BA%91" class="card-tag"># 极连云</a> <a href="../index.html?tag=%E8%BE%B9%E7%BC%98%E8%8A%82%E7%82%B9" class="card-tag"># 边缘节点</a> <a href="../index.html?tag=%E5%85%A8%E7%90%83%E4%BA%91" class="card-tag"># 全球云</a>
+          </div>
+        </div>
+        <div class="article-navigation">
+              <a href="one-multiplier.html" class="article-nav-card">
+                <span class="article-nav-label">← 上一篇</span>
+                <span class="article-nav-title">什么是1倍率机场？如何看懂计费规则，避开机场流量折算陷阱？</span>
+              </a>
+            
+              <a href="clash-subscription.html" class="article-nav-card" style="text-align: right;">
+                <span class="article-nav-label">下一篇 →</span>
+                <span class="article-nav-title">科学上网订阅地址获取与客户端通用配置防跑路避坑常识</span>
+              </a>
+            </div>
+      </article>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="sidebar">
+        <!-- Widget: Popular Tags -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">
+            <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 8.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75S6.47 8.25 5.5 8.25z"/></svg>
+            热门标签
+          </h3>
+          <div class="tags-cloud">
+            <a href="../index.html?tag=%E6%9C%BA%E5%9C%BA%E8%AF%84%E6%B5%8B" class="sidebar-tag" data-tag="机场评测">机场评测</a>
+          <a href="../index.html?tag=%E4%B8%8D%E9%99%90%E6%97%B6%E9%95%BF" class="sidebar-tag" data-tag="不限时长">不限时长</a>
+          <a href="../index.html?tag=%E7%A7%91%E5%AD%A6%E4%B8%8B%E8%BD%BD" class="sidebar-tag" data-tag="科学下载">科学下载</a>
+          <a href="../index.html?tag=%E6%9C%80%E6%96%B0%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB" class="sidebar-tag" data-tag="最新节点分享">最新节点分享</a>
+          <a href="../index.html?tag=%E5%85%8D%E8%B4%B9vpn" class="sidebar-tag" data-tag="免费vpn">免费vpn</a>
+          <a href="../index.html?tag=%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99" class="sidebar-tag" data-tag="一键翻墙">一键翻墙</a>
+          <a href="../index.html?tag=%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E8%B4%AD%E4%B9%B0" class="sidebar-tag" data-tag="如何订阅购买">如何订阅购买</a>
+          <a href="../index.html?tag=%E6%9E%81%E8%BF%9E%E4%BA%91" class="sidebar-tag" data-tag="极连云">极连云</a>
+          <a href="../index.html?tag=%E5%85%89%E5%B9%B4%E6%A2%AF" class="sidebar-tag" data-tag="光年梯">光年梯</a>
+          <a href="../index.html?tag=%E8%BE%B9%E7%BC%98" class="sidebar-tag" data-tag="边缘">边缘</a>
+          <a href="../index.html?tag=%E5%BF%AB%E7%8B%B8" class="sidebar-tag" data-tag="快狸">快狸</a>
+          <a href="../index.html?tag=%E5%85%89%E9%80%9F%E4%BA%91" class="sidebar-tag" data-tag="光速云">光速云</a>
+          <a href="../index.html?tag=%E5%85%A8%E7%90%83%E4%BA%91" class="sidebar-tag" data-tag="全球云">全球云</a>
+          <a href="../index.html?tag=%E7%9E%AC%E4%BA%91" class="sidebar-tag" data-tag="瞬云">瞬云</a>
+          <a href="../index.html?tag=%E5%AF%B0%E5%AE%87%E4%BA%91" class="sidebar-tag" data-tag="寰宇云">寰宇云</a>
+          <a href="../index.html?tag=%E9%80%9F%E7%95%8C" class="sidebar-tag" data-tag="速界">速界</a>
+          </div>
+        </div>
+
+        <!-- Widget: Featured Articles -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            精选文章
+          </h3>
+          <div class="featured-list">
+            <div class="featured-item">
+          <div class="featured-item-img" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.75rem; font-family:'Outfit'; font-style: normal;">JC</div>
+          <div class="featured-item-content">
+            <h4 class="featured-item-title"><a href="jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
+            <span class="featured-item-date">2026-07-18</span>
+          </div>
+        </div>
+<div class="featured-item">
+          <div class="featured-item-img" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.75rem; font-family:'Outfit'; font-style: normal;">JC</div>
+          <div class="featured-item-content">
+            <h4 class="featured-item-title"><a href="guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
+            <span class="featured-item-date">2026-07-16</span>
+          </div>
+        </div>
+<div class="featured-item">
+          <div class="featured-item-img" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.75rem; font-family:'Outfit'; font-style: normal;">JC</div>
+          <div class="featured-item-content">
+            <h4 class="featured-item-title"><a href="edge-review.html">边缘 机场（极界）深度评测：无日志与极速数据中转</a></h4>
+            <span class="featured-item-date">2026-07-14</span>
+          </div>
+        </div>
+<div class="featured-item">
+          <div class="featured-item-img" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.75rem; font-family:'Outfit'; font-style: normal;">JC</div>
+          <div class="featured-item-content">
+            <h4 class="featured-item-title"><a href="kuaili-review.html">快狸 机场推荐：多设备在线与高性价比备用选择</a></h4>
+            <span class="featured-item-date">2026-07-10</span>
+          </div>
+        </div>
+<div class="featured-item">
+          <div class="featured-item-img" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.75rem; font-family:'Outfit'; font-style: normal;">JC</div>
+          <div class="featured-item-content">
+            <h4 class="featured-item-title"><a href="guangshuyun-review.html">光速云 机场深度评测：全球 IPLC 专线与多端在线连接方案</a></h4>
+            <span class="featured-item-date">2026-07-09</span>
+          </div>
+        </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-brand-title">机场速递</h3>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4 class="footer-links-title">快捷导航</h4>
+          <ul class="footer-links-list">
+            <li><a href="cheap-airports.html" class="footer-link">便宜机场推荐</a></li>
+            <li><a href="premium-airports.html" class="footer-link">优质机场推荐</a></li>
+            <li><a href="kuaili-review.html" class="footer-link">老牌机场推荐</a></li>
+            <li><a href="best-airports-2026.html" class="footer-link">精选汇总</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-links-title">推荐列表</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云官网 ↗</a></li>
+            <li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
+            <li><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
+            <li><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="footer-link">速界官网 ↗</a></li>
+            <li><a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-links-title">合作联系</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
+          <ul class="footer-links-list" style="font-size: 0.85rem;">
+            <li>邮箱: 1962952406@qq.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
+        <div class="footer-bottom-links">
+          <a href="../sitemap.xml" class="footer-link">网站地图</a>
+          <a href="../robots.txt" class="footer-link">Robots.txt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

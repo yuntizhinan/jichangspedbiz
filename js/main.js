@@ -67,92 +67,147 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // CONTENT FILTERING (CATEGORIES & TAGS)
+  // CONTENT FILTERING & PAGINATION SYSTEM
   // ==========================================
-  const articleCards = document.querySelectorAll('.article-card');
-  const sidebarTags = document.querySelectorAll('.sidebar-tag');
+  const articleCards    = document.querySelectorAll('.article-card');
+  const sidebarTags     = document.querySelectorAll('.sidebar-tag');
   const filterIndicator = document.getElementById('active-filter-indicator');
-  const filterLabel = document.getElementById('filter-label');
-  const searchInput = document.getElementById('search-input');
+  const filterLabel     = document.getElementById('filter-label');
+  const searchInput     = document.getElementById('search-input');
 
-  // Categories mapping (mapping URL query / filter name to HTML classes/attributes)
-  // Categories: cheap (便宜机场), premium (优质机场), established (老牌机场), curated (精选汇总)
-  let currentFilter = {
-    type: 'all', // 'all', 'category', 'tag', 'search'
-    value: ''
-  };
+  let currentFilter = { type: 'all', value: '' };
 
-  let isFeedExpanded = false;
+  const CARDS_PER_PAGE = 8;
+  let currentPage = 1;
 
-  function updateArticlesVisibility() {
-    let visibleCount = 0;
-    let totalMatches = 0;
-    const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
-    const isHomepage = !!document.querySelector('.hero-section');
-
+  function getMatchedCards(searchVal) {
+    const matched = [];
     articleCards.forEach(card => {
       const cardCategories = card.dataset.categories ? card.dataset.categories.split(',') : [];
-      const cardTags = card.dataset.tags ? card.dataset.tags.split(',') : [];
-      const cardTitle = card.querySelector('.card-title').textContent.toLowerCase();
-      const cardExcerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
+      const cardTags       = card.dataset.tags       ? card.dataset.tags.split(',')       : [];
+      const cardTitle      = card.querySelector('.card-title').textContent.toLowerCase();
+      const cardExcerpt    = card.querySelector('.card-excerpt').textContent.toLowerCase();
 
       let matchesFilter = true;
-
-      // 1. Check Category/Tag filter
       if (currentFilter.type === 'category') {
         matchesFilter = cardCategories.includes(currentFilter.value);
       } else if (currentFilter.type === 'tag') {
         matchesFilter = cardTags.includes(currentFilter.value);
       }
 
-      // 2. Check Search text
       let matchesSearch = true;
       if (searchVal) {
-        matchesSearch = cardTitle.includes(searchVal) || 
-                        cardExcerpt.includes(searchVal) || 
+        matchesSearch = cardTitle.includes(searchVal) ||
+                        cardExcerpt.includes(searchVal) ||
                         cardTags.some(t => t.toLowerCase().includes(searchVal));
       }
 
-      // Final decision
-      if (matchesFilter && matchesSearch) {
-        totalMatches++;
-        // Limit on homepage when not filtering and not expanded
-        if (isHomepage && currentFilter.type === 'all' && !searchVal && !isFeedExpanded) {
-          if (totalMatches <= 5) {
-            card.style.display = 'grid';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
-        } else {
-          card.style.display = 'grid';
-          visibleCount++;
-        }
+      if (matchesFilter && matchesSearch) matched.push(card);
+    });
+    return matched;
+  }
+
+  function renderPagination(totalCards) {
+    const isHomepage = !!document.querySelector('.hero-section');
+    if (!isHomepage) return;
+
+    let pagerEl = document.getElementById('pagination-bar');
+    if (!pagerEl) {
+      pagerEl = document.createElement('div');
+      pagerEl.id = 'pagination-bar';
+      pagerEl.style.cssText = `
+        display: flex; align-items: center; justify-content: center;
+        gap: 6px; padding: 24px 0 8px; flex-wrap: wrap;
+      `;
+      const feed = document.querySelector('.content-feed');
+      if (feed) feed.appendChild(pagerEl);
+    }
+
+    const totalPages = Math.ceil(totalCards / CARDS_PER_PAGE);
+    // Hide pagination when filtering/searching (show all results)
+    const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    if (currentFilter.type !== 'all' || searchVal || totalPages <= 1) {
+      pagerEl.style.display = 'none';
+      return;
+    }
+    pagerEl.style.display = 'flex';
+
+    const btnBase = `
+      border: 1px solid var(--border-color, #e2e8f0);
+      background: var(--bg-card, #fff);
+      color: var(--text-primary, #1e293b);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 0.9rem;
+      font-family: 'Outfit', sans-serif;
+      cursor: pointer;
+      transition: all .2s;
+    `;
+    const btnActive = `
+      border-color: #6366f1;
+      background: #6366f1;
+      color: #fff;
+      font-weight: 700;
+    `;
+
+    let html = `<button style="${btnBase}${currentPage === 1 ? 'opacity:.4;cursor:default;' : ''}"
+      onclick="goToPage(${currentPage - 1})">上一页</button>`;
+
+    for (let p = 1; p <= totalPages; p++) {
+      html += `<button style="${btnBase}${p === currentPage ? btnActive : ''}"
+        onclick="goToPage(${p})">${p}</button>`;
+    }
+
+    html += `<button style="${btnBase}${currentPage === totalPages ? 'opacity:.4;cursor:default;' : ''}"
+      onclick="goToPage(${currentPage + 1})">下一页</button>`;
+
+    pagerEl.innerHTML = html;
+  }
+
+  window.goToPage = function(page) {
+    const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    const matched = getMatchedCards(searchVal);
+    const totalPages = Math.ceil(matched.length / CARDS_PER_PAGE);
+    if (page < 1 || page > totalPages) return;
+    currentPage = page;
+    updateArticlesVisibility();
+    // Scroll to top of feed
+    const feedSection = document.getElementById('articles-feed-section');
+    if (feedSection) {
+      window.scrollTo({ top: feedSection.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
+    }
+  };
+
+  function updateArticlesVisibility() {
+    const searchVal = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    const isHomepage = !!document.querySelector('.hero-section');
+    const matched = getMatchedCards(searchVal);
+
+    // Pagination only on homepage with no active filter/search
+    const usePagination = isHomepage && currentFilter.type === 'all' && !searchVal;
+    const totalPages = Math.ceil(matched.length / CARDS_PER_PAGE);
+    if (usePagination && currentPage > totalPages) currentPage = 1;
+
+    const startIdx = usePagination ? (currentPage - 1) * CARDS_PER_PAGE : 0;
+    const endIdx   = usePagination ? startIdx + CARDS_PER_PAGE : matched.length;
+
+    const matchedSet = new Set(matched);
+    let visibleCount = 0;
+    articleCards.forEach(card => {
+      if (!matchedSet.has(card)) {
+        card.classList.add('card-hidden');
+        return;
+      }
+      const idx = matched.indexOf(card);
+      if (idx >= startIdx && idx < endIdx) {
+        card.classList.remove('card-hidden');
+        visibleCount++;
       } else {
-        card.style.display = 'none';
+        card.classList.add('card-hidden');
       }
     });
 
-    // Update Expand Button UI
-    const expandContainer = document.getElementById('expand-btn-container');
-    if (isHomepage && currentFilter.type === 'all' && !searchVal) {
-      if (expandContainer) {
-        expandContainer.style.display = 'flex';
-        const expandBtn = document.getElementById('expand-articles-btn');
-        if (expandBtn) {
-          if (isFeedExpanded) {
-            expandBtn.innerHTML = `收起文章列表 <svg class="expand-chevron" style="transform: rotate(180deg);" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>`;
-          } else {
-            const hiddenCount = Math.max(0, totalMatches - 5);
-            expandBtn.innerHTML = `展开全部 ${totalMatches} 篇文章 <svg class="expand-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>`;
-          }
-        }
-      }
-    } else {
-      if (expandContainer) {
-        expandContainer.style.display = 'none';
-      }
-    }
+    renderPagination(matched.length);
 
     // Update filter UI indicator
     if (filterIndicator && filterLabel) {
@@ -176,12 +231,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Handle empty state if no articles match
+    // Handle empty state
     let emptyState = document.getElementById('empty-feed-state');
     if (visibleCount === 0 && articleCards.length > 0) {
       if (!emptyState) {
         emptyState = document.createElement('div');
         emptyState.id = 'empty-feed-state';
+        emptyState.classList.remove('card-hidden');
         emptyState.style.padding = '40px 20px';
         emptyState.style.textAlign = 'center';
         emptyState.style.backgroundColor = 'var(--bg-secondary)';
@@ -208,8 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.setBlogFilter = function(type, value) {
     currentFilter.type = type;
     currentFilter.value = value;
-    
-    // Update tag active classes in sidebar
+    currentPage = 1;
+
     sidebarTags.forEach(tag => {
       if (type === 'tag' && tag.dataset.tag === value) {
         tag.classList.add('active');
@@ -218,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Update active class on main navbar
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       const href = link.getAttribute('href');
@@ -231,17 +286,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateArticlesVisibility();
 
-    // Scroll to the main articles section if it's far below (e.g. mobile or landing header page)
     const contentFeed = document.getElementById('articles-feed-section');
     if (contentFeed) {
       const headerOffset = 80;
       const elementPosition = contentFeed.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerOffset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
@@ -249,8 +299,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.resetFilters = function() {
     currentFilter.type = 'all';
     currentFilter.value = '';
+    currentPage = 1;
     if (searchInput) searchInput.value = '';
-    
+
     sidebarTags.forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(link => {
       if (link.getAttribute('href') === 'index.html' || link.getAttribute('href') === '/') {
@@ -259,14 +310,13 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.remove('active');
       }
     });
-    
+
     updateArticlesVisibility();
   };
 
   // Bind Sidebar tags click
   sidebarTags.forEach(tag => {
     tag.addEventListener('click', (e) => {
-      // If we are not on the index page, redirect to index with tag query
       const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || !window.location.pathname.includes('.html');
       const tagVal = tag.dataset.tag;
       if (!isIndex) {
@@ -281,6 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bind Search input keyup
   if (searchInput) {
     searchInput.addEventListener('input', () => {
+      currentPage = 1;
       updateArticlesVisibility();
     });
   }
@@ -288,47 +339,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle URL parameters on load
   const urlParams = new URLSearchParams(window.location.search);
   const filterParam = urlParams.get('filter');
-  const tagParam = urlParams.get('tag');
+  const tagParam    = urlParams.get('tag');
 
-  // Only apply URL parameters or default visibility if we are on index
   if (articleCards.length > 0) {
-    const isHomepage = !!document.querySelector('.hero-section');
-    const contentFeed = document.querySelector('.content-feed');
-    if (isHomepage && contentFeed) {
-      const expandBtnContainer = document.createElement('div');
-      expandBtnContainer.id = 'expand-btn-container';
-      expandBtnContainer.className = 'expand-btn-container';
-      expandBtnContainer.innerHTML = `
-        <button class="expand-articles-btn" id="expand-articles-btn">
-          展开全部文章
-          <svg class="expand-chevron" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
-        </button>
-      `;
-      contentFeed.appendChild(expandBtnContainer);
-      
-      const expandArticlesBtn = document.getElementById('expand-articles-btn');
-      if (expandArticlesBtn) {
-        expandArticlesBtn.addEventListener('click', () => {
-          isFeedExpanded = !isFeedExpanded;
-          updateArticlesVisibility();
-          
-          // If collapsing, scroll smoothly back to the top of feed section
-          if (!isFeedExpanded) {
-            const feedSection = document.getElementById('articles-feed-section');
-            if (feedSection) {
-              const headerOffset = 80;
-              const elementPosition = feedSection.getBoundingClientRect().top + window.pageYOffset;
-              const offsetPosition = elementPosition - headerOffset;
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-              });
-            }
-          }
-        });
-      }
-    }
-
     if (filterParam) {
       setBlogFilter('category', filterParam);
     } else if (tagParam) {
@@ -482,3 +495,86 @@ window.closeFriendsModal = function() {
     modal.classList.remove('active');
   }
 }
+
+window.showLatestNewsModal = function() {
+  let modal = document.getElementById('latest-news-modal');
+  if (modal) {
+    modal.remove(); // 每次删除旧的重新构建以应用最新主题色
+  }
+  
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const modalBg = isDark ? '#1e293b' : '#ffffff';
+  const itemBg = isDark ? '#0f172a' : '#f8fafc';
+  const borderCol = isDark ? '#334155' : '#e2e8f0';
+  const textCol = isDark ? '#f8fafc' : '#1e293b';
+  const textMuted = isDark ? '#94a3b8' : '#64748b';
+
+  modal = document.createElement('div');
+  modal.id = 'latest-news-modal';
+  modal.className = 'friends-modal-overlay';
+  modal.innerHTML = `
+    <div class="friends-modal-content" style="max-width: 520px; text-align: left; position: relative; background-color: ${modalBg} !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04) !important;">
+      <h3 class="friends-modal-title" style="text-align: center; font-size: 1.4rem; font-weight: 800; margin-top: 4px; margin-bottom: 8px; color: ${textCol} !important;">🔥 最新资讯与科普</h3>
+      <p class="friends-modal-desc" style="text-align: center; margin-bottom: 20px; color: ${textMuted} !important;">实时发布本站最新深度评测、IPLC/IEPL专线科普与科学上网场景指南。</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; max-height: 380px; overflow-y: auto; padding-right: 4px;">
+        
+        <a href="articles/airport-guide-2026.html" style="display: block; text-decoration: none; padding: 14px; background: ${itemBg} !important; border: 1px solid ${borderCol} !important; border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='${borderCol}';">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 0.75rem; font-weight: 700; background: var(--accent-gradient); color: #fff; padding: 2px 8px; border-radius: 4px;">排行榜</span>
+            <span style="font-size: 0.75rem; color: ${textMuted};">2026-07-22</span>
+          </div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: ${textCol}; margin: 6px 0 4px;">2026年机场排行榜：高性价比翻墙机场科普与横向评测</h4>
+          <p style="font-size: 0.8rem; color: ${textMuted}; line-height: 1.4; margin: 0;">什么是机场？便宜/月付/按量付费机场全面对比，8大主流机场横向评分与选购建议。</p>
+        </a>
+
+        <a href="articles/iplc-guide.html" style="display: block; text-decoration: none; padding: 14px; background: ${itemBg} !important; border: 1px solid ${borderCol} !important; border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='${borderCol}';">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 0.75rem; font-weight: 700; background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%); color: #fff; padding: 2px 8px; border-radius: 4px;">技术科普</span>
+            <span style="font-size: 0.75rem; color: ${textMuted};">2026-07-22</span>
+          </div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: ${textCol}; margin: 6px 0 4px;">IPLC/IEPL专线科普：游戏加速与4K不卡顿完全指南</h4>
+          <p style="font-size: 0.8rem; color: ${textMuted}; line-height: 1.4; margin: 0;">深度解析 IPLC、IEPL、BGP 三种线路的区别，晚高峰延迟数据实测与游戏联机加速推荐。</p>
+        </a>
+
+        <a href="articles/streaming-ai-guide.html" style="display: block; text-decoration: none; padding: 14px; background: ${itemBg} !important; border: 1px solid ${borderCol} !important; border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='${borderCol}';">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 0.75rem; font-weight: 700; background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%); color: #fff; padding: 2px 8px; border-radius: 4px;">选购攻略</span>
+            <span style="font-size: 0.75rem; color: ${textMuted};">2026-07-22</span>
+          </div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: ${textCol}; margin: 6px 0 4px;">Netflix/ChatGPT/TikTok机场选择指南：流媒体与AI工具加速攻略</h4>
+          <p style="font-size: 0.8rem; color: ${textMuted}; line-height: 1.4; margin: 0;">不同使用场景下的最优机场推荐，含详细兼容性对比表，教你如何规避AI地区检测。</p>
+        </a>
+
+        <a href="articles/cheap-airports.html" style="display: block; text-decoration: none; padding: 14px; background: ${itemBg} !important; border: 1px solid ${borderCol} !important; border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='${borderCol}';">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <span style="font-size: 0.75rem; font-weight: 700; background: #8b5cf6; color: #fff; padding: 2px 8px; border-radius: 4px;">便宜机场</span>
+            <span style="font-size: 0.75rem; color: ${textMuted};">2026-07-05</span>
+          </div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: ${textCol}; margin: 6px 0 4px;">便宜机场推荐：10元左右高性价比机场首选</h4>
+          <p style="font-size: 0.8rem; color: ${textMuted}; line-height: 1.4; margin: 0;">预算有限又想看高清视频？盘点低价专线中性价比最具杀伤力的平价梯子选择。</p>
+        </a>
+
+      </div>
+      <button class="friends-modal-close" style="width: 100%; border: 1px solid ${borderCol} !important; background-color: ${itemBg} !important; color: ${textCol} !important;" onclick="closeLatestNewsModal()">关闭</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeLatestNewsModal();
+    }
+  });
+  
+  modal.offsetHeight;
+  modal.classList.add('active');
+}
+
+window.closeLatestNewsModal = function() {
+  const modal = document.getElementById('latest-news-modal');
+  if (modal) {
+    modal.classList.remove('active');
+  }
+}
+

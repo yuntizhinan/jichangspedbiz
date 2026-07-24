@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网络订阅配置与下载指南 - 机场速递博客 (jichangspeed.biz)</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="科学上网配置购买一站式指南。涵盖电脑客户端、安卓客户端与iOS苹果客户端下载与通用一键订阅导入教程，推荐使用极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅服务。">
+  <meta name="keywords" content="配置配置, 订阅下载, 客户端导入, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 22V12M12 12L4 7.5M12 12l8-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>机场速递</span>
+      </a>
+      
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+      
+      <nav class="nav" id="nav-menu">
+        <a href="index.html" class="nav-link">主页</a>
+        <!-- Item 1: 机场推荐 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场推荐 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="articles/cheap-airports.html" class="dropdown-item">便宜机场推荐</a>
+            <a href="articles/premium-airports.html" class="dropdown-item">优质机场推荐</a>
+            <a href="articles/kuaili-review.html" class="dropdown-item">老牌机场推荐</a>
+          </div>
+        </div>
+
+        <!-- Item 2: 机场资讯 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场资讯 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="articles/best-airports-2026.html" class="dropdown-item">精选汇总</a>
+            <a href="vpn-guide.html" class="dropdown-item">科学上网</a>
+          </div>
+        </div>
+
+        <!-- Item 3: 更多 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">更多 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="archives.html" class="dropdown-item">文章归档</a>
+            <a href="about.html" class="dropdown-item">关于我们</a>
+            <a href="#" class="dropdown-item" onclick="showFriendsModal(); return false;">友情链接</a>
+          </div>
+        </div>
+
+        <!-- Item 4: 伸缩搜索框 (Expandable Navbar Search) -->
+        <div class="nav-search-container" id="nav-search-container">
+          <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="输入关键字搜索机场...">
+          <div class="hot-search-popup" id="hot-search-popup">
+            <span class="hot-search-title">热门搜索：</span>
+            <div class="hot-search-tags">
+              <span class="hot-tag" onclick="performNavSearch('极连云')">极连云</span>
+              <span class="hot-tag" onclick="performNavSearch('边缘节点')">边缘节点</span>
+              <span class="hot-tag" onclick="performNavSearch('光年梯')">光年梯</span>
+              <span class="hot-tag" onclick="performNavSearch('快狸')">快狸</span>
+              <span class="hot-tag" onclick="performNavSearch('速界')">速界</span>
+              <span class="hot-tag" onclick="performNavSearch('瞬云')">瞬云</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="container article-page">
+    <div class="breadcrumbs">
+      <a href="index.html">首页</a>
+      <svg viewBox="0 0 24 24" style="width:12px; height:12px; fill:currentColor;"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>科学上网</span>
+    </div>
+
+    <div class="main-layout">
+      <!-- Left Column: Setup Guide -->
+      <article class="content-feed">
+        <div class="article-header">
+          <h1 class="article-title-large">翻墙客户端一键订阅与通用配置指南</h1>
+        </div>
+
+        <div class="article-body">
+          <p>进行专线网络浏览，我们需要两个基础要素：第一是**机场的官网订阅链接**，第二是**运行在设备上的软件客户端**。下面以极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云与速界为例，教您如何快速导入使用。</p>
+
+          <h2>一、一键自研客户端（最简单）</h2>
+          <p>如果您选择的是 <strong><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank">边缘 (极界)</a></strong>、<strong><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank">快狸 机场</a></strong> 或 <strong><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank">速界官网</a></strong>：</p>
+          <ul>
+            <li>登录对应的官网后台，点击 <strong>“下载自研客户端”</strong>，下载后一键登录您的注册账户，即可实现自动更新节点、一键开启翻墙，无需手动复制订阅，适合新手小白。</li>
+          </ul>
+
+          <h2>二、通用客户端一键订阅导入</h2>
+          <p>如果您使用的是 <strong>极连云</strong>、<strong>光年梯</strong>、<strong>光速云</strong>、<strong>全球云</strong>、<strong>瞬云</strong>、<strong>寰宇云</strong>，可以通过通用配置一键导入使用：</p>
+          <ul>
+            <li>登录官网后台，购买套餐后，点击“快捷导入”选项中的“一键导入配置”，软件会自动跳转并导入节点数据。同步完成后开启连接开关即可。</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="sidebar">
+        <!-- Sidebar Tag Widget -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">
+            <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 8.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75S6.47 8.25 5.5 8.25z"/></svg>
+            热门标签
+          </h3>
+          <div class="tags-cloud">
+            <a href="index.html?tag=%E6%9C%BA%E5%9C%BA%E8%AF%84%E6%B5%8B" class="sidebar-tag">机场评测</a>
+            <a href="index.html?tag=%E4%B8%8D%E9%99%90%E6%97%B6%E9%95%BF" class="sidebar-tag">不限时长</a>
+            <a href="index.html?tag=%E7%A7%91%E5%AD%A6%E4%B8%8B%E8%BD%BD" class="sidebar-tag">科学下载</a>
+            <a href="index.html?tag=%E6%9C%80%E6%96%B0%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB" class="sidebar-tag">最新节点分享</a>
+            <a href="index.html?tag=%E5%85%8D%E8%B4%B9vpn" class="sidebar-tag">免费vpn</a>
+            <a href="index.html?tag=%E4%B8%8D%E9%99%90%E6%97%B6%E9%95%BF" class="sidebar-tag">一键翻墙</a>
+            <a href="index.html?tag=%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E8%B4%AD%E4%B9%B0" class="sidebar-tag">如何订阅购买</a>
+            <a href="index.html?tag=%E6%9E%81%E8%BF%9E%E4%BA%91" class="sidebar-tag">极连云</a>
+            <a href="index.html?tag=%E5%85%8D%E8%B4%B9vpn" class="sidebar-tag">光年梯</a>
+            <a href="index.html?tag=%E8%BE%B9%E7%BC%98" class="sidebar-tag">边缘</a>
+            <a href="index.html?tag=%E5%BF%AB%E7%8B%B8" class="sidebar-tag">快狸</a>
+            <a href="index.html?tag=%E5%85%85%E5%80%BC" class="sidebar-tag">光速云</a>
+            <a href="index.html?tag=%E5%A5%8D" class="sidebar-tag">全球云</a>
+            <a href="index.html?tag=%E7%9E%AC%E4%BA%91" class="sidebar-tag">瞬云</a>
+            <a href="index.html?tag=%E5%AF%B5%E5%AE%87%E4%BA%91" class="sidebar-tag">寰宇云</a>
+            <a href="index.html?tag=%E9%80%9F%E7%95%8C" class="sidebar-tag">速界</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-brand-title">机场速递</h3>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云, 瞬云、寰宇云、速界官网订阅入口。</p>
+        </div>
+        
+        <div class="footer-links-col">
+          <h4 class="footer-links-title">快捷导航</h4>
+          <ul class="footer-links-list">
+            <li><a href="articles/cheap-airports.html" class="footer-link">便宜机场推荐</a></li>
+            <li><a href="articles/premium-airports.html" class="footer-link">优质机场推荐</a></li>
+            <li><a href="articles/kuaili-review.html" class="footer-link">老牌机场推荐</a></li>
+            <li><a href="articles/best-airports-2026.html" class="footer-link">精选汇总</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-links-title">推荐列表</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云官网 ↗</a></li>
+            <li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
+            <li><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
+            <li><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="footer-link">速界官网 ↗</a></li>
+            <li><a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-links-title">合作联系</h4>
+          <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
+          <ul class="footer-links-list" style="font-size: 0.85rem;">
+            <li>邮箱: 1962952406@qq.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

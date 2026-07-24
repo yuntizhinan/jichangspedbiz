@@ -14,7 +14,7 @@ links = {
 }
 
 def write_index():
-    html = f"""<!DOCTYPE html>
+    html = """<!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -145,7 +145,7 @@ def write_index():
         <h3 class="core-feature-title">机场推荐</h3>
         <p class="core-feature-desc">2026精选专线机场横向评测，保障极致稳定冲浪体验。</p>
       </a>
-      <a href="archives.html" class="core-feature-card">
+      <a href="#" onclick="showLatestNewsModal(); return false;" class="core-feature-card">
         <div class="core-feature-icon">
           <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
         </div>
@@ -277,24 +277,24 @@ def write_index():
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">BY</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
-              <span class="featured-item-date">2026-07-03</span>
+              <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（极界）深度评测：无日志与极速数据中转</a></h4>
+              <span class="featured-item-date">2026-07-14</span>
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SY</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">KL</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
-              <span class="featured-item-date">2026-07-06</span>
+              <h4 class="featured-item-title"><a href="articles/kuaili-review.html">快狸 机场推荐：多设备在线与高性价比备用选择</a></h4>
+              <span class="featured-item-date">2026-07-10</span>
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">HY</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GS</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/huanyuyun-review.html">寰宇云 机场评测：不限在线设备与原生 IP 解锁的专线选择</a></h4>
-              <span class="featured-item-date">2026-07-04</span>
+              <h4 class="featured-item-title"><a href="articles/guangshuyun-review.html">光速云 机场深度评测：全球 IPLC 专线与多端在线连接方案</a></h4>
+              <span class="featured-item-date">2026-07-09</span>
             </div>
           </div>
         </div>
@@ -311,8 +311,35 @@ def write_index():
         </div>
       </div>
 
-      <!-- 13 Article Cards -->
-      
+      <!-- 14 Article Cards -->
+
+      <!-- Card 0: 精选汇总 2026 (置顶) -->
+      <article class="article-card" data-categories="curated,premium,cheap" data-tags="机场评测,最新节点分享,如何订阅购买,不限时长,极连云,光年梯,边缘,快狸,速界">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.4rem; text-align:center; padding: 20px;">
+            精选汇总<br>2026 梯子合集
+          </div>
+          <span class="card-badge">本站精选</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-08</span>
+            <span>阅读 (3240)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/best-airports-2026.html">精选汇总：2026 年最值得推荐的稳定好用机场梯子合集</a></h3>
+          <p class="card-excerpt">如何挑选真实好用的加速器？本篇根据长期测速和连通率监控，总结出 2026 年最值得入手的 9 大机场推荐。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">机场评测</span> <span class="card-tag">最新节点分享</span>
+            </div>
+            <a href="articles/best-airports-2026.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
       <!-- Card 1: 极连云 -->
       <article class="article-card" data-categories="premium,cheap" data-tags="机场评测,最新节点分享,如何订阅购买,极连云">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);">
@@ -425,177 +452,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 5: 快狸 -->
-      <article class="article-card" data-categories="established,cheap" data-tags="机场评测,不限时长,如何订阅购买,快狸">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            快狸（狸机场）<br>自研客户端一键
-          </div>
-          <span class="card-badge">多设备不限</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-10</span>
-            <span>阅读 (1730)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/kuaili-review.html">快狸 机场推荐：多设备在线与高性价比备用选择</a></h3>
-          <p class="card-excerpt">快狸不限制同时在线设备数量，提供自研一键连接客户端，月狸套餐低至15元起，非常适合作为高可用网络备用通道。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">快狸</span>
-              <span class="card-tag">如何订阅购买</span>
-            </div>
-            <a href="articles/kuaili-review.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 6: 光速云 -->
-      <article class="article-card" data-categories="premium,cheap" data-tags="机场评测,最新节点分享,科学下载,光速云">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            光速云<br>全球IPLC专线
-          </div>
-          <span class="card-badge">IPLC专线</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-09</span>
-            <span>阅读 (2120)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/guangshuyun-review.html">光速云 机场深度评测：全球 IPLC 专线与多端在线连接方案</a></h3>
-          <p class="card-excerpt">光速云提供全球IPLC物理专线，最高2.5Gbps速率，月付低至17元，原生IP解锁流媒体，支持多设备同时在线。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">光速云</span>
-              <span class="card-tag">科学下载</span>
-            </div>
-            <a href="articles/guangshuyun-review.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 7: 全球云 -->
-      <article class="article-card" data-categories="premium,established" data-tags="不限时长,一键翻墙,如何订阅购买,全球云">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            全球云<br>BGP智能优化不限时
-          </div>
-          <span class="card-badge">流量永久有效</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-07</span>
-            <span>阅读 (1890)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/globalyun-review.html">全球云 机场评测：不限时 BGP 智能优化与永久有效大容量包推荐</a></h3>
-          <p class="card-excerpt">全球云提供不设到期重置的BGP不限时套餐，一次购买流量永久有效，支持解除常规单账户设备锁限制。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">全球云</span>
-              <span class="card-tag">不限时长</span>
-            </div>
-            <a href="articles/globalyun-review.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 8: 瞬云 -->
-      <article class="article-card" data-categories="cheap,established" data-tags="机场评测,不限时长,科学下载,瞬云">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            瞬云<br>Anycast高速节点
-          </div>
-          <span class="card-badge">高吞吐中转</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-06</span>
-            <span>阅读 (1880)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h3>
-          <p class="card-excerpt">瞬云提供 Anycast 高速路由节点中转，晚高峰延迟低，行者及纵横套餐支持超大流量，三年付优惠享受高达 25% 折扣。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">瞬云</span>
-              <span class="card-tag">科学下载</span>
-            </div>
-            <a href="articles/shunyun-review.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 9: 寰宇云 -->
-      <article class="article-card" data-categories="premium,established" data-tags="一键翻墙,如何订阅购买,最新节点分享,寰宇云">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            寰宇云<br>不限设备数量
-          </div>
-          <span class="card-badge">流媒体原生IP</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-04</span>
-            <span>阅读 (2010)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/huanyuyun-review.html">寰宇云 机场评测：不限在线设备与原生 IP 解锁的专线选择</a></h3>
-          <p class="card-excerpt">寰宇云提供不限在线设备数的专线网络覆盖。限定年付套餐低至 ¥79/年，全原生 IP 完美解锁奈飞和 AI 工具。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">寰宇云</span>
-              <span class="card-tag">最新节点分享</span>
-            </div>
-            <a href="articles/huanyuyun-review.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-
-
-      <!-- Card 10: 精选汇总 -->
-      <article class="article-card" data-categories="curated" data-tags="机场评测,最新节点分享,如何订阅购买,不限时长,极连云,光年梯,边缘,快狸,光速云,全球云,瞬云,寰宇云,速界">
-        <div class="card-image-wrap" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
-          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
-            2026 梯子<br>精选大汇总
-          </div>
-          <span class="card-badge">本站精选</span>
-        </div>
-        <div class="card-content">
-          <div class="card-meta">
-            <span>2026-07-08</span>
-            <span>阅读 (2540)</span>
-          </div>
-          <h3 class="card-title"><a href="articles/best-airports-2026.html">精选汇总：2026 年最值得推荐的稳定好用机场梯子合集</a></h3>
-          <p class="card-excerpt">如何挑选真实好用的加速器？本篇根据长期测速和连通率监控，总结出 2026 年最值得入手的 9 大机场推荐。</p>
-          <div class="card-footer">
-            <div class="card-tags">
-              <span class="card-tag">机场评测</span>
-              <span class="card-tag">极连云</span>
-            </div>
-            <a href="articles/best-airports-2026.html" class="read-more">
-              阅读全文 
-              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 11: 便宜机场 -->
+      <!-- Card 6: 便宜机场 -->
       <article class="article-card" data-categories="cheap" data-tags="免费vpn,机场评测,光年梯,快狸,光速云,瞬云,寰宇云,速界">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -623,7 +480,7 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 12: 优质机场 -->
+      <!-- Card 7: 优质机场 -->
       <article class="article-card" data-categories="premium" data-tags="机场评测,最新节点分享,极连云,边缘,光速云,全球云,寰宇云,速界">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -651,7 +508,232 @@ def write_index():
         </div>
       </article>
 
-      <!-- Card 13: 订阅购买指南 -->
+      <!-- Card 8: 快狸 -->
+      <article class="article-card" data-categories="established,cheap" data-tags="机场评测,不限时长,如何订阅购买,快狸">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            快狸（狸机场）<br>自研客户端一键
+          </div>
+          <span class="card-badge">多设备不限</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-10</span>
+            <span>阅读 (1730)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/kuaili-review.html">快狸 机场推荐：多设备在线与高性价比备用选择</a></h3>
+          <p class="card-excerpt">快狸不限制同时在线设备数量，提供自研一键连接客户端，月狸套餐低至15元起，非常适合作为高可用网络备用通道。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">快狸</span>
+              <span class="card-tag">如何订阅购买</span>
+            </div>
+            <a href="articles/kuaili-review.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9: 2026年机场排行榜 -->
+      <article class="article-card" data-categories="curated" data-tags="机场排行榜,便宜机场,按量付费机场,月付机场,高性价比翻墙">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            2026排行榜<br>高性价比科普
+          </div>
+          <span class="card-badge">深度科普</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-22</span>
+            <span>阅读 (3210)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/airport-guide-2026.html">2026年机场排行榜：高性价比翻墙机场科普与横向评测</a></h3>
+          <p class="card-excerpt">系统科普「什么是机场」、常见套餐类型对比，并提供 2026 年最新横向排行榜，覆盖便宜机场、按量付费机场、月付机场等主流方向。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">机场排行榜</span>
+              <span class="card-tag">便宜机场</span>
+            </div>
+            <a href="articles/airport-guide-2026.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 10: IPLC/IEPL专线科普 -->
+      <article class="article-card" data-categories="premium" data-tags="IPLC专线,IEPL专线,4K不卡顿,游戏加速,低延迟节点,Steam加速">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            专线科普<br>4K游戏不卡顿
+          </div>
+          <span class="card-badge">技术详解</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-22</span>
+            <span>阅读 (2780)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/iplc-guide.html">IPLC/IEPL专线科普：游戏加速与4K不卡顿完全指南</a></h3>
+          <p class="card-excerpt">深度解析 IPLC、IEPL、BGP 三种线路类型的本质区别，并通过延迟对比图表直观呈现，帮你找到适合游戏加速、4K视频、低延迟办公的最佳专线机场。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">IPLC专线</span>
+              <span class="card-tag">游戏加速</span>
+            </div>
+            <a href="articles/iplc-guide.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 11: Netflix/ChatGPT/TikTok机场选择指南 -->
+      <article class="article-card" data-categories="premium,cheap" data-tags="Netflix机场,TikTok加速器,ChatGPT加速器,Disney+观看,Claude专用,Steam加速">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            场景推荐<br>流媒体与AI加速
+          </div>
+          <span class="card-badge">选购攻略</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-22</span>
+            <span>阅读 (2950)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/streaming-ai-guide.html">Netflix/ChatGPT/TikTok机场选择指南：流媒体与AI工具加速完全攻略</a></h3>
+          <p class="card-excerpt">按使用场景分类整理：流媒体（Netflix/Disney+/TikTok）、办公AI（ChatGPT/Claude/GitHub/谷歌）、游戏加速（Steam/FPS），给出每个场景的最优机场选择建议。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">Netflix机场</span>
+              <span class="card-tag">ChatGPT加速器</span>
+            </div>
+            <a href="articles/streaming-ai-guide.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- Card 8: 光速云 -->
+      <article class="article-card" data-categories="premium,cheap" data-tags="机场评测,最新节点分享,科学下载,光速云">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            光速云<br>全球IPLC专线
+          </div>
+          <span class="card-badge">IPLC专线</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-09</span>
+            <span>阅读 (2120)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/guangshuyun-review.html">光速云 机场深度评测：全球 IPLC 专线与多端在线连接方案</a></h3>
+          <p class="card-excerpt">光速云提供全球IPLC物理专线，最高2.5Gbps速率，月付低至17元，原生IP解锁流媒体，支持多设备同时在线。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">光速云</span>
+              <span class="card-tag">科学下载</span>
+            </div>
+            <a href="articles/guangshuyun-review.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 9: 全球云 -->
+      <article class="article-card" data-categories="premium,established" data-tags="不限时长,一键翻墙,如何订阅购买,全球云">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            全球云<br>BGP智能优化不限时
+          </div>
+          <span class="card-badge">流量永久有效</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-07</span>
+            <span>阅读 (1890)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/globalyun-review.html">全球云 机场评测：不限时 BGP 智能优化与永久有效大容量包推荐</a></h3>
+          <p class="card-excerpt">全球云提供不设到期重置的BGP不限时套餐，一次购买流量永久有效，支持解除常规单账户设备锁限制。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">全球云</span>
+              <span class="card-tag">不限时长</span>
+            </div>
+            <a href="articles/globalyun-review.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 10: 瞬云 -->
+      <article class="article-card" data-categories="cheap,established" data-tags="机场评测,不限时长,科学下载,瞬云">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            瞬云<br>Anycast高速节点
+          </div>
+          <span class="card-badge">高吞吐中转</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-06</span>
+            <span>阅读 (1880)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h3>
+          <p class="card-excerpt">瞬云提供 Anycast 高速路由节点中转，晚高峰延迟低，行者及纵横套餐支持超大流量，三年付优惠享受高达 25% 折扣。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">瞬云</span>
+              <span class="card-tag">科学下载</span>
+            </div>
+            <a href="articles/shunyun-review.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 11: 寰宇云 -->
+      <article class="article-card" data-categories="premium,established" data-tags="一键翻墙,如何订阅购买,最新节点分享,寰宇云">
+        <div class="card-image-wrap" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+          <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
+            寰宇云<br>不限设备数量
+          </div>
+          <span class="card-badge">流媒体原生IP</span>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">
+            <span>2026-07-04</span>
+            <span>阅读 (2010)</span>
+          </div>
+          <h3 class="card-title"><a href="articles/huanyuyun-review.html">寰宇云 机场评测：不限在线设备与原生 IP 解锁的专线选择</a></h3>
+          <p class="card-excerpt">寰宇云提供不限在线设备数的专线网络覆盖。限定年付套餐低至 ¥79/年，全原生 IP 完美解锁奈飞和 AI 工具。</p>
+          <div class="card-footer">
+            <div class="card-tags">
+              <span class="card-tag">寰宇云</span>
+              <span class="card-tag">最新节点分享</span>
+            </div>
+            <a href="articles/huanyuyun-review.html" class="read-more">
+              阅读全文 
+              <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 12: 订阅购买指南 -->
       <article class="article-card" data-categories="curated" data-tags="如何订阅购买,一键翻墙,科学下载,极连云,光年梯,边缘,快狸,光速云,全球云,瞬云,寰宇云,速界">
         <div class="card-image-wrap" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
           <div style="display: flex; align-items: center; justify-content: center; height:100%; color:#fff; font-family:'Outfit'; font-weight:800; font-size:1.5rem; text-align:center; padding: 20px;">
@@ -679,8 +761,10 @@ def write_index():
         </div>
       </article>
 
+
     </section>
   </main>
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -704,12 +788,12 @@ def write_index():
         <div class="footer-links-col">
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
-            <li><a href="{links['极连云']}" target="_blank" class="footer-link">极连云官网 ↗</a></li>
-            <li><a href="{links['边缘']}" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
-            <li><a href="{links['光年梯']}" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
-            <li><a href="{links['快狸']}" target="_blank" class="footer-link">快狸官网 ↗</a></li>
-            <li><a href="{links['速界']}" target="_blank" class="footer-link">速界官网 ↗</a></li>
-            <li><a href="{links['瞬云']}" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
+            <li><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云官网 ↗</a></li>
+            <li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
+            <li><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
+            <li><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="footer-link">速界官网 ↗</a></li>
+            <li><a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
           </ul>
         </div>
 
@@ -736,6 +820,7 @@ def write_index():
 </body>
 </html>
 """
+
     with open('index.html', 'w', encoding='utf-8') as f:
         f.write(html)
     print("index.html written.")
@@ -940,7 +1025,7 @@ def write_about():
     print("about.html written.")
 
 def write_vpn_guide():
-    html = f"""<!DOCTYPE html>
+    html = """<!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -1047,7 +1132,7 @@ def write_vpn_guide():
           <p>进行专线网络浏览，我们需要两个基础要素：第一是**机场的官网订阅链接**，第二是**运行在设备上的软件客户端**。下面以极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云与速界为例，教您如何快速导入使用。</p>
 
           <h2>一、一键自研客户端（最简单）</h2>
-          <p>如果您选择的是 <strong><a href="{links['边缘']}" target="_blank">边缘 (极界)</a></strong>、<strong><a href="{links['快狸']}" target="_blank">快狸 机场</a></strong> 或 <strong><a href="{links['速界']}" target="_blank">速界官网</a></strong>：</p>
+          <p>如果您选择的是 <strong><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank">边缘 (极界)</a></strong>、<strong><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank">快狸 机场</a></strong> 或 <strong><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank">速界官网</a></strong>：</p>
           <ul>
             <li>登录对应的官网后台，点击 <strong>“下载自研客户端”</strong>，下载后一键登录您的注册账户，即可实现自动更新节点、一键开启翻墙，无需手动复制订阅，适合新手小白。</li>
           </ul>
@@ -1058,6 +1143,91 @@ def write_vpn_guide():
             <li>登录官网后台，购买套餐后，点击“快捷导入”选项中的“一键导入配置”，软件会自动跳转并导入节点数据。同步完成后开启连接开关即可。</li>
           </ul>
         </div>
+
+          <h2 style="margin-top: 30px;">三、科学上网深度科普与配置教程</h2>
+          <p>以下为您精选的 15 篇网络科学上网深度科普文章与客户端配置教程，帮助您更加深入地了解协议机制与安全翻墙防坑常识：</p>
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px; margin-bottom: 25px;">
+                <a href="articles/clash-tutorial.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Clash配置教程：2026年最全Clash节点导入与订阅地址使用完全指南</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/shadowrocket-setup.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Shadowrocket配置教程：iOS苹果小火箭订阅地址导入与SS/SSR专线配置完全指南</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/v2rayng-guide.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">V2RayNG配置教程：安卓手机一键导入订阅地址与VLESS/VESS网络配置攻略</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/lantern-alternative.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">蓝灯Lantern好用吗？2026年蓝灯替代方案与SS/SSR专线中转机场推荐</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/reality-protocol.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Reality协议科普：什么是Reality协议？安全性与主流客户端配置详解</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/hysteria2-vs-tuic.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Hysteria2与Tuic协议对比：晚高峰高丢包环境下的最佳UDP翻墙协议选择</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/iplc-vs-iepl.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">IPLC专线机场与IEPL中转有何区别？主流专线机场网络传输架构大科普</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/openwrt-router.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">OpenWrt科学上网教程：软路由固件插件安装、Clash/Sing-box节点配置完全指南</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/vps-vs-airport.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/one-multiplier.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">什么是1倍率机场？如何看懂计费规则，避开机场流量折算陷阱？</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/streaming-unlock.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">什么是解锁流媒体节点？Netflix/Disney+ 住宅IP分流选择科普与机场推荐</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/clash-subscription.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">科学上网订阅地址获取与客户端通用配置防跑路避坑常识</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/hy2-performance.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Hysteria2协议在低带宽晚高峰下的速度实测与Reality/VLESS协议横向评测</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/tuic-latency.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Tuic协议适合玩外服游戏吗？Tuic低延迟原理分析与SS/SSR专线游戏节点选择</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/router-firmware.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">软路由科学上网深度科普：OpenWrt主流固件插件性能对比与Clash配置教程</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/reality-vless-verge.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">VLESS与Reality协议在Clash Verge中的通用配置与速度优化教程</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/shadowrocket-h2.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">小火箭Hysteria2节点怎么配置？iOS Shadowrocket基于UDP的高丢包提速教程</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/openwrt-singbox.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Sing-box在OpenWrt软路由系统下的配置与高吞吐专线分流教程</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/blue-lantern-vpn.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">蓝灯VPN好用吗？为什么老牌翻墙VPN蓝灯连不上与最优机场方案对比</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+            <a href="articles/reality-vless-comparison.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Reality混淆协议与传统VLESS/Vmess加密协议安全性与防封锁横向对比</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
+            </a>
+          </div>
       </article>
 
       <!-- Right Column: Sidebar -->
@@ -1113,12 +1283,12 @@ def write_vpn_guide():
         <div class="footer-links-col">
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
-            <li><a href="{links['极连云']}" target="_blank" class="footer-link">极连云官网 ↗</a></li>
-            <li><a href="{links['边缘']}" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
-            <li><a href="{links['光年梯']}" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
-            <li><a href="{links['快狸']}" target="_blank" class="footer-link">快狸官网 ↗</a></li>
-            <li><a href="{links['速界']}" target="_blank" class="footer-link">速界官网 ↗</a></li>
-            <li><a href="{links['瞬云']}" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
+            <li><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云官网 ↗</a></li>
+            <li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
+            <li><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
+            <li><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="footer-link">速界官网 ↗</a></li>
+            <li><a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank" class="footer-link">瞬云官网 ↗</a></li>
           </ul>
         </div>
 
@@ -1141,6 +1311,7 @@ def write_vpn_guide():
 </body>
 </html>
 """
+
     with open('vpn-guide.html', 'w', encoding='utf-8') as f:
         f.write(html)
     print("vpn-guide.html written.")
@@ -1260,7 +1431,43 @@ def write_sitemap():
 def write_archives():
     from generate_final_site import article_list
     
-    sorted_articles = sorted(article_list, key=lambda x: x['date'], reverse=True)
+    science_list = [
+        {'slug': 'airport-guide-2026', 'title': '2026年机场排行榜：高性价比翻墙机场科普与横向评测', 'date': '2026-07-22'},
+        {'slug': 'iplc-guide', 'title': 'IPLC/IEPL专线科普：4K不卡顿、游戏加速、专线机场完全指南', 'date': '2026-07-22'},
+        {'slug': 'streaming-ai-guide', 'title': 'Netflix/ChatGPT/TikTok机场选择指南：流媒体与AI工具加速完全攻略', 'date': '2026-07-22'},
+        {'slug': 'clash-tutorial', 'title': 'Clash配置教程：2026年最全Clash节点导入与订阅地址使用完全指南', 'date': '2026-07-23'},
+        {'slug': 'shadowrocket-setup', 'title': 'Shadowrocket配置教程：iOS苹果小火箭订阅地址导入与SS/SSR专线配置完全指南', 'date': '2026-07-23'},
+        {'slug': 'v2rayng-guide', 'title': 'V2RayNG配置教程：安卓手机一键导入订阅地址与VLESS/VESS网络配置攻略', 'date': '2026-07-23'},
+        {'slug': 'lantern-alternative', 'title': '蓝灯Lantern好用吗？2026年蓝灯替代方案与SS/SSR专线中转机场推荐', 'date': '2026-07-23'},
+        {'slug': 'reality-protocol', 'title': 'Reality协议科普：什么是Reality协议？安全性与主流客户端配置详解', 'date': '2026-07-23'},
+        {'slug': 'hysteria2-vs-tuic', 'title': 'Hysteria2与Tuic协议对比：晚高峰高丢包环境下的最佳UDP翻墙协议选择', 'date': '2026-07-23'},
+        {'slug': 'iplc-vs-iepl', 'title': 'IPLC专线机场与IEPL中转有何区别？主流专线机场网络传输架构大科普', 'date': '2026-07-23'},
+        {'slug': 'openwrt-router', 'title': 'OpenWrt科学上网教程：软路由固件插件安装、Clash/Sing-box节点配置完全指南', 'date': '2026-07-23'},
+        {'slug': 'vps-vs-airport', 'title': '自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？', 'date': '2026-07-23'},
+        {'slug': 'one-multiplier', 'title': '什么是1倍率机场？如何看懂计费规则，避开机场流量折算陷阱？', 'date': '2026-07-23'},
+        {'slug': 'streaming-unlock', 'title': '什么是解锁流媒体节点？Netflix/Disney+ 住宅IP分流选择科普与机场推荐', 'date': '2026-07-23'},
+        {'slug': 'clash-subscription', 'title': '科学上网订阅地址获取与客户端通用配置防跑路避坑常识', 'date': '2026-07-23'},
+        {'slug': 'hy2-performance', 'title': 'Hysteria2协议在低带宽晚高峰下的速度实测与Reality/VLESS协议横向评测', 'date': '2026-07-23'},
+        {'slug': 'tuic-latency', 'title': 'Tuic协议适合玩外服游戏吗？Tuic低延迟原理分析与SS/SSR专线游戏节点选择', 'date': '2026-07-23'},
+        {'slug': 'router-firmware', 'title': '软路由科学上网深度科普：OpenWrt主流固件插件性能对比与Clash配置教程', 'date': '2026-07-23'},
+        {'slug': 'reality-vless-verge', 'title': 'VLESS与Reality协议在Clash Verge中的通用配置与速度优化教程', 'date': '2026-07-23'},
+        {'slug': 'shadowrocket-h2', 'title': '小火箭Hysteria2节点怎么配置？iOS Shadowrocket基于UDP的高丢包提速教程', 'date': '2026-07-23'},
+        {'slug': 'openwrt-singbox', 'title': 'Sing-box在OpenWrt软路由系统下的配置与高吞吐专线分流教程', 'date': '2026-07-23'},
+        {'slug': 'blue-lantern-vpn', 'title': '蓝灯VPN好用吗？为什么老牌翻墙VPN蓝灯连不上与最优机场方案对比', 'date': '2026-07-23'},
+        {'slug': 'reality-vless-comparison', 'title': 'Reality混淆协议与传统VLESS/Vmess加密协议安全性与防封锁横向对比', 'date': '2026-07-23'}
+    ]
+
+    # 将原有 article_list 转化为可以和 science_list 混合拼接的普通 dict 格式
+    formatted_articles = []
+    for a in article_list:
+        formatted_articles.append({
+            'slug': a['slug'],
+            'title': a['title'],
+            'date': a['date']
+        })
+
+    merged_list = formatted_articles + science_list
+    sorted_articles = sorted(merged_list, key=lambda x: x['date'], reverse=True)
     
     articles_by_year = {}
     for a in sorted_articles:
@@ -1295,7 +1502,7 @@ def write_archives():
           </div>
         </div>"""
 
-    total_count = len(article_list)
+    total_count = len(merged_list)
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
