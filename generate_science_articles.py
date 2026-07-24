@@ -57,7 +57,7 @@ def replace_text_globally():
             content_norm = content_norm.replace('<div class="featured-list">', '<div class="featured-list-done">', 1)
             
         content_norm = content_norm.replace('<div class="featured-list-done">', '<div class="featured-list">')
-        return content_norm.replace("\n", os.linesep)
+        return content_norm
 
     def remove_footer_links(content):
         content_norm = content.replace("\r\n", "\n")
@@ -89,7 +89,7 @@ def replace_text_globally():
         content_norm = content_norm.replace('<a href="robots.txt" class="footer-link">Robots.txt</a>', '')
         content_norm = content_norm.replace('<a href="../sitemap.xml" class="footer-link">网站地图</a>', '')
         content_norm = content_norm.replace('<a href="../robots.txt" class="footer-link">Robots.txt</a>', '')
-        return content_norm.replace("\n", os.linesep)
+        return content_norm
 
     def insert_featured_list_widget(content, is_subpage=False):
         if 'featured-list' in content:
@@ -145,7 +145,7 @@ def replace_text_globally():
         content_norm = content.replace("\r\n", "\n")
         if "</aside>" in content_norm:
             content_norm = content_norm.replace("</aside>", featured_widget + "\n      </aside>", 1)
-        return content_norm.replace("\n", os.linesep)
+        return content_norm
 
     # 1. 遍历修改 articles/ 目录下的所有文章 HTML
     articles_dir = "articles"
