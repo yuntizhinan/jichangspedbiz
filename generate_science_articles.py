@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import re
 
 def replace_text_globally():
     # 替换 LOGO 的通用子函数
@@ -30,34 +31,6 @@ def replace_text_globally():
         # 将归一化后的换行符还原为系统默认
         return content_norm.replace("\n", os.linesep)
 
-    # 1. 替换 write_final_pages.py
-    if os.path.exists("write_final_pages.py"):
-        with open("write_final_pages.py", "r", encoding="utf-8") as f:
-            content = f.read()
-        
-        # 替换普通文本与下拉菜单
-        content = content.replace("科学上网</a>", "科普专栏</a>")
-        content = content.replace("<span>科学上网</span>", "<span>科普专栏</span>")
-        content = content.replace("三、科学上网", "三、科普专栏")
-        content = content.replace("网络科学上网", "网络加速")
-        content = content.replace("OpenWrt科学上网", "OpenWrt科普")
-        content = content.replace("软路由科学上网", "软路由科普")
-        content = content.replace("motto\">2026稳定安全高速便宜机场推荐与官网订阅评测", "motto\">2026稳定安全高速便宜机场推荐与官网订阅评测")
-        
-        # 将 motto 里的“科学上网”换为“科普专栏”
-        content = content.replace("提供低门槛的科学上网科普", "提供低门槛的科普专栏")
-        content = content.replace("科学上网一站式指南", "科普专栏一站式指南")
-        content = content.replace("科学上网配置购买", "科普专栏配置购买")
-        
-        # 文章定义里也有科学上网
-        content = content.replace("OpenWrt科学上网教程", "OpenWrt科普教程")
-        content = content.replace("科学上网订阅地址", "网络订阅地址")
-        content = content.replace("软路由科学上网深度", "软路由技术科普")
-        content = content.replace("自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？", "自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？")
-        
-        # 替换 LOGO
-        content = update_logo_content(content)
-        
     def add_cache_busting_version(content):
         # 先回退，以防重复追加
         content = content.replace('js/main.js?v=20260724', 'js/main.js')
@@ -72,6 +45,59 @@ def replace_text_globally():
         content = content.replace('../css/style.css', '../css/style.css?v=20260724')
         return content
 
+    # 替换精选文章列表的子函数
+    def update_featured_list_in_html(content, is_subpage=False):
+        content_norm = content.replace("\r\n", "\n")
+        prefix = "" if is_subpage else "articles/"
+        
+        new_featured_html = f"""<div class="featured-list">
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">JL</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="{prefix}jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
+              <span class="featured-item-date">2026-07-18</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="{prefix}guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
+              <span class="featured-item-date">2026-07-16</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">BY</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="{prefix}edge-review.html">边缘 机场（极界）深度评测：无日志与极速数据中转</a></h4>
+              <span class="featured-item-date">2026-07-14</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="{prefix}sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
+              <span class="featured-item-date">2026-07-03</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SY</div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="{prefix}shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
+              <span class="featured-item-date">2026-07-06</span>
+            </div>
+          </div>
+        </div>"""
+        
+        # 使用正则表达式非贪婪匹配并替换掉整个 <div class="featured-list"> 到其后面的 </div> 盒子
+        # 匹配到外部容器以保证闭合无缺
+        content_norm = re.sub(
+            r'<div class="featured-list">.*?</div>\s*</div>', 
+            new_featured_html + "\n      </div>", 
+            content_norm, 
+            flags=re.DOTALL
+        )
+        return content_norm.replace("\n", os.linesep)
+
     # 1. 替换 write_final_pages.py
     if os.path.exists("write_final_pages.py"):
         with open("write_final_pages.py", "r", encoding="utf-8") as f:
@@ -87,7 +113,7 @@ def replace_text_globally():
         content = content.replace("motto\">2026稳定安全高速便宜机场推荐与官网订阅评测", "motto\">2026稳定安全高速便宜机场推荐与官网订阅评测")
         
         # 将 motto 里的“科学上网”换为“科普专栏”
-        content = content.replace("提供低门槛的科学上网科普", "提供低门槛的科普专栏")
+        content = content.replace("提供低门槛的科学上网科普", "提供低门槛 of 科普专栏")
         content = content.replace("科学上网一站式指南", "科普专栏一站式指南")
         content = content.replace("科学上网配置购买", "科普专栏配置购买")
         
@@ -97,9 +123,10 @@ def replace_text_globally():
         content = content.replace("软路由科学上网深度", "软路由技术科普")
         content = content.replace("自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？", "自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？")
         
-        # 替换 LOGO & 版本号
+        # 替换 LOGO & 版本号 & 精选侧边栏
         content = update_logo_content(content)
         content = add_cache_busting_version(content)
+        content = update_featured_list_in_html(content, is_subpage=False)
         
         with open("write_final_pages.py", "w", encoding="utf-8") as f:
             f.write(content)
@@ -114,6 +141,20 @@ def replace_text_globally():
         content = content.replace("<span>科学上网</span>", "<span>科普专栏</span>")
         content = content.replace("提供低门槛的科学上网科普", "提供低门槛的科普专栏")
         content = content.replace("所属版块: 科学上网", "所属版块: 科普专栏")
+        
+        # 精准替换 generate_final_site.py 中的 featured_items 数组定义
+        old_array_pattern = r"featured_items\s*=\s*\[.*?\]"
+        new_array_str = """featured_items = [
+        {'slug': 'jilianyun-review', 'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐', 'date': '2026-07-18', 'label': 'JL', 'color': 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)'},
+        {'slug': 'guangnianti-review', 'title': '光年梯 机场评测：稳定解锁流媒体与高可用线路方案', 'date': '2026-07-16', 'label': 'GN', 'color': 'linear-gradient(135deg, #10b981 0%, #059669 100%)'},
+        {'slug': 'edge-review', 'title': '边缘 机场（极界）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'color': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'},
+        {'slug': 'sujie-review', 'title': '速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐', 'date': '2026-07-03', 'label': 'SJ', 'color': 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)'},
+        {'slug': 'shunyun-review', 'title': '瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案', 'date': '2026-07-06', 'label': 'SY', 'color': 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'}
+    ]"""
+        # 归一化换行进行正则替换
+        content_norm = content.replace("\r\n", "\n")
+        content_norm = re.sub(old_array_pattern, new_array_str, content_norm, flags=re.DOTALL)
+        content = content_norm.replace("\n", os.linesep)
         
         # 替换 LOGO & 版本号
         content = update_logo_content(content)
@@ -144,9 +185,10 @@ def replace_text_globally():
                 html = html.replace("软路由科学上网", "软路由技术")
                 html = html.replace("科学上网订阅地址", "网络订阅地址")
                 
-                # 替换 LOGO & 版本号
+                # 替换 LOGO & 版本号 & 精选侧边栏
                 html = update_logo_content(html)
                 html = add_cache_busting_version(html)
+                html = update_featured_list_in_html(html, is_subpage=True)
                 
                 with open(fpath, "w", encoding="utf-8") as f:
                     f.write(html)
