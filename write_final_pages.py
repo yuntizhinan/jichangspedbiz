@@ -277,24 +277,24 @@ def write_index():
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">BY</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（极界）深度评测：无日志与极速数据中转</a></h4>
-              <span class="featured-item-date">2026-07-14</span>
+              <h4 class="featured-item-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
+              <span class="featured-item-date">2026-07-03</span>
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">KL</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SY</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/kuaili-review.html">快狸 机场推荐：多设备在线与高性价比备用选择</a></h4>
-              <span class="featured-item-date">2026-07-10</span>
+              <h4 class="featured-item-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
+              <span class="featured-item-date">2026-07-06</span>
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GS</div>
+            <div class="featured-item-img" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">HY</div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/guangshuyun-review.html">光速云 机场深度评测：全球 IPLC 专线与多端在线连接方案</a></h4>
-              <span class="featured-item-date">2026-07-09</span>
+              <h4 class="featured-item-title"><a href="articles/huanyuyun-review.html">寰宇云 机场评测：不限在线设备与原生 IP 解锁的专线选择</a></h4>
+              <span class="featured-item-date">2026-07-04</span>
             </div>
           </div>
         </div>
