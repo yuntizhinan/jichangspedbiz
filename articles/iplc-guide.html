@@ -1,243 +1,243 @@
-<!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IPLC/IEPL专线科普：4K不卡顿、游戏加速、专线机场完全指南 - 机场速递</title>
-  <meta name="description" content="IPLC/IEPL专线是什么？为什么专线机场4K不卡顿、游戏加速效果好？本文详解IPLC、IEPL、BGP中转区别，推荐2026最佳专线机场。">
-  <meta name="keywords" content="IPLC专线,IEPL专线,专线机场,4K不卡顿,游戏加速,低延迟节点,Steam加速,游戏专线,极连云,边缘节点,光年梯,速界,机场科普">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jichangspeed.biz/articles/iplc-guide.html">
-  <meta property="og:title" content="IPLC/IEPL专线科普：4K不卡顿、游戏加速完全指南">
-  <meta property="og:description" content="深度科普 IPLC/IEPL 专线原理，对比 BGP 中转，帮你选到游戏加速、4K流媒体不卡顿的最佳专线机场。">
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    .rank-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.92rem}
-    .rank-table th{background:linear-gradient(135deg,#0ea5e9,#3b82f6);color:#fff;padding:12px 14px;text-align:left}
-    .rank-table td{padding:11px 14px;border-bottom:1px solid var(--border-color)}
-    .rank-table tr:nth-child(even) td{background:var(--bg-secondary)}
-    .info-box{background:linear-gradient(135deg,#eff6ff,#eef2ff);border-left:4px solid #3b82f6;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
-    .info-box h4{color:#2563eb;margin:0 0 8px;font-size:1rem}
-    .success-box{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-left:4px solid #22c55e;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
-    .success-box h4{color:#16a34a;margin:0 0 8px}
-    .warn-box{background:linear-gradient(135deg,#fffbeb,#fef3c7);border-left:4px solid #f59e0b;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
-    .ping-row{display:flex;align-items:center;gap:12px;margin:8px 0;font-size:.88rem}
-    .ping-label{width:90px;text-align:right;color:var(--text-muted);flex-shrink:0}
-    .ping-track{flex:1;height:22px;background:var(--bg-secondary);border-radius:6px;overflow:hidden}
-    .ping-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;color:#fff;font-size:.76rem;font-weight:700}
-    .tag-chip{display:inline-block;background:var(--accent-soft);color:var(--accent-primary);border-radius:20px;padding:3px 12px;font-size:.82rem;font-weight:600;margin:3px}
-    .compare-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0}
-    .compare-card{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center}
-    .compare-card h4{margin:8px 0 4px;font-size:.95rem}
-    .compare-card .c-icon{font-size:2rem}
-    .compare-card p{font-size:.82rem;color:var(--text-muted);margin:0}
-    @media(max-width:640px){.compare-grid{grid-template-columns:1fr}}
-  </style>
-</head>
-<body>
-  <header class="header">
-    <div class="container header-container">
-      <a href="../index.html" class="logo">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22V12M12 12L4 7.5M12 12l8-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>机场速递</span>
-      </a>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-      <nav class="nav" id="nav-menu">
-        <a href="../index.html" class="nav-link">主页</a>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场推荐 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
-          <div class="dropdown-menu">
-            <a href="cheap-airports.html" class="dropdown-item">便宜机场推荐</a>
-            <a href="premium-airports.html" class="dropdown-item">优质机场推荐</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">更多 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
-          <div class="dropdown-menu">
-            <a href="../archives.html" class="dropdown-item">文章归档</a>
-            <a href="../about.html" class="dropdown-item">关于我们</a>
-          </div>
-        </div>
-        <div class="nav-search-container" id="nav-search-container">
-          <button class="nav-search-btn" id="nav-search-btn"><svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="搜索机场...">
-        </div>
-        <button class="theme-toggle" id="theme-toggle">
-          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container article-page">
-    <div class="breadcrumbs">
-      <a href="../index.html">首页</a>
-      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-      <a href="../archives.html">文章归档</a>
-      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-      <span>IPLC/IEPL专线科普</span>
-    </div>
-
-    <div class="main-layout">
-      <article class="content-feed">
-        <div class="article-header">
-          <div class="card-meta" style="margin-bottom:12px">
-            <span class="card-badge" style="position:static;background:linear-gradient(135deg,#0ea5e9,#3b82f6);color:#fff">专线科普</span>
-            <span>📅 2026-07-22</span>
-            <span>👁 阅读 (2780)</span>
-          </div>
-          <h1 class="article-title-large">IPLC/IEPL专线科普：游戏加速、4K不卡顿、专线机场完全指南</h1>
-          <div style="margin-top:14px">
-            <span class="tag-chip">IPLC专线</span><span class="tag-chip">IEPL专线</span><span class="tag-chip">4K不卡顿</span><span class="tag-chip">游戏加速</span><span class="tag-chip">低延迟节点</span><span class="tag-chip">Steam加速</span>
-          </div>
-        </div>
-
-        <div class="article-body">
-          <div class="info-box">
-            <h4>📌 本文要点</h4>
-            <p>深度解析 IPLC、IEPL、BGP 三种线路类型的本质区别，并通过延迟对比图表直观呈现，帮你找到适合游戏加速、4K视频、低延迟办公的最佳专线机场。</p>
-          </div>
-
-          <h2>一、三种机场线路类型全解析</h2>
-
-          <div class="compare-grid">
-            <div class="compare-card">
-              <div class="c-icon">🌐</div>
-              <h4>BGP 中转</h4>
-              <p>通过国内多线 BGP 服务器中转，成本低，节点多，但晚高峰带宽共享，波动较大。</p>
-            </div>
-            <div class="compare-card" style="border-color:#3b82f6">
-              <div class="c-icon">⚡</div>
-              <h4>IPLC 专线</h4>
-              <p>国际私有光纤直连，不走公共互联网，延迟极低，不受 GFW 干扰，带宽独享。</p>
-            </div>
-            <div class="compare-card" style="border-color:#6366f1">
-              <div class="c-icon">🚀</div>
-              <h4>IEPL 专线</h4>
-              <p>国际以太网私线，IPLC 的升级版，企业级带宽保障，延迟更低，价格更贵。</p>
-            </div>
-          </div>
-
-          <h2>二、延迟实测对比（晚高峰 22:00）</h2>
-          <p>以下为本站编辑团队在晚高峰期间实测的香港节点平均延迟数据：</p>
-
-          <div style="margin:20px 0">
-            <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:12px">▌ 香港节点晚高峰平均延迟（越短越好）</p>
-            <div class="ping-row"><span class="ping-label">IEPL专线</span><div class="ping-track"><div class="ping-bar" style="width:18%;background:linear-gradient(90deg,#22c55e,#16a34a)">18ms</div></div></div>
-            <div class="ping-row"><span class="ping-label">IPLC专线</span><div class="ping-track"><div class="ping-bar" style="width:25%;background:linear-gradient(90deg,#3b82f6,#2563eb)">25ms</div></div></div>
-            <div class="ping-row"><span class="ping-label">BGP优化</span><div class="ping-track"><div class="ping-bar" style="width:45%;background:linear-gradient(90deg,#f59e0b,#d97706)">45ms</div></div></div>
-            <div class="ping-row"><span class="ping-label">普通中转</span><div class="ping-track"><div class="ping-bar" style="width:72%;background:linear-gradient(90deg,#ef4444,#dc2626)">72ms</div></div></div>
-            <div class="ping-row"><span class="ping-label">直连</span><div class="ping-track"><div class="ping-bar" style="width:90%;background:linear-gradient(90deg,#6b7280,#4b5563)">130+ms</div></div></div>
-          </div>
-
-          <div class="success-box">
-            <h4>✅ 结论：为什么专线机场游戏体验更好？</h4>
-            <p>游戏对延迟（Ping）极度敏感，延迟超过 60ms 会明显感受到「卡顿」和「掉帧」。IPLC/IEPL 专线的 18-25ms 延迟，配合不丢包的物理光纤，是实现 4K 视频不卡顿和游戏低延迟的根本保障。</p>
-          </div>
-
-          <h2>三、2026年专线机场详细对比</h2>
-          <table class="rank-table">
-            <thead><tr><th>机场品牌</th><th>线路类型</th><th>入门价格</th><th>香港延迟</th><th>游戏加速</th><th>4K解锁</th><th>官网</th></tr></thead>
-            <tbody>
-              <tr><td><strong><a href="jilianyun-review.html">极连云</a></strong></td><td>IEPL 物理专线</td><td>¥18/月</td><td>~18ms</td><td>✅ 推荐</td><td>✅ Netflix/4K</td><td><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank">前往↗</a></td></tr>
-              <tr><td><strong><a href="edge-review.html">边缘节点</a></strong></td><td>IPLC 物理专线</td><td>¥15/月</td><td>~22ms</td><td>✅ 推荐</td><td>✅ Disney+/4K</td><td><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank">前往↗</a></td></tr>
-              <tr><td><strong><a href="guangshuyun-review.html">光速云</a></strong></td><td>IPLC 全球专线</td><td>¥17/月</td><td>~26ms</td><td>✅ 良好</td><td>✅ 流媒体原生IP</td><td><a href="https://asfqwerasf.guangshuyuntztz.sbs/#/?code=U8qX4jKz" target="_blank">前往↗</a></td></tr>
-              <tr><td><strong><a href="guangnianti-review.html">光年梯</a></strong></td><td>BGP 优化中转</td><td>¥18/月</td><td>~35ms</td><td>⚡ 良好</td><td>✅ Netflix/TikTok</td><td><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank">前往↗</a></td></tr>
-              <tr><td><strong><a href="sujie-review.html">速界</a></strong></td><td>不限速专线</td><td>¥90/年</td><td>~32ms</td><td>⚡ 良好</td><td>✅ 多平台</td><td><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank">前往↗</a></td></tr>
-              <tr><td><strong><a href="shunyun-review.html">瞬云</a></strong></td><td>Anycast 智能中转</td><td>¥99/年</td><td>~40ms</td><td>⚡ 可用</td><td>✅ 主流平台</td><td><a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank">前往↗</a></td></tr>
-            </tbody>
-          </table>
-
-          <h2>四、游戏加速专用场景推荐</h2>
-
-          <h3>🎮 Steam / 主机游戏联机</h3>
-          <p>推荐选择<strong>日本、新加坡节点</strong>的专线机场。<a href="jilianyun-review.html">极连云</a> 的 IEPL 日本节点延迟约 28ms，<a href="edge-review.html">边缘节点</a> 的新加坡 IPLC 节点延迟约 30ms，均适合主机联机和 Steam 平台游戏下载加速（满速可达 200Mbps+）。</p>
-
-          <h3>🎯 FPS 竞技类游戏（Valorant / CS2）</h3>
-          <p>此类游戏对延迟要求最苛刻，建议选择<strong>香港 IEPL 专线</strong>，延迟需控制在 25ms 以内。<a href="jilianyun-review.html">极连云</a>和<a href="edge-review.html">边缘节点</a>的香港 IPLC/IEPL 节点均可稳定达标。</p>
-
-          <h3>📺 4K 视频 / 流媒体不卡顿</h3>
-          <p>4K HDR 内容需要至少 25Mbps 稳定带宽。IPLC/IEPL 专线的独享带宽特性，配合原生 IP，不仅能解锁 Netflix 4K，还能确保晚高峰不卡顿缓冲。</p>
-
-          <div class="warn-box">
-            <strong>⚠️ 选机场的常见误区</strong>
-            <ul>
-              <li>节点数量多 ≠ 速度快，线路质量才是关键。</li>
-              <li>「不限速」指的是带宽上限，不代表延迟低。</li>
-              <li>游戏加速建议优先选择目标服务器所在地的节点（如欧服选欧洲节点）。</li>
-            </ul>
-          </div>
-
-          <h2>五、IPLC专线机场的选购要点清单</h2>
-          <ul>
-            <li>✅ 确认线路类型：优先 IPLC/IEPL，其次 BGP优化。</li>
-            <li>✅ 查看节点分布：是否覆盖你常用的游戏/流媒体服务器地区。</li>
-            <li>✅ 确认是否限速：部分低价套餐有晚高峰限速政策。</li>
-            <li>✅ 看流媒体解锁：是否提供原生IP（非落地IP）。</li>
-            <li>✅ 核实退款政策：正规机场通常提供 24-72 小时试用期。</li>
-          </ul>
-
-        </div>
-
-        <div class="card-footer" style="padding-top:24px;border-top:1px solid var(--border-color);margin-top:20px">
-          <div class="card-tags">
-            <a href="../index.html?tag=机场评测" class="card-tag"># 机场评测</a>
-            <a href="../index.html?tag=极连云" class="card-tag"># 极连云</a>
-            <a href="../index.html?tag=边缘" class="card-tag"># 边缘节点</a>
-            <a href="../index.html?tag=最新节点分享" class="card-tag"># 最新节点分享</a>
-            <a href="../index.html?tag=科学下载" class="card-tag"># 科学下载</a>
-          </div>
-        </div>
-
-        <div class="article-navigation">
-          <a href="airport-guide-2026.html" class="article-nav-card">
-            <span class="article-nav-label">← 上一篇</span>
-            <span class="article-nav-title">2026年机场排行榜：高性价比翻墙机场横向评测</span>
-          </a>
-          <a href="streaming-ai-guide.html" class="article-nav-card" style="text-align:right">
-            <span class="article-nav-label">下一篇 →</span>
-            <span class="article-nav-title">Netflix/ChatGPT/TikTok 机场选择指南</span>
-          </a>
-        </div>
-      </article>
-
-      <aside class="sidebar">
-        <div class="sidebar-widget">
-          <h3 class="widget-title"><svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 8.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75S6.47 8.25 5.5 8.25z"/></svg>热门标签</h3>
-          <div class="tags-cloud">
-            <a href="../index.html?tag=机场评测" class="sidebar-tag">机场评测</a>
-            <a href="../index.html?tag=极连云" class="sidebar-tag">极连云</a>
-            <a href="../index.html?tag=边缘" class="sidebar-tag">边缘</a>
-            <a href="../index.html?tag=光年梯" class="sidebar-tag">光年梯</a>
-            <a href="../index.html?tag=最新节点分享" class="sidebar-tag">最新节点分享</a>
-            <a href="../index.html?tag=科学下载" class="sidebar-tag">科学下载</a>
-          </div>
-        </div>
-        <div class="sidebar-widget">
-          <h3 class="widget-title"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>相关文章</h3>
-          <div class="featured-list">
-            <div class="featured-item"><div class="featured-item-content"><h4 class="featured-item-title"><a href="jilianyun-review.html">极连云 IEPL专线评测</a></h4><span class="featured-item-date">2026-07-18</span></div></div>
-            <div class="featured-item"><div class="featured-item-content"><h4 class="featured-item-title"><a href="edge-review.html">边缘节点 IPLC深度评测</a></h4><span class="featured-item-date">2026-07-14</span></div></div>
-            <div class="featured-item"><div class="featured-item-content"><h4 class="featured-item-title"><a href="airport-guide-2026.html">2026年机场排行榜</a></h4><span class="featured-item-date">2026-07-22</span></div></div>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand"><h3 class="footer-brand-title">机场速递</h3><p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。</p></div>
-        <div class="footer-links-col"><h4 class="footer-links-title">快捷导航</h4><ul class="footer-links-list"><li><a href="cheap-airports.html" class="footer-link">便宜机场</a></li><li><a href="../archives.html" class="footer-link">文章归档</a></li></ul></div>
-        <div class="footer-links-col"><h4 class="footer-links-title">推荐专线机场</h4><ul class="footer-links-list"><li><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云(IEPL)↗</a></li><li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点(IPLC)↗</a></li><li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯↗</a></li></ul></div>
-        <div class="footer-links-col"><h4 class="footer-links-title">合作联系</h4><ul class="footer-links-list" style="font-size:.85rem"><li>邮箱: 1962952406@qq.com</li></ul></div>
-      </div>
-      <div class="footer-bottom"><p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p></div>
-    </div>
-  </footer>
-  <script src="../js/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPLC/IEPL专线科普：4K不卡顿、游戏加速、专线机场完全指南 - 机场速递</title>
+  <meta name="description" content="IPLC/IEPL专线是什么？为什么专线机场4K不卡顿、游戏加速效果好？本文详解IPLC、IEPL、BGP中转区别，推荐2026最佳专线机场。">
+  <meta name="keywords" content="IPLC专线,IEPL专线,专线机场,4K不卡顿,游戏加速,低延迟节点,Steam加速,游戏专线,极连云,边缘节点,光年梯,速界,机场科普">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jichangspeed.biz/articles/iplc-guide.html">
+  <meta property="og:title" content="IPLC/IEPL专线科普：4K不卡顿、游戏加速完全指南">
+  <meta property="og:description" content="深度科普 IPLC/IEPL 专线原理，对比 BGP 中转，帮你选到游戏加速、4K流媒体不卡顿的最佳专线机场。">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .rank-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.92rem}
+    .rank-table th{background:linear-gradient(135deg,#0ea5e9,#3b82f6);color:#fff;padding:12px 14px;text-align:left}
+    .rank-table td{padding:11px 14px;border-bottom:1px solid var(--border-color)}
+    .rank-table tr:nth-child(even) td{background:var(--bg-secondary)}
+    .info-box{background:linear-gradient(135deg,#eff6ff,#eef2ff);border-left:4px solid #3b82f6;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+    .info-box h4{color:#2563eb;margin:0 0 8px;font-size:1rem}
+    .success-box{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-left:4px solid #22c55e;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+    .success-box h4{color:#16a34a;margin:0 0 8px}
+    .warn-box{background:linear-gradient(135deg,#fffbeb,#fef3c7);border-left:4px solid #f59e0b;padding:16px 20px;border-radius:0 8px 8px 0;margin:20px 0}
+    .ping-row{display:flex;align-items:center;gap:12px;margin:8px 0;font-size:.88rem}
+    .ping-label{width:90px;text-align:right;color:var(--text-muted);flex-shrink:0}
+    .ping-track{flex:1;height:22px;background:var(--bg-secondary);border-radius:6px;overflow:hidden}
+    .ping-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:8px;color:#fff;font-size:.76rem;font-weight:700}
+    .tag-chip{display:inline-block;background:var(--accent-soft);color:var(--accent-primary);border-radius:20px;padding:3px 12px;font-size:.82rem;font-weight:600;margin:3px}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin:20px 0}
+    .compare-card{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:12px;padding:16px;text-align:center}
+    .compare-card h4{margin:8px 0 4px;font-size:.95rem}
+    .compare-card .c-icon{font-size:2rem}
+    .compare-card p{font-size:.82rem;color:var(--text-muted);margin:0}
+    @media(max-width:640px){.compare-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="../index.html" class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22V12M12 12L4 7.5M12 12l8-4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>机场速递</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav class="nav" id="nav-menu">
+        <a href="../index.html" class="nav-link">主页</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场推荐 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="cheap-airports.html" class="dropdown-item">便宜机场推荐</a>
+            <a href="premium-airports.html" class="dropdown-item">优质机场推荐</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">更多 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="../archives.html" class="dropdown-item">文章归档</a>
+            <a href="../about.html" class="dropdown-item">关于我们</a>
+          </div>
+        </div>
+        <div class="nav-search-container" id="nav-search-container">
+          <button class="nav-search-btn" id="nav-search-btn"><svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="搜索机场...">
+        </div>
+        <button class="theme-toggle" id="theme-toggle">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container article-page">
+    <div class="breadcrumbs">
+      <a href="../index.html">首页</a>
+      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <a href="../archives.html">文章归档</a>
+      <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>IPLC/IEPL专线科普</span>
+    </div>
+
+    <div class="main-layout">
+      <article class="content-feed">
+        <div class="article-header">
+          <div class="card-meta" style="margin-bottom:12px">
+            <span class="card-badge" style="position:static;background:linear-gradient(135deg,#0ea5e9,#3b82f6);color:#fff">专线科普</span>
+            <span>📅 2026-07-22</span>
+            <span>👁 阅读 (2780)</span>
+          </div>
+          <h1 class="article-title-large">IPLC/IEPL专线科普：游戏加速、4K不卡顿、专线机场完全指南</h1>
+          <div style="margin-top:14px">
+            <span class="tag-chip">IPLC专线</span><span class="tag-chip">IEPL专线</span><span class="tag-chip">4K不卡顿</span><span class="tag-chip">游戏加速</span><span class="tag-chip">低延迟节点</span><span class="tag-chip">Steam加速</span>
+          </div>
+        </div>
+
+        <div class="article-body">
+          <div class="info-box">
+            <h4>📌 本文要点</h4>
+            <p>深度解析 IPLC、IEPL、BGP 三种线路类型的本质区别，并通过延迟对比图表直观呈现，帮你找到适合游戏加速、4K视频、低延迟办公的最佳专线机场。</p>
+          </div>
+
+          <h2>一、三种机场线路类型全解析</h2>
+
+          <div class="compare-grid">
+            <div class="compare-card">
+              <div class="c-icon">🌐</div>
+              <h4>BGP 中转</h4>
+              <p>通过国内多线 BGP 服务器中转，成本低，节点多，但晚高峰带宽共享，波动较大。</p>
+            </div>
+            <div class="compare-card" style="border-color:#3b82f6">
+              <div class="c-icon">⚡</div>
+              <h4>IPLC 专线</h4>
+              <p>国际私有光纤直连，不走公共互联网，延迟极低，不受 GFW 干扰，带宽独享。</p>
+            </div>
+            <div class="compare-card" style="border-color:#6366f1">
+              <div class="c-icon">🚀</div>
+              <h4>IEPL 专线</h4>
+              <p>国际以太网私线，IPLC 的升级版，企业级带宽保障，延迟更低，价格更贵。</p>
+            </div>
+          </div>
+
+          <h2>二、延迟实测对比（晚高峰 22:00）</h2>
+          <p>以下为本站编辑团队在晚高峰期间实测的香港节点平均延迟数据：</p>
+
+          <div style="margin:20px 0">
+            <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:12px">▌ 香港节点晚高峰平均延迟（越短越好）</p>
+            <div class="ping-row"><span class="ping-label">IEPL专线</span><div class="ping-track"><div class="ping-bar" style="width:18%;background:linear-gradient(90deg,#22c55e,#16a34a)">18ms</div></div></div>
+            <div class="ping-row"><span class="ping-label">IPLC专线</span><div class="ping-track"><div class="ping-bar" style="width:25%;background:linear-gradient(90deg,#3b82f6,#2563eb)">25ms</div></div></div>
+            <div class="ping-row"><span class="ping-label">BGP优化</span><div class="ping-track"><div class="ping-bar" style="width:45%;background:linear-gradient(90deg,#f59e0b,#d97706)">45ms</div></div></div>
+            <div class="ping-row"><span class="ping-label">普通中转</span><div class="ping-track"><div class="ping-bar" style="width:72%;background:linear-gradient(90deg,#ef4444,#dc2626)">72ms</div></div></div>
+            <div class="ping-row"><span class="ping-label">直连</span><div class="ping-track"><div class="ping-bar" style="width:90%;background:linear-gradient(90deg,#6b7280,#4b5563)">130+ms</div></div></div>
+          </div>
+
+          <div class="success-box">
+            <h4>✅ 结论：为什么专线机场游戏体验更好？</h4>
+            <p>游戏对延迟（Ping）极度敏感，延迟超过 60ms 会明显感受到「卡顿」和「掉帧」。IPLC/IEPL 专线的 18-25ms 延迟，配合不丢包的物理光纤，是实现 4K 视频不卡顿和游戏低延迟的根本保障。</p>
+          </div>
+
+          <h2>三、2026年专线机场详细对比</h2>
+          <table class="rank-table">
+            <thead><tr><th>机场品牌</th><th>线路类型</th><th>入门价格</th><th>香港延迟</th><th>游戏加速</th><th>4K解锁</th><th>官网</th></tr></thead>
+            <tbody>
+              <tr><td><strong><a href="jilianyun-review.html">极连云</a></strong></td><td>IEPL 物理专线</td><td>¥18/月</td><td>~18ms</td><td>✅ 推荐</td><td>✅ Netflix/4K</td><td><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank">前往↗</a></td></tr>
+              <tr><td><strong><a href="edge-review.html">边缘节点</a></strong></td><td>IPLC 物理专线</td><td>¥15/月</td><td>~22ms</td><td>✅ 推荐</td><td>✅ Disney+/4K</td><td><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank">前往↗</a></td></tr>
+              <tr><td><strong><a href="guangshuyun-review.html">光速云</a></strong></td><td>IPLC 全球专线</td><td>¥17/月</td><td>~26ms</td><td>✅ 良好</td><td>✅ 流媒体原生IP</td><td><a href="https://asfqwerasf.guangshuyuntztz.sbs/#/?code=U8qX4jKz" target="_blank">前往↗</a></td></tr>
+              <tr><td><strong><a href="guangnianti-review.html">光年梯</a></strong></td><td>BGP 优化中转</td><td>¥18/月</td><td>~35ms</td><td>⚡ 良好</td><td>✅ Netflix/TikTok</td><td><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank">前往↗</a></td></tr>
+              <tr><td><strong><a href="sujie-review.html">速界</a></strong></td><td>不限速专线</td><td>¥90/年</td><td>~32ms</td><td>⚡ 良好</td><td>✅ 多平台</td><td><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank">前往↗</a></td></tr>
+              <tr><td><strong><a href="shunyun-review.html">瞬云</a></strong></td><td>Anycast 智能中转</td><td>¥99/年</td><td>~40ms</td><td>⚡ 可用</td><td>✅ 主流平台</td><td><a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank">前往↗</a></td></tr>
+            </tbody>
+          </table>
+
+          <h2>四、游戏加速专用场景推荐</h2>
+
+          <h3>🎮 Steam / 主机游戏联机</h3>
+          <p>推荐选择<strong>日本、新加坡节点</strong>的专线机场。<a href="jilianyun-review.html">极连云</a> 的 IEPL 日本节点延迟约 28ms，<a href="edge-review.html">边缘节点</a> 的新加坡 IPLC 节点延迟约 30ms，均适合主机联机和 Steam 平台游戏下载加速（满速可达 200Mbps+）。</p>
+
+          <h3>🎯 FPS 竞技类游戏（Valorant / CS2）</h3>
+          <p>此类游戏对延迟要求最苛刻，建议选择<strong>香港 IEPL 专线</strong>，延迟需控制在 25ms 以内。<a href="jilianyun-review.html">极连云</a>和<a href="edge-review.html">边缘节点</a>的香港 IPLC/IEPL 节点均可稳定达标。</p>
+
+          <h3>📺 4K 视频 / 流媒体不卡顿</h3>
+          <p>4K HDR 内容需要至少 25Mbps 稳定带宽。IPLC/IEPL 专线的独享带宽特性，配合原生 IP，不仅能解锁 Netflix 4K，还能确保晚高峰不卡顿缓冲。</p>
+
+          <div class="warn-box">
+            <strong>⚠️ 选机场的常见误区</strong>
+            <ul>
+              <li>节点数量多 ≠ 速度快，线路质量才是关键。</li>
+              <li>「不限速」指的是带宽上限，不代表延迟低。</li>
+              <li>游戏加速建议优先选择目标服务器所在地的节点（如欧服选欧洲节点）。</li>
+            </ul>
+          </div>
+
+          <h2>五、IPLC专线机场的选购要点清单</h2>
+          <ul>
+            <li>✅ 确认线路类型：优先 IPLC/IEPL，其次 BGP优化。</li>
+            <li>✅ 查看节点分布：是否覆盖你常用的游戏/流媒体服务器地区。</li>
+            <li>✅ 确认是否限速：部分低价套餐有晚高峰限速政策。</li>
+            <li>✅ 看流媒体解锁：是否提供原生IP（非落地IP）。</li>
+            <li>✅ 核实退款政策：正规机场通常提供 24-72 小时试用期。</li>
+          </ul>
+
+        </div>
+
+        <div class="card-footer" style="padding-top:24px;border-top:1px solid var(--border-color);margin-top:20px">
+          <div class="card-tags">
+            <a href="../index.html?tag=机场评测" class="card-tag"># 机场评测</a>
+            <a href="../index.html?tag=极连云" class="card-tag"># 极连云</a>
+            <a href="../index.html?tag=边缘" class="card-tag"># 边缘节点</a>
+            <a href="../index.html?tag=最新节点分享" class="card-tag"># 最新节点分享</a>
+            <a href="../index.html?tag=科学下载" class="card-tag"># 科学下载</a>
+          </div>
+        </div>
+
+        <div class="article-navigation">
+          <a href="airport-guide-2026.html" class="article-nav-card">
+            <span class="article-nav-label">← 上一篇</span>
+            <span class="article-nav-title">2026年机场排行榜：高性价比翻墙机场横向评测</span>
+          </a>
+          <a href="streaming-ai-guide.html" class="article-nav-card" style="text-align:right">
+            <span class="article-nav-label">下一篇 →</span>
+            <span class="article-nav-title">Netflix/ChatGPT/TikTok 机场选择指南</span>
+          </a>
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 8.25c-.97 0-1.75-.78-1.75-1.75s.78-1.75 1.75-1.75 1.75.78 1.75 1.75S6.47 8.25 5.5 8.25z"/></svg>热门标签</h3>
+          <div class="tags-cloud">
+            <a href="../index.html?tag=机场评测" class="sidebar-tag">机场评测</a>
+            <a href="../index.html?tag=极连云" class="sidebar-tag">极连云</a>
+            <a href="../index.html?tag=边缘" class="sidebar-tag">边缘</a>
+            <a href="../index.html?tag=光年梯" class="sidebar-tag">光年梯</a>
+            <a href="../index.html?tag=最新节点分享" class="sidebar-tag">最新节点分享</a>
+            <a href="../index.html?tag=科学下载" class="sidebar-tag">科学下载</a>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <h3 class="widget-title"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>相关文章</h3>
+          <div class="featured-list">
+            <div class="featured-item"><div class="featured-item-content"><h4 class="featured-item-title"><a href="jilianyun-review.html">极连云 IEPL专线评测</a></h4><span class="featured-item-date">2026-07-18</span></div></div>
+            <div class="featured-item"><div class="featured-item-content"><h4 class="featured-item-title"><a href="edge-review.html">边缘节点 IPLC深度评测</a></h4><span class="featured-item-date">2026-07-14</span></div></div>
+            <div class="featured-item"><div class="featured-item-content"><h4 class="featured-item-title"><a href="airport-guide-2026.html">2026年机场排行榜</a></h4><span class="featured-item-date">2026-07-22</span></div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3 class="footer-brand-title">机场速递</h3><p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。</p></div>
+        <div class="footer-links-col"><h4 class="footer-links-title">快捷导航</h4><ul class="footer-links-list"><li><a href="cheap-airports.html" class="footer-link">便宜机场</a></li><li><a href="../archives.html" class="footer-link">文章归档</a></li></ul></div>
+        <div class="footer-links-col"><h4 class="footer-links-title">推荐专线机场</h4><ul class="footer-links-list"><li><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云(IEPL)↗</a></li><li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点(IPLC)↗</a></li><li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯↗</a></li></ul></div>
+        <div class="footer-links-col"><h4 class="footer-links-title">合作联系</h4><ul class="footer-links-list" style="font-size:.85rem"><li>邮箱: 1962952406@qq.com</li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p></div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
