@@ -1131,10 +1131,18 @@ def generate_article_html(article, index):
 </body>
 </html>"""
 if __name__ == '__main__':
-    # Re-create articles directory
+    # Re-create articles directory robustly to handle Windows file locks
+    os.makedirs(articles_dir, exist_ok=True)
     if os.path.exists(articles_dir):
-        shutil.rmtree(articles_dir)
-    os.makedirs(articles_dir)
+        for filename in os.listdir(articles_dir):
+            file_path = os.path.join(articles_dir, filename)
+            try:
+                if os.path.isfile(file_path) or os.path.islink(file_path):
+                    os.unlink(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+            except Exception as e:
+                print(f"Warning: Could not remove {file_path} due to {e}. It will be overwritten during generation.")
     # Generate article files
     for index, article in enumerate(article_list):
         file_path = os.path.join(articles_dir, f"{article['slug']}.html")
