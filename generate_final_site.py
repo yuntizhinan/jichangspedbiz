@@ -1042,7 +1042,7 @@ def generate_article_html(article, index):
       <article class="content-feed">
         <div class="article-header">
           <div class="card-meta" style="margin-bottom: 12px;">
-            <span class="card-badge" style="position: static; background: var(--accent-gradient); color: #fff;">
+            <span class="card-badge" style="position: static; background: var(--accent-gradient) !important; color: #fff !important;">
               推荐评测
             </span>
             <span>
