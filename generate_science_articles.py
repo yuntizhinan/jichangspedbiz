@@ -50,7 +50,15 @@ def replace_text_globally():
         content_norm = content.replace("\r\n", "\n")
         prefix = "" if is_subpage else "articles/"
         
-        new_featured_html = f"""<div class="featured-list">
+        while '<div class="featured-list">' in content_norm:
+            # 找到当前组件 featured-list 头部
+            idx = content_norm.find('<div class="featured-list">')
+            # 找到组件结束标志 aside 容器
+            end_idx = content_norm.find('</aside>', idx)
+            if end_idx == -1:
+                break
+                
+            new_featured_html = f"""<div class="featured-list">
           <div class="featured-item">
             <div class="featured-item-img" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">JL</div>
             <div class="featured-item-content">
@@ -86,16 +94,16 @@ def replace_text_globally():
               <span class="featured-item-date">2026-07-06</span>
             </div>
           </div>
-        </div>"""
-        
-        # 使用正则表达式非贪婪匹配并替换掉整个 <div class="featured-list"> 到其后面的 </div> 盒子
-        # 匹配到外部容器以保证闭合无缺
-        content_norm = re.sub(
-            r'<div class="featured-list">.*?</div>\s*</div>', 
-            new_featured_html + "\n      </div>", 
-            content_norm, 
-            flags=re.DOTALL
-        )
+        </div>
+      </div>"""
+            
+            # 用新版块完整覆盖旧 featured-list 到 aside 闭合前的这一整个脏代码区
+            content_norm = content_norm[:idx] + new_featured_html + content_norm[end_idx:]
+            # 暂时将已替换的组件标记，防止无限死循环
+            content_norm = content_norm.replace('<div class="featured-list">', '<div class="featured-list-done">', 1)
+            
+        # 还原标记
+        content_norm = content_norm.replace('<div class="featured-list-done">', '<div class="featured-list">')
         return content_norm.replace("\n", os.linesep)
 
     # 1. 替换 write_final_pages.py
