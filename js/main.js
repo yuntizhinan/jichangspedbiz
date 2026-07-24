@@ -131,34 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     pagerEl.style.display = 'flex';
+    pagerEl.className = 'pagination';
 
-    const btnBase = `
-      border: 1px solid var(--border-color, #e2e8f0);
-      background: var(--bg-card, #fff);
-      color: var(--text-primary, #1e293b);
-      border-radius: 8px;
-      padding: 7px 14px;
-      font-size: 0.9rem;
-      font-family: 'Outfit', sans-serif;
-      cursor: pointer;
-      transition: all .2s;
-    `;
-    const btnActive = `
-      border-color: #6366f1;
-      background: #6366f1;
-      color: #fff;
-      font-weight: 700;
-    `;
-
-    let html = `<button style="${btnBase}${currentPage === 1 ? 'opacity:.4;cursor:default;' : ''}"
+    let html = `<button class="pager-btn" ${currentPage === 1 ? 'disabled' : ''}
       onclick="goToPage(${currentPage - 1})">上一页</button>`;
 
     for (let p = 1; p <= totalPages; p++) {
-      html += `<button style="${btnBase}${p === currentPage ? btnActive : ''}"
+      html += `<button class="pager-btn ${p === currentPage ? 'active' : ''}"
         onclick="goToPage(${p})">${p}</button>`;
     }
 
-    html += `<button style="${btnBase}${currentPage === totalPages ? 'opacity:.4;cursor:default;' : ''}"
+    html += `<button class="pager-btn" ${currentPage === totalPages ? 'disabled' : ''}
       onclick="goToPage(${currentPage + 1})">下一页</button>`;
 
     pagerEl.innerHTML = html;
