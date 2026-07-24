@@ -11,6 +11,33 @@ links = {
     '寰宇云': 'https://vip3.huanyuyunbest.com/#/register?code=K6h5VWw2',
     '速界': 'https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl'
 }
+
+science_list = [
+    {'slug': 'airport-guide-2026', 'title': '2026年机场排行榜：高性价比翻墙机场科普与横向评测', 'date': '2026-07-22'},
+    {'slug': 'iplc-guide', 'title': 'IPLC/IEPL专线科普：4K不卡顿、游戏加速、专线机场完全指南', 'date': '2026-07-22'},
+    {'slug': 'streaming-ai-guide', 'title': 'Netflix/ChatGPT/TikTok机场选择指南：流媒体与AI工具加速完全攻略', 'date': '2026-07-22'},
+    {'slug': 'clash-tutorial', 'title': 'Clash配置教程：2026年最全Clash节点导入与订阅地址使用完全指南', 'date': '2026-07-23'},
+    {'slug': 'shadowrocket-setup', 'title': 'Shadowrocket配置教程：iOS苹果小火箭订阅地址导入与SS/SSR专线配置完全指南', 'date': '2026-07-23'},
+    {'slug': 'v2rayng-guide', 'title': 'V2RayNG配置教程：安卓手机一键导入订阅地址与VLESS/VESS网络配置攻略', 'date': '2026-07-23'},
+    {'slug': 'lantern-alternative', 'title': '蓝灯Lantern好用吗？2026年蓝灯替代方案与SS/SSR专线中转机场推荐', 'date': '2026-07-23'},
+    {'slug': 'reality-protocol', 'title': 'Reality协议科普：什么是Reality协议？安全性与主流客户端配置详解', 'date': '2026-07-23'},
+    {'slug': 'hysteria2-vs-tuic', 'title': 'Hysteria2与Tuic协议对比：晚高峰高丢包环境下的最佳UDP翻墙协议选择', 'date': '2026-07-23'},
+    {'slug': 'iplc-vs-iepl', 'title': 'IPLC专线机场与IEPL中转有何区别？主流专线机场网络传输架构大科普', 'date': '2026-07-23'},
+    {'slug': 'openwrt-router', 'title': 'OpenWrt科普教程：软路由固件插件安装、Clash/Sing-box节点配置完全指南', 'date': '2026-07-23'},
+    {'slug': 'vps-vs-airport', 'title': '自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？', 'date': '2026-07-23'},
+    {'slug': 'one-multiplier', 'title': '什么是1倍率机场？如何看懂计费规则，避开机场流量折算陷阱？', 'date': '2026-07-23'},
+    {'slug': 'streaming-unlock', 'title': '什么是解锁流媒体节点？Netflix/Disney+ 住宅IP分流选择科普与机场推荐', 'date': '2026-07-23'},
+    {'slug': 'clash-subscription', 'title': '网络订阅地址获取与客户端通用配置防跑路避坑常识', 'date': '2026-07-23'},
+    {'slug': 'hy2-performance', 'title': 'Hysteria2协议在低带宽晚高峰下的速度实测与Reality/VLESS协议横向评测', 'date': '2026-07-23'},
+    {'slug': 'tuic-latency', 'title': 'Tuic协议适合玩外服游戏吗？Tuic低延迟原理分析与SS/SSR专线游戏节点选择', 'date': '2026-07-23'},
+    {'slug': 'router-firmware', 'title': '软路由科普深度科普：OpenWrt主流固件插件性能对比与Clash配置教程', 'date': '2026-07-23'},
+    {'slug': 'reality-vless-verge', 'title': 'VLESS与Reality协议在Clash Verge中的通用配置与速度优化教程', 'date': '2026-07-23'},
+    {'slug': 'shadowrocket-h2', 'title': '小火箭Hysteria2节点怎么配置？iOS Shadowrocket基于UDP的高丢包提速教程', 'date': '2026-07-23'},
+    {'slug': 'openwrt-singbox', 'title': 'Sing-box在OpenWrt软路由系统下的配置与高吞吐专线分流教程', 'date': '2026-07-23'},
+    {'slug': 'blue-lantern-vpn', 'title': '蓝灯VPN好用吗？为什么老牌翻墙VPN蓝灯连不上与最优机场方案对比', 'date': '2026-07-23'},
+    {'slug': 'reality-vless-comparison', 'title': 'Reality混淆协议与传统VLESS/Vmess加密协议安全性与防封锁横向对比', 'date': '2026-07-23'}
+]
+
 def write_index():
     html = """<!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
@@ -970,7 +997,16 @@ def write_about():
         f.write(html)
     print("about.html written.")
 def write_vpn_guide():
-    html = """<!DOCTYPE html>
+    global science_list
+    science_articles_html = ""
+    for s in science_list:
+        science_articles_html += f"""            <a href=\"articles/{s['slug']}.html\" style=\"display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;\" onmouseover=\"this.style.borderColor='var(--accent-primary)';\" onmouseout=\"this.style.borderColor='var(--border-color)';\">
+              <span style=\"font-size: 0.92rem; font-weight: 600; color: var(--text-primary);\">{s['title']}</span>
+              <span style=\"font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;\">📅 {s['date']}</span>
+            </a>
+"""
+
+    html = f"""<!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -1072,7 +1108,7 @@ def write_vpn_guide():
           <h1 class="article-title-large">机场科普与高速网络优化专栏简介</h1>
         </div>
         <div class="article-body">
-          <p>欢迎来到<strong>科普专栏</strong>。本专栏致力于为广大网络用户提供2026年最新、最客观的国际高速网络技术科普，详细解析各种主流网络代理协议（如 VLESS、Reality、Hysteria2、Tuic 等）与网络架构（IPLC专线、IEPL中转、BGP中转）的底层原理。帮助您避开计费流量倍率陷阱、防范不良服务商跑路风控，实现安全、顺畅的全球商务办公和日常娱乐冲浪。</p>
+          <p>欢迎来到<strong>科普专栏</strong>。本专栏致力于为广大网络用户提供2026年最新、最客观的国际高速网络技术科普，详细解析各种主流网络代理协议（如 VLESS、Reality、Hysteria2、Tuic 等）与网络架构（IPLC专线、IEPL中转、BGP中转）的底层原理。帮助您避开计费流量倍率陷阱、防范不良服务商跑路风控，实现安全、顺畅的全球商务办公 and 日常娱乐冲浪。</p>
           <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin: 25px 0;">
             <h3 style="margin-top: 0; color: var(--accent-primary); font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="stroke-linecap: round; stroke-linejoin: round;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1086,92 +1122,12 @@ def write_vpn_guide():
               <li style="margin-bottom: 0;">🌟 <strong><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">快狸官网 ↗</a></strong>：老牌高稳定服务商，支持灵活月付方案（15元/月起），节点遍布全球主要核心区域，线路高可用 Anycast 容灾，备用及主力均非常扎实。</li>
             </ul>
           </div>
-          <p>在了解并订阅了心仪的网络节点后，如果您在使用客户端（如 Clash、Shadowrocket、V2RayNG 等）或者配置软路由时遇到任何问题，欢迎深入翻阅本专栏下方的 15 篇专业科普与配置指南：</p>
+          <p>在了解并订阅了心仪的网络节点后，如果您在使用客户端（如 Clash、Shadowrocket、V2RayNG 等）或者配置软路由时遇到任何问题，欢迎深入翻阅本专栏下方的 {len(science_list)} 篇专业科普与配置指南：</p>
         </div>
           <h2 style="margin-top: 30px;">三、科普专栏深度科普与配置教程</h2>
-          <p>以下为您精选的 15 篇网络加速深度科普文章与客户端配置教程，帮助您更加深入地了解协议机制与安全翻墙防坑常识：</p>
+          <p>以下为您精选的 {len(science_list)} 篇网络加速深度科普文章与客户端配置教程，帮助您更加深入地了解协议机制与安全翻墙防坑常识：</p>
           <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px; margin-bottom: 25px;">
-                <a href="articles/clash-tutorial.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Clash配置教程：2026年最全Clash节点导入与订阅地址使用完全指南</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/shadowrocket-setup.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Shadowrocket配置教程：iOS苹果小火箭订阅地址导入与SS/SSR专线配置完全指南</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/v2rayng-guide.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">V2RayNG配置教程：安卓手机一键导入订阅地址与VLESS/VESS网络配置攻略</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/lantern-alternative.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">蓝灯Lantern好用吗？2026年蓝灯替代方案与SS/SSR专线中转机场推荐</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/reality-protocol.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Reality协议科普：什么是Reality协议？安全性与主流客户端配置详解</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/hysteria2-vs-tuic.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Hysteria2与Tuic协议对比：晚高峰高丢包环境下的最佳UDP翻墙协议选择</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/iplc-vs-iepl.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">IPLC专线机场与IEPL中转有何区别？主流专线机场网络传输架构大科普</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/openwrt-router.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">OpenWrt科普教程：软路由固件插件安装、Clash/Sing-box节点配置完全指南</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/vps-vs-airport.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/one-multiplier.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">什么是1倍率机场？如何看懂计费规则，避开机场流量折算陷阱？</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/streaming-unlock.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">什么是解锁流媒体节点？Netflix/Disney+ 住宅IP分流选择科普与机场推荐</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/clash-subscription.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">网络订阅地址获取与客户端通用配置防跑路避坑常识</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/hy2-performance.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Hysteria2协议在低带宽晚高峰下的速度实测与Reality/VLESS协议横向评测</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/tuic-latency.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Tuic协议适合玩外服游戏吗？Tuic低延迟原理分析与SS/SSR专线游戏节点选择</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/router-firmware.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">软路由科普深度科普：OpenWrt主流固件插件性能对比与Clash配置教程</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/reality-vless-verge.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">VLESS与Reality协议在Clash Verge中的通用配置与速度优化教程</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/shadowrocket-h2.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">小火箭Hysteria2节点怎么配置？iOS Shadowrocket基于UDP的高丢包提速教程</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/openwrt-singbox.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Sing-box在OpenWrt软路由系统下的配置与高吞吐专线分流教程</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/blue-lantern-vpn.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">蓝灯VPN好用吗？为什么老牌翻墙VPN蓝灯连不上与最优机场方案对比</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-            <a href="articles/reality-vless-comparison.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
-              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Reality混淆协议与传统VLESS/Vmess加密协议安全性与防封锁横向对比</span>
-              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
-            </a>
-          </div>
+{science_articles_html}          </div>
       </article>
       <!-- Right Column: Sidebar -->
       <aside class="sidebar">
@@ -1252,143 +1208,52 @@ def write_vpn_guide():
         f.write(html)
     print("vpn-guide.html written.")
 def write_sitemap():
-    xml = """<?xml version="1.0" encoding="UTF-8"?>
+    from generate_final_site import article_list
+    global science_list
+    all_articles = [a['slug'] for a in article_list] + [s['slug'] for s in science_list]
+    articles_nodes = ""
+    for slug in all_articles:
+        articles_nodes += f"""  <url>
+    <loc>https://jichangspeed.biz/articles/{slug}.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+"""
+    xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jichangspeed.biz/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://jichangspeed.biz/about.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jichangspeed.biz/vpn-guide.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jichangspeed.biz/archives.html</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- 13 Articles -->
-  <url>
-    <loc>https://jichangspeed.biz/articles/jilianyun-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/guangnianti-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/edge-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/kuaili-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/guangshuyun-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/globalyun-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/shunyun-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/huanyuyun-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/sujie-review.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/best-airports-2026.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/cheap-airports.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/premium-airports.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://jichangspeed.biz/articles/subscription-guide.html</loc>
-    <lastmod>2026-07-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>
+{articles_nodes}</urlset>
 """
     with open('sitemap.xml', 'w', encoding='utf-8') as f:
         f.write(xml)
     print("sitemap.xml written.")
 def write_archives():
     from generate_final_site import article_list
-    science_list = [
-        {'slug': 'airport-guide-2026', 'title': '2026年机场排行榜：高性价比翻墙机场科普与横向评测', 'date': '2026-07-22'},
-        {'slug': 'iplc-guide', 'title': 'IPLC/IEPL专线科普：4K不卡顿、游戏加速、专线机场完全指南', 'date': '2026-07-22'},
-        {'slug': 'streaming-ai-guide', 'title': 'Netflix/ChatGPT/TikTok机场选择指南：流媒体与AI工具加速完全攻略', 'date': '2026-07-22'},
-        {'slug': 'clash-tutorial', 'title': 'Clash配置教程：2026年最全Clash节点导入与订阅地址使用完全指南', 'date': '2026-07-23'},
-        {'slug': 'shadowrocket-setup', 'title': 'Shadowrocket配置教程：iOS苹果小火箭订阅地址导入与SS/SSR专线配置完全指南', 'date': '2026-07-23'},
-        {'slug': 'v2rayng-guide', 'title': 'V2RayNG配置教程：安卓手机一键导入订阅地址与VLESS/VESS网络配置攻略', 'date': '2026-07-23'},
-        {'slug': 'lantern-alternative', 'title': '蓝灯Lantern好用吗？2026年蓝灯替代方案与SS/SSR专线中转机场推荐', 'date': '2026-07-23'},
-        {'slug': 'reality-protocol', 'title': 'Reality协议科普：什么是Reality协议？安全性与主流客户端配置详解', 'date': '2026-07-23'},
-        {'slug': 'hysteria2-vs-tuic', 'title': 'Hysteria2与Tuic协议对比：晚高峰高丢包环境下的最佳UDP翻墙协议选择', 'date': '2026-07-23'},
-        {'slug': 'iplc-vs-iepl', 'title': 'IPLC专线机场与IEPL中转有何区别？主流专线机场网络传输架构大科普', 'date': '2026-07-23'},
-        {'slug': 'openwrt-router', 'title': 'OpenWrt科普教程：软路由固件插件安装、Clash/Sing-box节点配置完全指南', 'date': '2026-07-23'},
-        {'slug': 'vps-vs-airport', 'title': '自建节点对比专线机场：2026年为什么我不建议新手折腾搭建翻墙？', 'date': '2026-07-23'},
-        {'slug': 'one-multiplier', 'title': '什么是1倍率机场？如何看懂计费规则，避开机场流量折算陷阱？', 'date': '2026-07-23'},
-        {'slug': 'streaming-unlock', 'title': '什么是解锁流媒体节点？Netflix/Disney+ 住宅IP分流选择科普与机场推荐', 'date': '2026-07-23'},
-        {'slug': 'clash-subscription', 'title': '网络订阅地址获取与客户端通用配置防跑路避坑常识', 'date': '2026-07-23'},
-        {'slug': 'hy2-performance', 'title': 'Hysteria2协议在低带宽晚高峰下的速度实测与Reality/VLESS协议横向评测', 'date': '2026-07-23'},
-        {'slug': 'tuic-latency', 'title': 'Tuic协议适合玩外服游戏吗？Tuic低延迟原理分析与SS/SSR专线游戏节点选择', 'date': '2026-07-23'},
-        {'slug': 'router-firmware', 'title': '软路由科普深度科普：OpenWrt主流固件插件性能对比与Clash配置教程', 'date': '2026-07-23'},
-        {'slug': 'reality-vless-verge', 'title': 'VLESS与Reality协议在Clash Verge中的通用配置与速度优化教程', 'date': '2026-07-23'},
-        {'slug': 'shadowrocket-h2', 'title': '小火箭Hysteria2节点怎么配置？iOS Shadowrocket基于UDP的高丢包提速教程', 'date': '2026-07-23'},
-        {'slug': 'openwrt-singbox', 'title': 'Sing-box在OpenWrt软路由系统下的配置与高吞吐专线分流教程', 'date': '2026-07-23'},
-        {'slug': 'blue-lantern-vpn', 'title': '蓝灯VPN好用吗？为什么老牌翻墙VPN蓝灯连不上与最优机场方案对比', 'date': '2026-07-23'},
-        {'slug': 'reality-vless-comparison', 'title': 'Reality混淆协议与传统VLESS/Vmess加密协议安全性与防封锁横向对比', 'date': '2026-07-23'}
-    ]
+    global science_list
     # 将原有 article_list 转化为可以和 science_list 混合拼接的普通 dict 格式
     formatted_articles = []
     for a in article_list:

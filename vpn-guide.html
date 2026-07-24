@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="css/style.css?v=20260724">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
-    [data-theme="dark"] .logo span {{
+    [data-theme="dark"] .logo span {
       background: none !important;
       -webkit-background-clip: unset !important;
       -webkit-text-fill-color: #ffffff !important;
       color: #ffffff !important;
-    }}
+    }
   </style>
 </head>
 <body>
@@ -100,7 +100,7 @@
           <h1 class="article-title-large">机场科普与高速网络优化专栏简介</h1>
         </div>
         <div class="article-body">
-          <p>欢迎来到<strong>科普专栏</strong>。本专栏致力于为广大网络用户提供2026年最新、最客观的国际高速网络技术科普，详细解析各种主流网络代理协议（如 VLESS、Reality、Hysteria2、Tuic 等）与网络架构（IPLC专线、IEPL中转、BGP中转）的底层原理。帮助您避开计费流量倍率陷阱、防范不良服务商跑路风控，实现安全、顺畅的全球商务办公和日常娱乐冲浪。</p>
+          <p>欢迎来到<strong>科普专栏</strong>。本专栏致力于为广大网络用户提供2026年最新、最客观的国际高速网络技术科普，详细解析各种主流网络代理协议（如 VLESS、Reality、Hysteria2、Tuic 等）与网络架构（IPLC专线、IEPL中转、BGP中转）的底层原理。帮助您避开计费流量倍率陷阱、防范不良服务商跑路风控，实现安全、顺畅的全球商务办公 and 日常娱乐冲浪。</p>
           <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin: 25px 0;">
             <h3 style="margin-top: 0; color: var(--accent-primary); font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="stroke-linecap: round; stroke-linejoin: round;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -114,12 +114,24 @@
               <li style="margin-bottom: 0;">🌟 <strong><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">快狸官网 ↗</a></strong>：老牌高稳定服务商，支持灵活月付方案（15元/月起），节点遍布全球主要核心区域，线路高可用 Anycast 容灾，备用及主力均非常扎实。</li>
             </ul>
           </div>
-          <p>在了解并订阅了心仪的网络节点后，如果您在使用客户端（如 Clash、Shadowrocket、V2RayNG 等）或者配置软路由时遇到任何问题，欢迎深入翻阅本专栏下方的 15 篇专业科普与配置指南：</p>
+          <p>在了解并订阅了心仪的网络节点后，如果您在使用客户端（如 Clash、Shadowrocket、V2RayNG 等）或者配置软路由时遇到任何问题，欢迎深入翻阅本专栏下方的 23 篇专业科普与配置指南：</p>
         </div>
           <h2 style="margin-top: 30px;">三、科普专栏深度科普与配置教程</h2>
-          <p>以下为您精选的 15 篇网络加速深度科普文章与客户端配置教程，帮助您更加深入地了解协议机制与安全翻墙防坑常识：</p>
+          <p>以下为您精选的 23 篇网络加速深度科普文章与客户端配置教程，帮助您更加深入地了解协议机制与安全翻墙防坑常识：</p>
           <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px; margin-bottom: 25px;">
-                <a href="articles/clash-tutorial.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+            <a href="articles/airport-guide-2026.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">2026年机场排行榜：高性价比翻墙机场科普与横向评测</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-22</span>
+            </a>
+            <a href="articles/iplc-guide.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">IPLC/IEPL专线科普：4K不卡顿、游戏加速、专线机场完全指南</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-22</span>
+            </a>
+            <a href="articles/streaming-ai-guide.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
+              <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Netflix/ChatGPT/TikTok机场选择指南：流媒体与AI工具加速完全攻略</span>
+              <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-22</span>
+            </a>
+            <a href="articles/clash-tutorial.html" style="display: flex; justify-content: space-between; align-items: center; text-decoration: none; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent-primary)';" onmouseout="this.style.borderColor='var(--border-color)';">
               <span style="font-size: 0.92rem; font-weight: 600; color: var(--text-primary);">Clash配置教程：2026年最全Clash节点导入与订阅地址使用完全指南</span>
               <span style="font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; margin-left: 10px;">📅 2026-07-23</span>
             </a>
