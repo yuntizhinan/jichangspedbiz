@@ -1134,9 +1134,9 @@ def write_vpn_guide():
           <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; margin: 25px 0;">
             <h3 style="margin-top: 0; color: var(--accent-primary); font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="stroke-linecap: round; stroke-linejoin: round;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              优质网络服务商（机场）软推荐
+              优质网络服务商（机场）精选推荐
             </h3>
-            <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;">为了方便大家快速接入安全稳定的加速网络，我们根据各大服务商的晚高峰连通率、延迟 and 丢包实测，向您进行如下软推荐（点击对应名称即可直接访问官网）：</p>
+            <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;">为了方便大家快速接入安全稳定的加速网络，我们根据各大服务商的晚高峰连通率、延迟 and 丢包实测，向您进行如下精选推荐（点击对应名称即可直接访问官网）：</p>
             <ul style="font-size: 0.9rem; line-height: 1.7; padding-left: 20px; margin-bottom: 0; list-style-type: none;">
               <li style="margin-bottom: 10px;">🌟 <strong><a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">极连云官网 ↗</a></strong>：全系部署 IEPL 企业级物理私网，香港物理延迟低至 18ms，晚高峰 100% 连通不卡顿，且全节点均为 1 倍率实在计费，流媒体完美解锁，是高端商务办公、低延迟游戏加速与会议的不二选择。</li>
               <li style="margin-bottom: 10px;">🌟 <strong><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">速界官网 ↗</a></strong>：高性价比年付首选，体验套餐年付低至 90 元（折合 7.5 元/月）。不仅全节点 1 倍率，且完全不限在线客户端设备数，提供极其简便的一键连接软件，极其适合轻度及多设备共享用户。</li>
