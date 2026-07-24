@@ -164,17 +164,14 @@ ul, ol {
 }
 
 .logo span {
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: var(--text-primary);
+  color: var(--accent-primary);
 }
 
 [data-theme="dark"] .logo span {
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: var(--text-primary) !important;
-  color: var(--text-primary) !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .logo svg {
