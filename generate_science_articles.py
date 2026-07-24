@@ -91,6 +91,62 @@ def replace_text_globally():
         content_norm = content_norm.replace('<a href="../robots.txt" class="footer-link">Robots.txt</a>', '')
         return content_norm.replace("\n", os.linesep)
 
+    def insert_featured_list_widget(content, is_subpage=False):
+        if 'featured-list' in content:
+            return content
+            
+        prefix = "" if is_subpage else "articles/"
+        
+        featured_widget = f"""        <!-- Sidebar Featured Widget -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            精选文章
+          </h3>
+          <div class="featured-list">
+            <div class="featured-item">
+              <div class="featured-item-img" style="background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">JL</div>
+              <div class="featured-item-content">
+                <h4 class="featured-item-title"><a href="{prefix}jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
+                <span class="featured-item-date">2026-07-18</span>
+              </div>
+            </div>
+            <div class="featured-item">
+              <div class="featured-item-img" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">GN</div>
+              <div class="featured-item-content">
+                <h4 class="featured-item-title"><a href="{prefix}guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
+                <span class="featured-item-date">2026-07-16</span>
+              </div>
+            </div>
+            <div class="featured-item">
+              <div class="featured-item-img" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">BY</div>
+              <div class="featured-item-content">
+                <h4 class="featured-item-title"><a href="{prefix}edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
+                <span class="featured-item-date">2026-07-14</span>
+              </div>
+            </div>
+            <div class="featured-item">
+              <div class="featured-item-img" style="background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SJ</div>
+              <div class="featured-item-content">
+                <h4 class="featured-item-title"><a href="{prefix}sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
+                <span class="featured-item-date">2026-07-03</span>
+              </div>
+            </div>
+            <div class="featured-item">
+              <div class="featured-item-img" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:0.75rem; font-family:'Outfit';">SY</div>
+              <div class="featured-item-content">
+                <h4 class="featured-item-title"><a href="{prefix}shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
+                <span class="featured-item-date">2026-07-06</span>
+              </div>
+            </div>
+          </div>
+        </div>"""
+        
+        content_norm = content.replace("\r\n", "\n")
+        if "</aside>" in content_norm:
+            content_norm = content_norm.replace("</aside>", featured_widget + "\n      </aside>", 1)
+        return content_norm.replace("\n", os.linesep)
+
     # 1. 遍历修改 articles/ 目录下的所有文章 HTML
     articles_dir = "articles"
     if os.path.exists(articles_dir):
@@ -112,9 +168,11 @@ def replace_text_globally():
                 html = html.replace("软路由科学上网", "软路由技术")
                 html = html.replace("科学上网订阅地址", "网络订阅地址")
                 
-                # 升级精选文章侧边栏与去除页脚链接
+                # 升级精选文章侧边栏与页脚
                 html = update_featured_list_in_html(html, is_subpage=True)
                 html = remove_footer_links(html)
+                # 强行在没有侧边栏列表的页面中注入精选文章列表
+                html = insert_featured_list_widget(html, is_subpage=True)
                 # 全局替换极界为 EdgeNova
                 html = html.replace("极界", "EdgeNova")
                 
@@ -128,6 +186,8 @@ def replace_text_globally():
             with open(fname, 'r', encoding='utf-8') as f:
                 html = f.read()
             html = html.replace("极界", "EdgeNova")
+            # 同样对主目录下的 parent 页（如 vpn-guide.html）进行侧边栏精选列表注入
+            html = insert_featured_list_widget(html, is_subpage=False)
             with open(fname, 'w', encoding='utf-8') as f:
                 f.write(html)
     print("Updated parent HTML files")
