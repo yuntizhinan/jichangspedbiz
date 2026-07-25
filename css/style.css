@@ -2606,8 +2606,13 @@ a.core-feature-card {
     background: none !important;
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: initial !important;
-    color: var(--accent-primary, #3b82f6) !important;
+    color: #007aff !important; /* Brighter iOS Blue for Light Mode */
     display: inline !important;
+  }
+
+  [data-theme="dark"] .hero-title span,
+  [data-theme="dark"] .text-gradient {
+    color: #60a5fa !important; /* Brighter Sky Blue for Dark Mode */
   }
 }
 

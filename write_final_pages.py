@@ -330,7 +330,7 @@ def write_index():
   <meta name="geo.placename" content="Guangdong" />
   <meta name="geo.position" content="23.12908;113.26436" />
   <meta name="ICBM" content="23.12908, 113.26436" />
-  <link rel="stylesheet" href="css/style.css?v=20260729">
+  <link rel="stylesheet" href="css/style.css?v=20260730">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
     [data-theme="dark"] .logo span {{
@@ -673,7 +673,7 @@ def write_about():
   <meta name="description" content="关于机场速递 (jichangspeed.biz) —— 我们的定位、测速准则、核心价值与联系方式。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等高品质专线梯子官网入口。">
   <meta name="keywords" content="关于我们, 机场速递, 机场评测, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=20260729">
+  <link rel="stylesheet" href="css/style.css?v=20260730">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
     [data-theme="dark"] .logo span {{
@@ -869,7 +869,7 @@ def write_vpn_guide():
   <meta name="description" content="科普专栏配置购买一站式指南。涵盖电脑客户端、安卓客户端与iOS苹果客户端下载与通用一键订阅导入教程，推荐使用极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅服务。">
   <meta name="keywords" content="配置配置, 订阅下载, 客户端导入, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=20260729">
+  <link rel="stylesheet" href="css/style.css?v=20260730">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
     [data-theme="dark"] .logo span {{
@@ -1157,7 +1157,7 @@ def write_archives():
   <meta name="description" content="文章归档页面包含机场速递 (jichangspeed.biz) 全站所有机场测速、便宜机场推荐、优质专线机场评测文章时间线列表。">
   <meta name="keywords" content="文章归档, 机场测速, 极连云, 光年梯, 边缘, 快狸, 瞬云, 寰宇云, 速界">
   <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="css/style.css?v=20260729">
+  <link rel="stylesheet" href="css/style.css?v=20260730">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
     [data-theme="dark"] .logo span {{
