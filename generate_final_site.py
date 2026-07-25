@@ -969,7 +969,7 @@ def generate_article_html(article, index):
   <meta property="og:description" content="{article['excerpt']}">
   <meta property="og:image" content="https://jichangspeed.biz/images/og-share.jpg">
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/style.css?v=20260726">
+  <link rel="stylesheet" href="../css/style.css?v=20260728">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
     [data-theme="dark"] .logo span {{
@@ -1167,7 +1167,7 @@ def generate_article_html(article, index):
       </div>
     </div>
   </footer>
-  <script src="../js/main.js?v=20260727"></script>
+  <script src="../js/main.js?v=20260728"></script>
 </body>
 </html>"""
 if __name__ == '__main__':
