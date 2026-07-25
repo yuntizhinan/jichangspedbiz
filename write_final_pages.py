@@ -643,7 +643,7 @@ def write_index():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: 1962952406@qq.com</li>
+            <li>邮箱: <a href="mailto:1962952406@qq.com" class="footer-link">1962952406@qq.com</a></li>
           </ul>
         </div>
       </div>
@@ -833,7 +833,7 @@ def write_about():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: 1962952406@qq.com</li>
+            <li>邮箱: <a href="mailto:1962952406@qq.com" class="footer-link">1962952406@qq.com</a></li>
           </ul>
         </div>
       </div>
@@ -1044,7 +1044,7 @@ def write_vpn_guide():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: 1962952406@qq.com</li>
+            <li>邮箱: <a href="mailto:1962952406@qq.com" class="footer-link">1962952406@qq.com</a></li>
           </ul>
         </div>
       </div>
@@ -1337,7 +1337,7 @@ def write_archives():
           <h4 class="footer-links-title">合作联系</h4>
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">商务与测速投稿请发邮件：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
-            <li>邮箱: 1962952406@qq.com</li>
+            <li>邮箱: <a href="mailto:1962952406@qq.com" class="footer-link">1962952406@qq.com</a></li>
           </ul>
         </div>
       </div>
