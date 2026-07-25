@@ -4,12 +4,26 @@ import re
 
 def replace_text_globally():
     def inject_theme_script(html):
-        if 'localStorage.getItem(\'theme\')' in html:
+        # Remove old script version without try-catch if present
+        old_script_str = """  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme === 'dark' || (!savedTheme && systemPrefersDark) ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>"""
+        html = html.replace(old_script_str, "")
+        
+        if 'try {' in html and 'localStorage.getItem(\'theme\')' in html:
             return html
         script = """<head>
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('theme');
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('theme');
+      } catch (e) {}
       const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const theme = savedTheme === 'dark' || (!savedTheme && systemPrefersDark) ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', theme);

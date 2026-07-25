@@ -3,7 +3,10 @@
 <head>
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('theme');
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('theme');
+      } catch (e) {}
       const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const theme = savedTheme === 'dark' || (!savedTheme && systemPrefersDark) ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', theme);
@@ -347,6 +350,6 @@
       </div>
     </div>
   </footer>
-  <script src="../js/main.js?v=20260728"></script>
+  <script src="../js/main.js?v=20260729"></script>
 </body>
 </html>
