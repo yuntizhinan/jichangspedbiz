@@ -2605,13 +2605,14 @@ a.core-feature-card {
   .text-gradient {
     background: none !important;
     -webkit-background-clip: unset !important;
-    -webkit-text-fill-color: initial !important;
+    -webkit-text-fill-color: #007aff !important; /* Force text fill color to solid iOS blue */
     color: #007aff !important; /* Brighter iOS Blue for Light Mode */
     display: inline !important;
   }
 
   [data-theme="dark"] .hero-title span,
   [data-theme="dark"] .text-gradient {
+    -webkit-text-fill-color: #60a5fa !important; /* Force text fill color to solid sky blue */
     color: #60a5fa !important; /* Brighter Sky Blue for Dark Mode */
   }
 }
