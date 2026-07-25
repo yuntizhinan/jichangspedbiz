@@ -28,6 +28,9 @@ article_list = [
     'excerpt': '极连云是一家提供超高性价比 IEPL 专线的网络加速机场。本文将从网络架构、晚高峰丢包延迟测速、流媒体及AI解锁、客户端配置等多维度对其进行详尽评测。',
     'content': f"""
       <p>在全球化互联网高度互联的今天，无论是日常的娱乐、跨国协同开发，还是需要稳定连接海外学术资源的留学生与科研人员，高速且安全的科学上网通道都已成为核心生产力工具。然而，普通的网络代理服务往往在网络高峰期拥堵不堪，甚至在特殊敏感时期遭遇大面积断连。为了解决这一痛点，物理专线网络应运而生。今天我们要深度评测的 <strong>极连云</strong> 机场，就是一款主打高端 IEPL/IPLC 物理专线，且在定价上保持极高性价比的标杆级服务产品。</p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://i.ibb.co/TxW2rqGj/jilianyunlogo.webp" alt="极连云 logo" style="width: 120px; height: auto; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--border-color);">
+      </div>
       <h2>一、物理专线网络 (IEPL) 的深层技术优势</h2>
       <p>对于初入科学上网领域的网民来说，经常会产生疑问：专线网络为什么普遍比直连或普通中转网络贵？它的稳定性优势体现在哪里？事实上，IEPL（国际以太网专线）是一种端到端的跨国物理光纤链路。这种链路的物理流量不经过公共互联网骨干网，因而能够完全绕开国内防火墙的深度流量检测（DPI）与动态阻断。同时，因为不受国际出口带宽拥堵的影响，它的数据传输丢包率接近为零。</p>
       <p>在每晚的 20:30 至 23:30 这一公网拥堵最严重的晚高峰期间，当普通中转节点因为公网带宽爆满而频繁卡顿、断流、延迟飙升时，极连云的 IEPL 专线网络依然能够稳定地输出高达数百兆的极速下行，保证用户的视频播放与数据传输完全不受干扰。极连云自建的高速物理光纤链路，还配合了多机房 BGP 入口与 Anycast 智能选路寻址功能。当某一个国内入口遭遇断网或网络抖动时，Anycast 系统会在传输层自动将用户的连接切换至备用入口，真正做到了连接的无感知切换。</p>
@@ -109,6 +112,9 @@ article_list = [
     'excerpt': '光年梯是一家性价比极高的网络加速服务商，全专线高速率，支持解锁主流流媒体平台，适合多设备使用。本文带来其最新的订阅方案与评测。',
     'content': f"""
       <p>寻找稳定又便宜的代理服务商一直是许多网民的核心诉求。许多人并不需要每个月几百GB甚至上千GB的超大流量，而是需要一个价格便宜、晚高峰能流畅看视频、并且能够稳定解锁流媒体的可靠节点。在 2026 年的高性价比平价机场中，<strong>光年梯</strong> 凭借其低廉的资费与稳定物理专线保障，在学生党、外贸小白和轻度网民群体中赢得了极高的人气。今天，我们将针对光年梯的线路配置、套餐方案、实测网络延迟及解锁属性进行一次全维度的深度评测。</p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://i.ibb.co/mCYxy3yM/guanniantilogo.webp" alt="光年梯 logo" style="width: 120px; height: auto; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--border-color);">
+      </div>
       <h2>一、光年梯的核心网络架构</h2>
       <p>虽然光年梯的定价偏向亲民与高性价比，但它并没有在核心网络带宽上偷工减料。光年梯在所有节点中全线部署了高速物理中转专线，出口带宽充沛，单节点最高可跑满 2.5Gbps 速率。其节点在敏感防屏蔽技术上也进行了针对性的隧道加密，能够在晚间高峰期提供稳定的网络输出。更难得的是，光年梯的所有套餐均<strong>不限制多设备同时在线数量</strong>，这意味着只要您的套餐内流量充足，您的电脑、手机、平板甚至智能电视都可以同时通过光年梯获取高速网络，完美避免了常规机场连接设备过多报错封号的困扰。</p>
       <h2>二、光年梯 订阅套餐列表</h2>
@@ -169,6 +175,9 @@ article_list = [
     'excerpt': '边缘机场（又称EdgeNova）是一家主打安全防护与隐私保护的高端网络中继商。其多设备支持与流媒体AI完美兼容是其核心卖点。',
     'content': f"""
       <p>在全球信息化和互联网监管日趋严格的环境中，用户个人隐私保护与数据传输的安全性已被提到了前所未有的高度。特别是对于日常需要开发涉外加密商务往来、进行跨国远程开发提交源码、或者运行量化交易分析的极客群体而言，普通的不加密网络中继极易遭遇中间人劫持与流量指纹分析。今天我们要进行深度测速与机制测评的 <strong>边缘 机场</strong>（又称EdgeNova），就是一款主打无日志读写、高度隐私安全、且全线标配自研专属客户端的高端专线中继网络平台。</p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp" alt="边缘 logo" style="width: 120px; height: auto; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--border-color);">
+      </div>
       <h2>一、只读内存与零日志 (Zero-Log) 的隐私安全壁垒</h2>
       <p>边缘机场自成立之初，就将“极客隐私防护”作为产品的第一核心定位。它的所有网络专线节点均部署在只读内存（RAM-only）架构的独立服务器上。当您的网络请求经过边缘机场的专线通道时，所有数据流量均在只读内存中进行中转，不在本地硬盘中保留任何用户的登录 IP 地址、访问轨迹、数据长度等隐私指纹。一旦服务器遭遇异常抖动或断电，内存数据将瞬间全部清空，从物理机制上杜绝了数据外泄的可能。同时，全节点全链路采用强混淆隧道加密，能够完全防范大流量深度数据报检测，为极客和外贸商户提供了最安心的无缝防屏蔽网络防护。</p>
       <h2>二、自研一键连接客户端彻底告别繁琐参数</h2>
@@ -241,6 +250,9 @@ article_list = [
     'excerpt': '快狸机场运营稳定，提供自研一键连接客户端，不限制设备数量。本文详细解析其最新的套餐与链接。',
     'content': f"""
       <p>在网络科学上网大潮中，对于需要长期处理重要跨国商务、涉外网店管理、量化金融交易或准备学术考试的重度科学上网用户来说，单纯依赖一款加速服务是极其危险的。因为随着网络监管环境的变动，再稳定的机场也可能会遭遇断连抖动。因此，业内一直提倡“备用容灾、双通道主力”的原则。今天我们重点推荐的 <strong>快狸 机场</strong>（狸机场），就是一款以“高稳定性、不限在线设备数、自研一键式直连客户端”为核心的高性价比备用及主力兼顾的机场选择。</p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://i.ibb.co/1f4FvF92/kuaililogo.webp" alt="快狸 logo" style="width: 120px; height: auto; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--border-color);">
+      </div>
       <h2>一、不限设备限制：打破多终端连接瓶颈</h2>
       <p>在代理机场套餐的设计中，绝大多数服务商为了防范一个订阅被多人倒卖，会在后台严格检测当前在线的设备 IP 数（例如最多只能 2 台或 3 台设备同时在线），一旦超出数量就会直接将账号封禁或者报错断开。然而，现在的重度网民基本拥有手机、电脑、平板等多台终端，这种限制极其不便。快狸机场的最大特点就是<strong>彻底放开了同时在线设备的硬件锁</strong>。这意味着只要您套餐内流量充足，您就可以放心将节点部署在所有终端上，甚至分享给全家人或团队共享使用，非常人性化。</p>
       <h2>二、快狸 订购套餐价格列表</h2>
@@ -404,6 +416,9 @@ article_list = [
     'excerpt': '瞬云是一款针对极速需求打造 of 优质机场，提供行者、纵横等超大流量月付套餐，以及高连通率的ANYCAST高速节点。',
     'content': f"""
       <p>在高流量科学上网时代下，很多自媒体运营人员、4K 视频上传发布者以及经常下载超大网络文件的发烧友，最核心的诉求就是“极速下载”和“大吞吐量”。传统的代理节点在高峰期由于总带宽出口有限，速度往往会大打折扣。而 <strong>瞬云</strong> 机场凭借其创新的 ANYCAST（任意播）智能路径分发和主干千兆不限速物理出口，在极速梯队中备受瞩目。今天，我们将针对瞬云的 Anycast 架构、资费套餐及折上折优惠进行深入的评测解析。</p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://i.ibb.co/jkR2rZRw/shunyunlogo.webp" alt="瞬云 logo" style="width: 120px; height: auto; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--border-color);">
+      </div>
       <h2>一、什么是 Anycast 智能选路寻址技术</h2>
       <p>瞬云最大的硬件亮点在于部署了高速多入口 Anycast（任意播）智能路由系统。相比于传统的单入口中继，Anycast 任意播可以在全球范围内使用同一个 IP 地址宣告。当您的客户端发起网络连接请求时，数据包会自动在运营商底层寻址并分发至当前地理位置延迟最低、最空闲的物理机房入口。这种架构不仅大为降低了国内接入延时，更带来了极高水平的“容灾抗屏蔽”能力：当某地机房发生突发断电或出口被墙检测波动时，系统会在毫秒级将数据分流至备用入口，用户上网过程几乎无感断流，稳定性优势极其明显。</p>
       <h2>二、瞬云 订阅套餐价格表</h2>
@@ -514,6 +529,9 @@ article_list = [
     'excerpt': '速界是一款专注于高稳定、低延迟的企业级 IEPL 专线机场，最低低至15元/月起，且全套餐不限速、不限连接设备数量，是视频创作、办公、海外游戏加速的完美解决方案。',
     'content': f"""
       <p>对于许多在电脑 and 手机上部署大量代理终端的涉外商务人员、游戏直播团队以及拥有多设备在线的科技发烧友来说，常规机场的“设备在线锁限制”和“带宽单端口限速”通常是不可调和的业务门槛。为了从根源上打破这些限制，<strong><a href="https://speedworld.cc/" target="_blank">速界</a></strong> 机场（Speed World）在 2026 年推出了全新的高性能加速架构，以<strong>不限速、不限制连接设备数量</strong>、自研一键连接软件以及全球 60+ 高质量物理专线节点为主打卖点，获得了极佳的市场反响。</p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="https://i.ibb.co/tpkZpVhs/sujielogo.webp" alt="速界 logo" style="width: 120px; height: auto; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--border-color);">
+      </div>
       <h2>一、速界机场核心技术与优势特点</h2>
       <p>速界 IEPL 机场提供“专线直达，极速无界”的高规格专线互联服务，拥有以下核心技术优势：</p>
       <ul>
@@ -912,15 +930,16 @@ def generate_article_html(article, index):
     ])
     # Featured articles
     featured_items = [
-        {'slug': 'sujie-review', 'title': '速界 机场评测：不限速不限制设备的高性能 IEPL 专线推荐', 'date': '2026-07-03', 'label': 'SJ', 'color': 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)'},
-        {'slug': 'edge-review', 'title': '边缘 机场（EdgeNova）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'color': 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'},
-        {'slug': 'jilianyun-review', 'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐', 'date': '2026-07-18', 'label': 'JL', 'color': 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)'},
-        {'slug': 'guangnianti-review', 'title': '光年梯 机场评测：稳定解锁流媒体与高可用线路方案', 'date': '2026-07-16', 'label': 'GN', 'color': 'linear-gradient(135deg, #10b981 0%, #059669 100%)'},
-        {'slug': 'shunyun-review', 'title': '瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案', 'date': '2026-07-06', 'label': 'SY', 'color': 'linear-gradient(135deg, #a855f7 0%, #9333ea 100%)'}
+        {'slug': 'sujie-review', 'title': '速界 机场评测：不限速不限制设备的高性能 IEPL 专线推荐', 'date': '2026-07-03', 'label': 'SJ', 'logo': 'https://i.ibb.co/tpkZpVhs/sujielogo.webp'},
+        {'slug': 'edge-review', 'title': '边缘 机场（EdgeNova）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'logo': 'https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp'},
+        {'slug': 'jilianyun-review', 'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐', 'date': '2026-07-18', 'label': 'JL', 'logo': 'https://i.ibb.co/TxW2rqGj/jilianyunlogo.webp'},
+        {'slug': 'guangnianti-review', 'title': '光年梯 机场评测：稳定解锁流媒体与高可用线路方案', 'date': '2026-07-16', 'label': 'GN', 'logo': 'https://i.ibb.co/mCYxy3yM/guanniantilogo.webp'},
+        {'slug': 'shunyun-review', 'title': '瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案', 'date': '2026-07-06', 'label': 'SY', 'logo': 'https://i.ibb.co/jkR2rZRw/shunyunlogo.webp'},
+        {'slug': 'kuaili-review', 'title': '快狸 机场推荐：多设备在线与高性价比备用选择', 'date': '2026-07-10', 'label': 'KL', 'logo': 'https://i.ibb.co/1f4FvF92/kuaililogo.webp'}
     ]
     featured_items_html = "\n".join([
         f'''<div class="featured-item">
-          <div class="featured-item-img" style="background: {item['color']}; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.75rem; font-family:\'Outfit\'; font-style: normal;">{item['label']}</div>
+          <div class="featured-item-img" style="background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden;"><img src="{item['logo']}" style="width: 100%; height: 100%; object-fit: cover;" alt="{item['label']}"></div>
           <div class="featured-item-content">
             <h4 class="featured-item-title"><a href="{item['slug']}.html">{item['title']}</a></h4>
             <span class="featured-item-date">{item['date']}</span>
