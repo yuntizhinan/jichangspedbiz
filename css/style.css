@@ -2599,5 +2599,15 @@ a.core-feature-card {
     width: 44px !important;
     height: 44px !important;
   }
+
+  /* Make gradient texts render as solid high-contrast colors on mobile to prevent Force Dark Mode bugs */
+  .hero-title span,
+  .text-gradient {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: initial !important;
+    color: var(--accent-primary, #3b82f6) !important;
+    display: inline !important;
+  }
 }
 
