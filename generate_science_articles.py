@@ -3,6 +3,20 @@ import os
 import re
 
 def replace_text_globally():
+    def inject_theme_script(html):
+        if 'localStorage.getItem(\'theme\')' in html:
+            return html
+        script = """<head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme === 'dark' || (!savedTheme && systemPrefersDark) ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>"""
+        return html.replace('<head>', script)
+
     # 替换精选文章列表的子函数
     def update_featured_list_in_html(content, is_subpage=False):
         content_norm = content.replace("\r\n", "\n")
@@ -189,6 +203,7 @@ def replace_text_globally():
                 html = insert_featured_list_widget(html, is_subpage=True)
                 # 全局替换极界为 EdgeNova
                 html = html.replace("极界", "EdgeNova")
+                html = inject_theme_script(html)
                 
                 with open(fpath, "w", encoding="utf-8") as f:
                     f.write(html)
@@ -202,6 +217,7 @@ def replace_text_globally():
             html = html.replace("极界", "EdgeNova")
             # 同样对主目录下的 parent 页（如 vpn-guide.html）进行侧边栏精选列表注入
             html = insert_featured_list_widget(html, is_subpage=False)
+            html = inject_theme_script(html)
             with open(fname, 'w', encoding='utf-8') as f:
                 f.write(html)
     print("Updated parent HTML files")
