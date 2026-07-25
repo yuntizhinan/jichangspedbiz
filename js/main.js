@@ -351,19 +351,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const navSearchInput = document.getElementById('nav-search-input');
 
   if (navSearchBtn && navSearchContainer && navSearchInput) {
-    navSearchBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isActive = navSearchContainer.classList.contains('active');
-      if (!isActive) {
-        navSearchContainer.classList.add('active');
-        navSearchInput.focus();
-      } else {
+    // Hover to expand
+    navSearchContainer.addEventListener('mouseenter', () => {
+      navSearchContainer.classList.add('active');
+      navSearchInput.focus();
+    });
+
+    // Collapse on mouse leave if empty and not focused
+    navSearchContainer.addEventListener('mouseleave', () => {
+      const query = navSearchInput.value.trim();
+      if (!query && document.activeElement !== navSearchInput) {
+        navSearchContainer.classList.remove('active');
+        navSearchInput.blur();
+      }
+    });
+
+    // Collapse on focus blur if empty and not hovered
+    navSearchInput.addEventListener('blur', () => {
+      setTimeout(() => {
         const query = navSearchInput.value.trim();
-        if (query) {
-          performNavSearch(query);
-        } else {
+        if (!query && !navSearchContainer.matches(':hover')) {
           navSearchContainer.classList.remove('active');
         }
+      }, 150);
+    });
+
+    // Search on button click (if query exists)
+    navSearchBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const query = navSearchInput.value.trim();
+      if (query) {
+        performNavSearch(query);
       }
     });
 
