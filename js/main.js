@@ -357,23 +357,11 @@ document.addEventListener('DOMContentLoaded', () => {
       navSearchInput.focus();
     });
 
-    // Collapse on mouse leave if empty and not focused
+    // Collapse immediately when mouse leaves
     navSearchContainer.addEventListener('mouseleave', () => {
-      const query = navSearchInput.value.trim();
-      if (!query && document.activeElement !== navSearchInput) {
-        navSearchContainer.classList.remove('active');
-        navSearchInput.blur();
-      }
-    });
-
-    // Collapse on focus blur if empty and not hovered
-    navSearchInput.addEventListener('blur', () => {
-      setTimeout(() => {
-        const query = navSearchInput.value.trim();
-        if (!query && !navSearchContainer.matches(':hover')) {
-          navSearchContainer.classList.remove('active');
-        }
-      }, 150);
+      navSearchContainer.classList.remove('active');
+      navSearchInput.value = '';
+      navSearchInput.blur();
     });
 
     // Search on button click (if query exists)
@@ -387,16 +375,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navSearchInput.addEventListener('click', (e) => {
       e.stopPropagation();
-    });
-
-    // Close search dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navSearchContainer.contains(e.target) && navSearchContainer.classList.contains('active')) {
-        const query = navSearchInput.value.trim();
-        if (!query) {
-          navSearchContainer.classList.remove('active');
-        }
-      }
     });
 
     // Handle enter key on navbar search input

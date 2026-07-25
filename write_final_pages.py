@@ -654,7 +654,7 @@ def write_index():
       </div>
     </div>
   </footer>
-  <script src="js/main.js?v=20260726"></script>
+  <script src="js/main.js?v=20260727"></script>
 </body>
 </html>
 """
@@ -842,7 +842,7 @@ def write_about():
       </div>
     </div>
   </footer>
-  <script src="js/main.js?v=20260726"></script>
+  <script src="js/main.js?v=20260727"></script>
 </body>
 </html>
 """
@@ -1053,7 +1053,7 @@ def write_vpn_guide():
       </div>
     </div>
   </footer>
-  <script src="js/main.js?v=20260726"></script>
+  <script src="js/main.js?v=20260727"></script>
 </body>
 </html>
 """
@@ -1348,7 +1348,7 @@ def write_archives():
       </div>
     </div>
   </footer>
-  <script src="js/main.js?v=20260726"></script>
+  <script src="js/main.js?v=20260727"></script>
 </body>
 </html>"""
     with open('archives.html', 'w', encoding='utf-8') as f:

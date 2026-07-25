@@ -1167,7 +1167,7 @@ def generate_article_html(article, index):
       </div>
     </div>
   </footer>
-  <script src="../js/main.js?v=20260726"></script>
+  <script src="../js/main.js?v=20260727"></script>
 </body>
 </html>"""
 if __name__ == '__main__':
