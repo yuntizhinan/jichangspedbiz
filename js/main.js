@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // THEME TOGGLE
   // ==========================================
@@ -475,11 +475,11 @@ window.showFriendsModal = function() {
         <h3 class="friends-modal-title">友情链接</h3>
         <p class="friends-modal-desc">欢迎各大网络技术、科学上网、极客分享博客交换友链。申请请发送邮件至：1962952406@qq.com</p>
         <div class="friends-links-grid">
-          <a href="https://ugewe.jilianat.homes/#/?code=9ygBtCN8" target="_blank" class="friend-link-item">极连云官网</a>
-          <a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="friend-link-item">光年梯官网</a>
-          <a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="friend-link-item">边缘节点</a>
-          <a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="friend-link-item">快狸官网</a>
-          <a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="friend-link-item">速界官网</a>
+          <a href="https://19629.jlyvipaff.com/#/?code=9ygBtCN8" target="_blank" class="friend-link-item">极连云官网</a>
+          <a href="https://19629.gntaff.com/#/?code=AixFrykO" target="_blank" class="friend-link-item">光年梯官网</a>
+          <a href="https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU" target="_blank" class="friend-link-item">边缘节点</a>
+          <a href="https://196295.kuailiaff.com/#/?code=tmUe2z1n" target="_blank" class="friend-link-item">快狸官网</a>
+          <a href="https://lqy001.speedworldaff.com/#/?code=C2v7kRVl" target="_blank" class="friend-link-item">速界官网</a>
           <a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank" class="friend-link-item">瞬云官网</a>
         </div>
         <button class="friends-modal-close" onclick="closeFriendsModal()">关闭</button>

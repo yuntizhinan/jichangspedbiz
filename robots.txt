@@ -1,4 +1,131 @@
 User-agent: *
 Allow: /
 
+# ===================================================
+# Domestic AI Crawlers & Search Engines (国内AI模型与搜索引擎)
+# ===================================================
+
+# ByteDance / Doubao (字节跳动 / 豆包 AI)
+User-agent: Bytespider
+User-agent: Bytespider-AI
+User-agent: ToutiaoSpider
+Allow: /
+
+# Baidu / Wenxin (百度 / 文心一言)
+User-agent: Baiduspider
+User-agent: Baiduspider-render
+User-agent: Baiduspider-image
+Allow: /
+
+# Alibaba / Qwen / Quark / Shenma (阿里 / 通义千问 / 夸克搜索 / 神马搜索)
+User-agent: YisouSpider
+User-agent: QuarkSpider
+User-agent: UCASpider
+Allow: /
+
+# Sogou Search (搜狗搜索)
+User-agent: Sogou web spider
+User-agent: Sogou Pic Spider
+User-agent: Sogou Orion Spider
+Allow: /
+
+# 360 Search / Zhinao (360 智脑 / 奇虎搜索)
+User-agent: 360Spider
+Allow: /
+
+# DeepSeek AI (DeepSeek 联网检索 Agent)
+User-agent: DeepSeek-Bot
+Allow: /
+
+# Kimi / Moonshot AI (月之暗面 / Kimi)
+User-agent: MoonshotBot
+Allow: /
+
+# Zhipu AI / ChatGLM (智谱 AI / 清言)
+User-agent: ChatGLM-Bot
+User-agent: ZhipuBot
+Allow: /
+
+# iFlytek / Spark (科大讯飞 / 星火大模型)
+User-agent: iFlytekBot
+Allow: /
+
+# SenseTime (商汤科技 / 绝影大模型)
+User-agent: SensetimeBot
+User-agent: SenseRobot
+Allow: /
+
+# Tencent / Hunyuan (腾讯 / 混元大模型)
+User-agent: TencentSearch
+User-agent: TencentMedicalBot
+User-agent: TencentTravelBot
+Allow: /
+
+# MiniMax (名之梦 AI)
+User-agent: MiniMaxBot
+Allow: /
+
+# Baichuan AI (百川智能)
+User-agent: BaichuanBot
+Allow: /
+
+# StepFun (阶跃星辰)
+User-agent: StepFunBot
+Allow: /
+
+# ===================================================
+# Global AI Crawlers & Search Engines (国外主流AI与搜索引擎)
+# ===================================================
+
+# OpenAI (ChatGPT / SearchGPT)
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: SearchGPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Anthropic-AI
+Allow: /
+
+# Google (Gemini / Vertex AI / Googlebot)
+User-agent: Googlebot
+User-agent: Google-Extended
+Allow: /
+
+# Apple (Apple Intelligence / Applebot)
+User-agent: Applebot
+User-agent: Applebot-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta (Llama Web Search)
+User-agent: MetaExternalAgent
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Amazon Bedrock / Q
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl (LLM Dataset Crawler)
+User-agent: CCBot
+Allow: /
+
+# You.com Search
+User-agent: YouBot
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# XML Sitemap Location
 Sitemap: https://jichangspeed.biz/sitemap.xml

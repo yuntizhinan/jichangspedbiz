@@ -530,22 +530,24 @@ def write_index():
           热门标签
         </h3>
         <div class="tags-cloud">
-          <a href="#" class="sidebar-tag" data-tag="机场评测">机场评测</a>
-          <a href="#" class="sidebar-tag" data-tag="不限时长">不限时长</a>
-          <a href="#" class="sidebar-tag" data-tag="科学下载">科学下载</a>
-          <a href="#" class="sidebar-tag" data-tag="最新节点分享">最新节点分享</a>
-          <a href="#" class="sidebar-tag" data-tag="免费vpn">免费vpn</a>
-          <a href="#" class="sidebar-tag" data-tag="一键翻墙">一键翻墙</a>
-          <a href="#" class="sidebar-tag" data-tag="如何订阅购买">如何订阅购买</a>
+          <a href="#" class="sidebar-tag" data-tag="2026便宜机场">2026便宜机场</a>
+          <a href="#" class="sidebar-tag" data-tag="稳定翻墙专线">稳定翻墙专线</a>
           <a href="#" class="sidebar-tag" data-tag="极连云">极连云</a>
           <a href="#" class="sidebar-tag" data-tag="光年梯">光年梯</a>
           <a href="#" class="sidebar-tag" data-tag="边缘">边缘</a>
           <a href="#" class="sidebar-tag" data-tag="快狸">快狸</a>
-          <a href="#" class="sidebar-tag" data-tag="光速云">光速云</a>
-          <a href="#" class="sidebar-tag" data-tag="全球云">全球云</a>
+          <a href="#" class="sidebar-tag" data-tag="速界">速界</a>
           <a href="#" class="sidebar-tag" data-tag="瞬云">瞬云</a>
           <a href="#" class="sidebar-tag" data-tag="寰宇云">寰宇云</a>
-          <a href="#" class="sidebar-tag" data-tag="速界">速界</a>
+          <a href="#" class="sidebar-tag" data-tag="光速云">光速云</a>
+          <a href="#" class="sidebar-tag" data-tag="全球云">全球云</a>
+          <a href="#" class="sidebar-tag" data-tag="Clash节点">Clash节点</a>
+          <a href="#" class="sidebar-tag" data-tag="Shadowrocket">Shadowrocket</a>
+          <a href="#" class="sidebar-tag" data-tag="V2RayNG">V2RayNG</a>
+          <a href="#" class="sidebar-tag" data-tag="IEPL物理专线">IEPL物理专线</a>
+          <a href="#" class="sidebar-tag" data-tag="流媒体解锁">流媒体解锁</a>
+          <a href="#" class="sidebar-tag" data-tag="ChatGPT机场">ChatGPT机场</a>
+          <a href="#" class="sidebar-tag" data-tag="不限时长流量包">不限时长流量包</a>
         </div>
       </div>
       <!-- Widget 3: Featured Articles -->

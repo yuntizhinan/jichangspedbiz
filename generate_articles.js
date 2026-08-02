@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const articlesDir = path.join(__dirname, 'articles');
@@ -784,7 +784,6 @@ function generateArticleHTML(article, index) {
       <div class="footer-bottom">
         <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。内容仅用于网络技术交流，请遵守当地法律法规。</p>
         <div class="footer-bottom-links">
-          <a href="../sitemap.xml" class="footer-link">网站地图</a>
           <a href="../robots.txt" class="footer-link">Robots.txt</a>
         </div>
       </div>
