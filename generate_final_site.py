@@ -969,6 +969,11 @@ def generate_article_html(article, index):
   <meta property="og:description" content="{article['excerpt']}">
   <meta property="og:image" content="https://jichangspeed.biz/images/og-share.jpg">
   <!-- CSS -->
+    <!-- Favicon / Site Icons -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
   <link rel="stylesheet" href="../css/style.css?v=20260731">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */

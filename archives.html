@@ -1,52 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
 <head>
-  <script>
-    (function() {
-      let savedTheme = null;
-      try {
-        savedTheme = localStorage.getItem('theme');
-      } catch (e) {}
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = savedTheme === 'dark' || (!savedTheme && systemPrefersDark) ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>文章归档 - 机场速递博客 (jichangspeed.biz)</title>
   <!-- SEO Meta Tags -->
   <meta name="description" content="文章归档页面包含机场速递 (jichangspeed.biz) 全站所有机场测速、便宜机场推荐、优质专线机场评测文章时间线列表。">
   <meta name="keywords" content="文章归档, 机场测速, 极连云, 光年梯, 边缘, 快狸, 瞬云, 寰宇云, 速界">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://jichangspeed.biz/archives.html">
-  <!-- OpenGraph Meta Tags -->
-  <meta property="og:site_name" content="机场速递 (jichangspeed.biz)">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jichangspeed.biz/archives.html">
-  <meta property="og:title" content="文章归档 - 机场速递博客">
-  <meta property="og:description" content="文章归档页面包含全站所有机场测速、便宜机场推荐、优质专线机场评测文章时间线列表。">
-  <meta property="og:image" content="https://i.ibb.co/tpkZpVhs/sujielogo.webp">
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="文章归档 - 机场速递博客">
-  <meta name="twitter:description" content="文章归档页面包含全站所有机场测速、便宜机场推荐、优质专线机场评测文章时间线列表。">
-  <meta name="twitter:image" content="https://i.ibb.co/tpkZpVhs/sujielogo.webp">
-  <!-- Schema.org JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "@id": "https://jichangspeed.biz/archives.html#webpage",
-        "url": "https://jichangspeed.biz/archives.html",
-        "name": "文章归档",
-        "description": "机场速递全站文章归档索引"
-      }
-    ]
-  }
-  </script>
+  <meta name="robots" content="index, follow">
+    <!-- Favicon / Site Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css?v=20260731">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
@@ -346,58 +312,7 @@
           </a>
         </div>
       </div>
-            <!-- Sidebar Featured Widget -->
-        <div class="sidebar-widget">
-          <h3 class="widget-title">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-            精选文章
-          </h3>
-          <div class="featured-list">
-            <div class="featured-item">
-              <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/tpkZpVhs/sujielogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="速界"></div>
-              <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="articles/sujie-review.html">速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐</a></h4>
-                <span class="featured-item-date">2026-07-03</span>
-              </div>
-            </div>
-            <div class="featured-item">
-              <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="边缘"></div>
-              <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
-                <span class="featured-item-date">2026-07-14</span>
-              </div>
-            </div>
-            <div class="featured-item">
-              <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/TxW2rqGj/jilianyunlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="极连云"></div>
-              <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
-                <span class="featured-item-date">2026-07-18</span>
-              </div>
-            </div>
-            <div class="featured-item">
-              <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/mCYxy3yM/guanniantilogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="光年梯"></div>
-              <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="articles/guangnianti-review.html">光年梯 机场评测：稳定解锁流媒体与高可用线路方案</a></h4>
-                <span class="featured-item-date">2026-07-16</span>
-              </div>
-            </div>
-            <div class="featured-item">
-              <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/jkR2rZRw/shunyunlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="瞬云"></div>
-              <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
-                <span class="featured-item-date">2026-07-06</span>
-              </div>
-            </div>
-                      <div class="featured-item">
-              <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/1f4FvF92/kuaililogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="快狸"></div>
-              <div class="featured-item-content">
-                <h4 class="featured-item-title"><a href="articles/kuaili-review.html">快狸 机场推荐：多设备在线与高性价比备用选择</a></h4>
-                <span class="featured-item-date">2026-07-10</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
+    </aside>
   </main>
   <!-- Footer -->
   <footer class="footer">

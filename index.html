@@ -1,106 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="light">
 <head>
-  <script>
-    (function() {
-      let savedTheme = null;
-      try {
-        savedTheme = localStorage.getItem('theme');
-      } catch (e) {}
-      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = savedTheme === 'dark' || (!savedTheme && systemPrefersDark) ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>机场速递 (jichangspeed.biz) - 2026稳定安全高速便宜机场推荐与官网订阅评测</title>
   <!-- SEO Meta Tags -->
   <meta name="description" content="机场速递 (jichangspeed.biz) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
   <meta name="keywords" content="极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, 机场推荐, 稳定机场, 安全翻墙, 高速中转, jichangspeed.biz">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://jichangspeed.biz/">
-  <!-- OpenGraph Meta Tags -->
-  <meta property="og:site_name" content="机场速递 (jichangspeed.biz)">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://jichangspeed.biz/">
-  <meta property="og:title" content="机场速递 - 2026稳定安全高速便宜机场推荐与官网订阅评测">
-  <meta property="og:description" content="机场速递 (jichangspeed.biz) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
-  <meta property="og:image" content="https://i.ibb.co/tpkZpVhs/sujielogo.webp">
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="机场速递 - 2026稳定安全高速便宜机场推荐与官网订阅评测">
-  <meta name="twitter:description" content="2026年稳定、安全、高速、便宜、高性价比机场推荐与官网订阅评测。提供极连云、光年梯、边缘、快狸等官网入口。">
-  <meta name="twitter:image" content="https://i.ibb.co/tpkZpVhs/sujielogo.webp">
-  <!-- Schema.org JSON-LD Structured Data for AI & Search Engines -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://jichangspeed.biz/#website",
-        "url": "https://jichangspeed.biz/",
-        "name": "机场速递",
-        "description": "2026稳定安全高速便宜机场推荐与官网订阅评测平台",
-        "publisher": {
-          "@id": "https://jichangspeed.biz/#organization"
-        },
-        "inLanguage": "zh-CN"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://jichangspeed.biz/#organization",
-        "name": "机场速递 (jichangspeed.biz)",
-        "url": "https://jichangspeed.biz/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://i.ibb.co/tpkZpVhs/sujielogo.webp"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "1962952406@qq.com",
-          "contactType": "customer service"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://jichangspeed.biz/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "2026年有哪些稳定便宜的翻墙机场推荐？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "2026年推荐首选极连云（全IEPL物理专线，1.0倍率不限设备）、速界机场（年付仅需¥90，千兆IEPL专线）、边缘机场（RAM-only无日志只读架构，隐私防护强）以及光年梯（多线中继，¥89/年高性价比）。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "什么是专线机场？为什么专线比普通机场更稳定？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "专线机场（IPLC/IEPL）采用点对点跨国以太网物理专线传输，流量完全绕过防火墙公网检测（GFW），在晚高峰或敏感时期也能保持0丢包、低延迟和满速吞吐。"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "机场订阅怎么导入到 Clash 或小火箭（Shadowrocket）？",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "在机场官网购买套餐后，复制 Clash 或小火箭一键订阅链接，打开客户端粘贴或点击导入即可自动同步最新节点列表并开启加速。"
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
+  <meta name="robots" content="index, follow">
   <!-- GEO Tags -->
   <meta name="geo.region" content="CN-GD" />
   <meta name="geo.placename" content="Guangdong" />
   <meta name="geo.position" content="23.12908;113.26436" />
   <meta name="ICBM" content="23.12908, 113.26436" />
+    <!-- Favicon / Site Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css?v=20260731">
   <style>
     /* 强力保证夜间模式下 Logo span 文本显示为清晰的纯白色，不受外部样式缓存影响 */
@@ -336,17 +253,17 @@
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/TxW2rqGj/jilianyunlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="极连云"></div>
-            <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
-              <span class="featured-item-date">2026-07-18</span>
-            </div>
-          </div>
-          <div class="featured-item">
             <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="边缘"></div>
             <div class="featured-item-content">
               <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
               <span class="featured-item-date">2026-07-14</span>
+            </div>
+          </div>
+          <div class="featured-item">
+            <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/TxW2rqGj/jilianyunlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="极连云"></div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/jilianyun-review.html">极连云 机场测速与评测：高性价比 IEPL 专线推荐</a></h4>
+              <span class="featured-item-date">2026-07-18</span>
             </div>
           </div>
           <div class="featured-item">
