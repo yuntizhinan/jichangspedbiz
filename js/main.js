@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // THEME TOGGLE
   // ==========================================
@@ -475,7 +475,7 @@ window.showFriendsModal = function() {
         <h3 class="friends-modal-title">友情链接</h3>
         <p class="friends-modal-desc">欢迎各大网络技术、科学上网、极客分享博客交换友链。申请请发送邮件至：1962952406@qq.com</p>
         <div class="friends-links-grid">
-          <a href="https://19629.jlyvipaff.com/#/?code=9ygBtCN8" target="_blank" class="friend-link-item">极连云官网</a>
+          <a href="https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR" target="_blank" class="friend-link-item">极连云官网</a>
           <a href="https://19629.gntaff.com/#/?code=AixFrykO" target="_blank" class="friend-link-item">光年梯官网</a>
           <a href="https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU" target="_blank" class="friend-link-item">边缘节点</a>
           <a href="https://196295.kuailiaff.com/#/?code=tmUe2z1n" target="_blank" class="friend-link-item">快狸官网</a>
