@@ -228,7 +228,7 @@ def build_card_html(article):
 links = {
     '极连云': 'https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR',
     '光年梯': 'https://hjbesu8d.fazuttt.club/#/?code=AixFrykO',
-    '边缘': 'https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU',
+    '边缘': 'https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU',
     '快狸': 'https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n',
     '光速云': 'https://kjlq01.gsyvipaff.cc/#/?code=b1OTkTeL',
     '全球云': 'https://haozevpn.gcvipaff.cc/#/?code=WRQJc2v4',
@@ -639,7 +639,7 @@ def write_index():
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
             <li><a href="https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR" target="_blank" class="footer-link">极连云官网 ↗</a></li>
-            <li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
             <li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
             <li><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
             <li><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="footer-link">速界官网 ↗</a></li>
@@ -1050,7 +1050,7 @@ def write_vpn_guide():
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
             <li><a href="https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR" target="_blank" class="footer-link">极连云官网 ↗</a></li>
-            <li><a href="https://asfeoasf.bianyuntztz2.cyou/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
             <li><a href="https://hjbesu8d.fazuttt.club/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
             <li><a href="https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
             <li><a href="https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl" target="_blank" class="footer-link">速界官网 ↗</a></li>
