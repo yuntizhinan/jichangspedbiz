@@ -5,7 +5,7 @@ import urllib.parse
 articles_dir = os.path.join(os.path.dirname(__file__), 'articles')
 # Affiliate URLs
 links = {
-    '极连云': 'https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR',
+    '极连云': 'https://19629.jlyvipaff.com/#/?code=9ygBtCN8',
     '光年梯': 'https://19629.gntaff.com/#/?code=AixFrykO',
     '边缘节点': 'https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU',
     '快狸': 'https://196295.kuailiaff.com/#/?code=tmUe2z1n',

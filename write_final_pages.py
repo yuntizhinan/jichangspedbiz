@@ -226,7 +226,7 @@ def build_card_html(article):
 
 
 links = {
-    '极连云': 'https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR',
+    '极连云': 'https://19629.jlyvipaff.com/#/?code=9ygBtCN8',
     '光年梯': 'https://19629.gntaff.com/#/?code=AixFrykO',
     '边缘节点': 'https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU',
     '快狸': 'https://196295.kuailiaff.com/#/?code=tmUe2z1n',
@@ -638,7 +638,7 @@ def write_index():
         <div class="footer-links-col">
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
-            <li><a href="https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR" target="_blank" class="footer-link">极连云官网 ↗</a></li>
+            <li><a href="https://19629.jlyvipaff.com/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云官网 ↗</a></li>
             <li><a href="https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
             <li><a href="https://19629.gntaff.com/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
             <li><a href="https://196295.kuailiaff.com/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
@@ -986,7 +986,7 @@ def write_vpn_guide():
             </h3>
             <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;">为了方便大家快速接入安全稳定的加速网络，我们根据各大服务商的晚高峰连通率、延迟 and 丢包实测，向您进行如下精选推荐（点击对应名称即可直接访问官网）：</p>
             <ul style="font-size: 0.9rem; line-height: 1.7; padding-left: 20px; margin-bottom: 0; list-style-type: none;">
-              <li style="margin-bottom: 10px;">🌟 <strong><a href="https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">极连云官网 ↗</a></strong>：全系部署 IEPL 企业级物理私网，香港物理延迟低至 18ms，晚高峰 100% 连通不卡顿，且全节点均为 1 倍率实在计费，流媒体完美解锁，是高端商务办公、低延迟游戏加速与会议的不二选择。</li>
+              <li style="margin-bottom: 10px;">🌟 <strong><a href="https://19629.jlyvipaff.com/#/?code=9ygBtCN8" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">极连云官网 ↗</a></strong>：全系部署 IEPL 企业级物理私网，香港物理延迟低至 18ms，晚高峰 100% 连通不卡顿，且全节点均为 1 倍率实在计费，流媒体完美解锁，是高端商务办公、低延迟游戏加速与会议的不二选择。</li>
               <li style="margin-bottom: 10px;">🌟 <strong><a href="https://lqy001.speedworldaff.com/#/?code=C2v7kRVl" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">速界官网 ↗</a></strong>：高性价比首选，提供仅 ¥15.00/月起的首月体验包，且年付套餐低至 90 元（结合开业8折特惠折合低至 6.00元/月！）。不仅全节点 1 倍率，且完全不限在线客户端设备数，提供极其简便的一键连接软件，极其适合轻度及多设备共享用户。</li>
               <li style="margin-bottom: 10px;">🌟 <strong><a href="https://19629.gntaff.com/#/?code=AixFrykO" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">光年梯官网 ↗</a></strong>：提供极高稳定性的物理多路由中继，全专线互联，流媒体 Netflix/Disney+ 和 AI 软件（ChatGPT/Claude）通过率达到 100%，套餐配置丰富灵活。</li>
               <li style="margin-bottom: 0;">🌟 <strong><a href="https://196295.kuailiaff.com/#/?code=tmUe2z1n" target="_blank" style="color: var(--accent-primary); font-weight: 700; text-decoration: underline;">快狸官网 ↗</a></strong>：老牌高稳定服务商，支持灵活月付方案（15元/月起），节点遍布全球主要核心区域，线路高可用 Anycast 容灾，备用及主力均非常扎实。</li>
@@ -1049,7 +1049,7 @@ def write_vpn_guide():
         <div class="footer-links-col">
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
-            <li><a href="https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR" target="_blank" class="footer-link">极连云官网 ↗</a></li>
+            <li><a href="https://19629.jlyvipaff.com/#/?code=9ygBtCN8" target="_blank" class="footer-link">极连云官网 ↗</a></li>
             <li><a href="https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
             <li><a href="https://19629.gntaff.com/#/?code=AixFrykO" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
             <li><a href="https://196295.kuailiaff.com/#/?code=tmUe2z1n" target="_blank" class="footer-link">快狸官网 ↗</a></li>
