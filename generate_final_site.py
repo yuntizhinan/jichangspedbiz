@@ -6,14 +6,14 @@ articles_dir = os.path.join(os.path.dirname(__file__), 'articles')
 # Affiliate URLs
 links = {
     '极连云': 'https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR',
-    '光年梯': 'https://hjbesu8d.fazuttt.club/#/?code=AixFrykO',
+    '光年梯': 'https://19629.gntaff.com/#/?code=AixFrykO',
     '边缘节点': 'https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU',
-    '快狸': 'https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n',
+    '快狸': 'https://196295.kuailiaff.com/#/?code=tmUe2z1n',
     '光速云': 'https://kjlq01.gsyvipaff.cc/#/?code=b1OTkTeL',
     '全球云': 'https://haozevpn.gcvipaff.cc/#/?code=WRQJc2v4',
     '瞬云': 'https://aaa.jichang.best/#/register?code=ClNa0zPm',
     '寰宇云': 'https://vip3.huanyuyunbest.com/#/register?code=K6h5VWw2',
-    '速界': 'https://asfweroasf.sujietztz2.xyz/#/?code=C2v7kRVl'
+    '速界': 'https://lqy001.speedworldaff.com/#/?code=C2v7kRVl'
 }
 # The 13 articles
 article_list = [
