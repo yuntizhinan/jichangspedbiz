@@ -12,7 +12,7 @@ sidebar_tags_html = "".join([f'<a href="../index.html?tag={urllib.parse.quote(t)
 
 featured_items = [
     {'slug': 'sujie-review', 'title': '速界 机场评测：不限速不限制设备的高性能 IEPL 节点首选推荐', 'date': '2026-07-03', 'label': 'SJ', 'logo': 'https://i.ibb.co/tpkZpVhs/sujielogo.webp'},
-    {'slug': 'edge-review', 'title': '边缘 机场（EdgeNova）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'logo': 'https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp'},
+    {'slug': 'edge-review', 'title': '边缘节点 机场（EdgeNova）深度评测：无日志与极速数据中转', 'date': '2026-07-14', 'label': 'BY', 'logo': 'https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp'},
     {'slug': 'jilianyun-review', 'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐', 'date': '2026-07-18', 'label': 'JL', 'logo': 'https://i.ibb.co/TxW2rqGj/jilianyunlogo.webp'},
     {'slug': 'guangnianti-review', 'title': '光年梯 机场评测：稳定解锁流媒体与高可用线路方案', 'date': '2026-07-16', 'label': 'GN', 'logo': 'https://i.ibb.co/mCYxy3yM/guanniantilogo.webp'},
     {'slug': 'shunyun-review', 'title': '瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案', 'date': '2026-07-06', 'label': 'SY', 'logo': 'https://i.ibb.co/jkR2rZRw/shunyunlogo.webp'},

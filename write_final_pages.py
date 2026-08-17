@@ -65,7 +65,7 @@ original_card_styles = {
     },
     'edge-review': {
         'style': 'background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);',
-        'content': '边缘机场<br>无日志专线',
+        'content': '边缘节点机场<br>无日志专线',
         'badge': '老牌推荐'
     },
     'jilianyun-review': {
@@ -228,7 +228,7 @@ def build_card_html(article):
 links = {
     '极连云': 'https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR',
     '光年梯': 'https://hjbesu8d.fazuttt.club/#/?code=AixFrykO',
-    '边缘': 'https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU',
+    '边缘节点': 'https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU',
     '快狸': 'https://iu9asffa.kuailitztz2.sbs/#/?code=tmUe2z1n',
     '光速云': 'https://kjlq01.gsyvipaff.cc/#/?code=b1OTkTeL',
     '全球云': 'https://haozevpn.gcvipaff.cc/#/?code=WRQJc2v4',
@@ -322,8 +322,8 @@ def write_index():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>机场速递 (jichangspeed.biz) - 2026稳定安全高速便宜机场推荐与官网订阅评测</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="机场速递 (jichangspeed.biz) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
-  <meta name="keywords" content="极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, 机场推荐, 稳定机场, 安全翻墙, 高速中转, jichangspeed.biz">
+  <meta name="description" content="机场速递 (jichangspeed.biz) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
+  <meta name="keywords" content="极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, 机场推荐, 稳定机场, 安全翻墙, 高速中转, jichangspeed.biz">
   <meta name="robots" content="index, follow">
   <!-- GEO Tags -->
   <meta name="geo.region" content="CN-GD" />
@@ -539,7 +539,7 @@ def write_index():
           <a href="#" class="sidebar-tag" data-tag="稳定翻墙专线">稳定翻墙专线</a>
           <a href="#" class="sidebar-tag" data-tag="极连云">极连云</a>
           <a href="#" class="sidebar-tag" data-tag="光年梯">光年梯</a>
-          <a href="#" class="sidebar-tag" data-tag="边缘">边缘</a>
+          <a href="#" class="sidebar-tag" data-tag="边缘节点">边缘</a>
           <a href="#" class="sidebar-tag" data-tag="快狸">快狸</a>
           <a href="#" class="sidebar-tag" data-tag="速界">速界</a>
           <a href="#" class="sidebar-tag" data-tag="瞬云">瞬云</a>
@@ -570,9 +570,9 @@ def write_index():
             </div>
           </div>
           <div class="featured-item">
-            <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="边缘"></div>
+            <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/C5P4QcfT/bianyuanjiedianlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="边缘节点"></div>
             <div class="featured-item-content">
-              <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
+              <h4 class="featured-item-title"><a href="articles/edge-review.html">边缘节点 机场（EdgeNova）深度评测：无日志与极速数据中转</a></h4>
               <span class="featured-item-date">2026-07-14</span>
             </div>
           </div>
@@ -624,7 +624,7 @@ def write_index():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -677,8 +677,8 @@ def write_about():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>关于我们 - 机场速递博客 (jichangspeed.biz)</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="关于机场速递 (jichangspeed.biz) —— 我们的定位、测速准则、核心价值与联系方式。提供极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界等高品质专线梯子官网入口。">
-  <meta name="keywords" content="关于我们, 机场速递, 机场评测, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
+  <meta name="description" content="关于机场速递 (jichangspeed.biz) —— 我们的定位、测速准则、核心价值与联系方式。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界等高品质专线梯子官网入口。">
+  <meta name="keywords" content="关于我们, 机场速递, 机场评测, 极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
   <meta name="robots" content="index, follow">
     <!-- Favicon / Site Icons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -779,7 +779,7 @@ def write_about():
         <div class="article-body">
           <p>欢迎来到 <strong>机场速递 (jichangspeed.biz)</strong>。我们是一个专注于网络技术交流、加速网络优化、以及优质专线网络服务评测的独立媒体。</p>
           <h2>一、我们的使命</h2>
-          <p>安全、高速、平稳地获取海外学术信息与商用数据是每一位开发者、设计师、跨境电商以及外贸从业者的刚需。我们致力于通过真实、透明的评估测试，为您提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>安全、高速、平稳地获取海外学术信息与商用数据是每一位开发者、设计师、跨境电商以及外贸从业者的刚需。我们致力于通过真实、透明的评估测试，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
           <p><em>声明：本站所有评测文章及教程仅供网络安全技术交流、学术研究与跨境合法商务使用，请严格遵守当地法律法规，切勿用于非法用途。</em></p>
         </div>
       </article>
@@ -801,7 +801,7 @@ def write_about():
             <a href="index.html?tag=%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E8%B4%AD%E4%B9%B0" class="sidebar-tag">如何订阅购买</a>
             <a href="index.html?tag=%E6%9E%81%E8%BF%9E%E4%BA%91" class="sidebar-tag">极连云</a>
             <a href="index.html?tag=%E5%85%8D%E8%B4%B9vpn" class="sidebar-tag">光年梯</a>
-            <a href="index.html?tag=%E8%BE%B9%E7%BC%98" class="sidebar-tag">边缘</a>
+            <a href="index.html?tag=%E8%BE%B9%E7%BC%98%E8%8A%82%E7%82%B9" class="sidebar-tag">边缘</a>
             <a href="index.html?tag=%E5%BF%AB%E7%8B%B8" class="sidebar-tag">快狸</a>
             <a href="index.html?tag=%E5%85%85%E5%80%BC" class="sidebar-tag">光速云</a>
             <a href="index.html?tag=%E5%A5%8D" class="sidebar-tag">全球云</a>
@@ -819,7 +819,7 @@ def write_about():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -834,7 +834,7 @@ def write_about():
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
             <li><a href="{links['极连云']}" target="_blank" class="footer-link">极连云官网 ↗</a></li>
-            <li><a href="{links['边缘']}" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="{links['边缘节点']}" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
             <li><a href="{links['光年梯']}" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
             <li><a href="{links['快狸']}" target="_blank" class="footer-link">快狸官网 ↗</a></li>
             <li><a href="{links['速界']}" target="_blank" class="footer-link">速界官网 ↗</a></li>
@@ -878,8 +878,8 @@ def write_vpn_guide():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>网络订阅配置与下载指南 - 机场速递博客 (jichangspeed.biz)</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="科普专栏配置购买一站式指南。涵盖电脑客户端、安卓客户端与iOS苹果客户端下载与通用一键订阅导入教程，推荐使用极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅服务。">
-  <meta name="keywords" content="配置配置, 订阅下载, 客户端导入, 极连云, 光年梯, 边缘, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
+  <meta name="description" content="科普专栏配置购买一站式指南。涵盖电脑客户端、安卓客户端与iOS苹果客户端下载与通用一键订阅导入教程，推荐使用极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅服务。">
+  <meta name="keywords" content="配置配置, 订阅下载, 客户端导入, 极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
   <meta name="robots" content="index, follow">
     <!-- Favicon / Site Icons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -1017,7 +1017,7 @@ def write_vpn_guide():
             <a href="index.html?tag=%E5%A6%82%E4%BD%95%E8%AE%A2%E9%98%85%E8%B4%AD%E4%B9%B0" class="sidebar-tag">如何订阅购买</a>
             <a href="index.html?tag=%E6%9E%81%E8%BF%9E%E4%BA%91" class="sidebar-tag">极连云</a>
             <a href="index.html?tag=%E5%85%8D%E8%B4%B9vpn" class="sidebar-tag">光年梯</a>
-            <a href="index.html?tag=%E8%BE%B9%E7%BC%98" class="sidebar-tag">边缘</a>
+            <a href="index.html?tag=%E8%BE%B9%E7%BC%98%E8%8A%82%E7%82%B9" class="sidebar-tag">边缘</a>
             <a href="index.html?tag=%E5%BF%AB%E7%8B%B8" class="sidebar-tag">快狸</a>
             <a href="index.html?tag=%E5%85%85%E5%80%BC" class="sidebar-tag">光速云</a>
             <a href="index.html?tag=%E5%A5%8D" class="sidebar-tag">全球云</a>
@@ -1035,7 +1035,7 @@ def write_vpn_guide():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云, 瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云, 瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -1172,7 +1172,7 @@ def write_archives():
   <title>文章归档 - 机场速递博客 (jichangspeed.biz)</title>
   <!-- SEO Meta Tags -->
   <meta name="description" content="文章归档页面包含机场速递 (jichangspeed.biz) 全站所有机场测速、便宜机场推荐、优质专线机场评测文章时间线列表。">
-  <meta name="keywords" content="文章归档, 机场测速, 极连云, 光年梯, 边缘, 快狸, 瞬云, 寰宇云, 速界">
+  <meta name="keywords" content="文章归档, 机场测速, 极连云, 光年梯, 边缘节点, 快狸, 瞬云, 寰宇云, 速界">
   <meta name="robots" content="index, follow">
     <!-- Favicon / Site Icons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -1333,7 +1333,7 @@ def write_archives():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -1348,7 +1348,7 @@ def write_archives():
           <h4 class="footer-links-title">推荐列表</h4>
           <ul class="footer-links-list">
             <li><a href="{links['极连云']}" target="_blank" class="footer-link">极连云官网 ↗</a></li>
-            <li><a href="{links['边缘']}" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
+            <li><a href="{links['边缘节点']}" target="_blank" class="footer-link">边缘节点官网 ↗</a></li>
             <li><a href="{links['光年梯']}" target="_blank" class="footer-link">光年梯官网 ↗</a></li>
             <li><a href="{links['快狸']}" target="_blank" class="footer-link">快狸官网 ↗</a></li>
             <li><a href="{links['速界']}" target="_blank" class="footer-link">速界官网 ↗</a></li>
