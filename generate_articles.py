@@ -787,7 +787,7 @@ def generate_article_html(article, index):
           <p style="font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px;">如有商务合作、投稿或侵权处理，请通过以下方式联系：</p>
           <ul class="footer-links-list" style="font-size: 0.85rem;">
             <li>电报: @jichangsped_admin</li>
-            <li>邮箱: <a href="mailto:1962952406@qq.com" class="footer-link">1962952406@qq.com</a></li>
+            <li>邮箱: <a href="mailto:psytong@outlook.com" class="footer-link">psytong@outlook.com</a></li>
           </ul>
         </div>
       </div>

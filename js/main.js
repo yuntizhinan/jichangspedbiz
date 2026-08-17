@@ -473,7 +473,7 @@ window.showFriendsModal = function() {
     modal.innerHTML = `
       <div class="friends-modal-content">
         <h3 class="friends-modal-title">友情链接</h3>
-        <p class="friends-modal-desc">欢迎各大网络技术、科学上网、极客分享博客交换友链。申请请发送邮件至：1962952406@qq.com</p>
+        <p class="friends-modal-desc">欢迎各大网络技术、科学上网、极客分享博客交换友链。申请请发送邮件至：psytong@outlook.com</p>
         <div class="friends-links-grid">
           <a href="https://haozevpn.jlyvipaff.com/#/?code=pfzRz5dR" target="_blank" class="friend-link-item">极连云官网</a>
           <a href="https://19629.gntaff.com/#/?code=AixFrykO" target="_blank" class="friend-link-item">光年梯官网</a>
