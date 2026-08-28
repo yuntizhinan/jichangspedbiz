@@ -1,7 +1,7 @@
 import os
 import re
 
-file_path = r'C:\Users\psyto\Desktop\jichangsped.biz\articles\airport-guide-2026.html'
+file_path = r'C:\Users\psyto\Desktop\vpnstuijian.com\articles\airport-guide-2026.html'
 
 with open(file_path, 'r', encoding='utf-8') as f:
     content = f.read()

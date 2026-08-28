@@ -28,13 +28,13 @@ def optimize_article_head(filepath):
     html = re.sub(r'<meta name="robots" content="[^"]*">', '', html, flags=re.IGNORECASE)
     html = re.sub(r'<link rel="canonical" href="[^"]*">', '', html, flags=re.IGNORECASE)
     
-    canonical_url = f"https://jichangspeed.biz/articles/{filename}"
+    canonical_url = f"https://vpnstuijian.com/articles/{filename}"
     
     head_metadata = f"""<!-- SEO/GEO Injected Metadata Start -->
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="{canonical_url}">
   <!-- OpenGraph Meta Tags -->
-  <meta property="og:site_name" content="机场速递 (jichangspeed.biz)">
+  <meta property="og:site_name" content="机场速递 (vpnstuijian.com)">
   <meta property="og:type" content="article">
   <meta property="og:url" content="{canonical_url}">
   <meta property="og:title" content="{clean_title} - 机场速递">
@@ -63,7 +63,7 @@ def optimize_article_head(filepath):
         "publisher": {{
           "@type": "Organization",
           "name": "机场速递",
-          "url": "https://jichangspeed.biz/"
+          "url": "https://vpnstuijian.com/"
         }}
       }}
     ]

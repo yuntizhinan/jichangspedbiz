@@ -1,0 +1,10 @@
+# Cloudflare Pages / Netlify 301 Permanent Redirect Rules for Domain Migration
+https://jichangspeed.biz/* https://vpnstuijian.com/:splat 301!
+http://jichangspeed.biz/* https://vpnstuijian.com/:splat 301!
+https://www.jichangspeed.biz/* https://vpnstuijian.com/:splat 301!
+http://www.jichangspeed.biz/* https://vpnstuijian.com/:splat 301!
+
+https://jichangsped.biz/* https://vpnstuijian.com/:splat 301!
+http://jichangsped.biz/* https://vpnstuijian.com/:splat 301!
+https://www.jichangsped.biz/* https://vpnstuijian.com/:splat 301!
+http://www.jichangsped.biz/* https://vpnstuijian.com/:splat 301!

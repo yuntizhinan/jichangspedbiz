@@ -1,0 +1,9 @@
+# Apache / LiteSpeed 301 Permanent Domain Redirect
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect old domains to vpnstuijian.com
+  RewriteCond %{HTTP_HOST} ^(www\.)?jichangspeed\.biz$ [NC,OR]
+  RewriteCond %{HTTP_HOST} ^(www\.)?jichangsped\.biz$ [NC]
+  RewriteRule ^(.*)$ https://vpnstuijian.com/$1 [R=301,L]
+</IfModule>

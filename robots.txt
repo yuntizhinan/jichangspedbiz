@@ -128,4 +128,4 @@ User-agent: Diffbot
 Allow: /
 
 # XML Sitemap Location
-Sitemap: https://jichangspeed.biz/sitemap.xml
+Sitemap: https://vpnstuijian.com/sitemap.xml

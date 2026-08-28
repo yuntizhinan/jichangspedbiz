@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "(jichangspeed\\.biz|jichangsped\\.biz|www\\.jichangspeed\\.biz|www\\.jichangsped\\.biz)"
+        }
+      ],
+      "destination": "https://vpnstuijian.com/:path*",
+      "permanent": true
+    }
+  ]
+}

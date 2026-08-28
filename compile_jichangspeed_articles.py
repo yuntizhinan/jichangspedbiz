@@ -112,10 +112,10 @@ def compile_all():
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} - 机场速递 (jichangspeed.biz)</title>
+  <title>{title} - 机场速递 (vpnstuijian.com)</title>
   <!-- SEO Meta Tags -->
   <meta name="description" content="{excerpt}">
-  <meta name="keywords" content="{', '.join(tags_list)}, 稳定, 安全, 高速, 便宜, 性价比, 机场, Clash, Shadowrocket, V2RayNG, 科学上网, 翻墙, jichangspeed.biz">
+  <meta name="keywords" content="{', '.join(tags_list)}, 稳定, 安全, 高速, 便宜, 性价比, 机场, Clash, Shadowrocket, V2RayNG, 科学上网, 翻墙, vpnstuijian.com">
   <meta name="robots" content="index, follow">
   <!-- GEO Tags -->
   <meta name="geo.region" content="CN-GD" />
@@ -124,10 +124,10 @@ def compile_all():
   <meta name="ICBM" content="23.12908, 113.26436" />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jichangspeed.biz/articles/{slug}.html">
+  <meta property="og:url" content="https://vpnstuijian.com/articles/{slug}.html">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{excerpt}">
-  <meta property="og:image" content="https://jichangspeed.biz/images/og-share.jpg">
+  <meta property="og:image" content="https://vpnstuijian.com/images/og-share.jpg">
   
     <!-- Favicon / Site Icons -->
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -295,7 +295,7 @@ def compile_all():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速 and 评测。我们致力于打破虚假宣传，为您提供真实的主力官网订阅入口。</p>
+          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速 and 评测。我们致力于打破虚假宣传，为您提供真实的主力官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -326,7 +326,7 @@ def compile_all():
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
+        <p>&copy; 2026 机场速递 (vpnstuijian.com) 保留所有权利。</p>
       </div>
     </div>
   </footer>

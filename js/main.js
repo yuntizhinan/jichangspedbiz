@@ -1,3 +1,16 @@
+// ==========================================
+// DOMAIN 301 AUTO-REDIRECT FALLBACK
+// ==========================================
+(function() {
+  try {
+    var host = window.location.hostname;
+    if (host && (host.indexOf('jichangspeed.biz') !== -1 || host.indexOf('jichangsped.biz') !== -1)) {
+      var targetUrl = 'https://vpnstuijian.com' + window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace(targetUrl);
+    }
+  } catch (e) {}
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // THEME TOGGLE

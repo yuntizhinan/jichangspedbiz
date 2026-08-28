@@ -952,10 +952,10 @@ def generate_article_html(article, index):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{article['title']} - 机场速递博客 (jichangspeed.biz)</title>
+  <title>{article['title']} - 机场速递博客 (vpnstuijian.com)</title>
   <!-- SEO Meta Tags -->
   <meta name="description" content="{article['excerpt']}">
-  <meta name="keywords" content="{', '.join(article['tags'])}, 稳定, 安全, 高速, 便宜, 高性价比, 极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, jichangspeed.biz">
+  <meta name="keywords" content="{', '.join(article['tags'])}, 稳定, 安全, 高速, 便宜, 高性价比, 极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, vpnstuijian.com">
   <meta name="robots" content="index, follow">
   <!-- GEO Tags -->
   <meta name="geo.region" content="CN-GD" />
@@ -964,10 +964,10 @@ def generate_article_html(article, index):
   <meta name="ICBM" content="23.12908, 113.26436" />
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jichangspeed.biz/articles/{article['slug']}.html">
+  <meta property="og:url" content="https://vpnstuijian.com/articles/{article['slug']}.html">
   <meta property="og:title" content="{article['title']}">
   <meta property="og:description" content="{article['excerpt']}">
-  <meta property="og:image" content="https://jichangspeed.biz/images/og-share.jpg">
+  <meta property="og:image" content="https://vpnstuijian.com/images/og-share.jpg">
   <!-- CSS -->
     <!-- Favicon / Site Icons -->
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -1135,7 +1135,7 @@ def generate_article_html(article, index):
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>jichangspeed.biz 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -1166,7 +1166,7 @@ def generate_article_html(article, index):
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 机场速递 (jichangspeed.biz) 保留所有权利。</p>
+        <p>&copy; 2026 机场速递 (vpnstuijian.com) 保留所有权利。</p>
         <div class="footer-bottom-links">
         </div>
       </div>
