@@ -30,13 +30,24 @@ def get_science_article_metadata(slug, title, date):
         tags = ['科普专栏']
         
     categories = ['science']
-    lower_title = title.lower()
-    if 'clash' in lower_title:
-        categories.append('clash')
-    if 'shadowrocket' in lower_title or '小火箭' in lower_title:
-        categories.append('shadowrocket')
-    if 'sing-box' in lower_title:
-        categories.append('sing-box')
+    if slug == '2026-august-airport-monthly-report':
+        categories = ['curated', 'premium']
+    elif slug == 'ai-productivity-airport-guide':
+        categories = ['curated', 'premium']
+    elif slug == 'hysteria2-vless-anytls-protocol-2026':
+        categories = ['curated', 'premium']
+    elif slug == 'cost-per-gb-buying-guide-2026':
+        categories = ['curated', 'cheap']
+    elif slug == 'airport-runaway-warning-2026':
+        categories = ['curated', 'danger']
+    else:
+        lower_title = title.lower()
+        if 'clash' in lower_title:
+            categories.append('clash')
+        if 'shadowrocket' in lower_title or '小火箭' in lower_title:
+            categories.append('shadowrocket')
+        if 'sing-box' in lower_title:
+            categories.append('sing-box')
         
     views = 900 + (len(slug) * 17) % 500
     readTime = 5 + (len(title) % 5)
@@ -53,6 +64,31 @@ def get_science_article_metadata(slug, title, date):
     }
 
 original_card_styles = {
+    '2026-august-airport-monthly-report': {
+        'style': 'background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);',
+        'content': '8月最新<br>机场月报',
+        'badge': 'NEW 8月月报'
+    },
+    'ai-productivity-airport-guide': {
+        'style': 'background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);',
+        'content': 'AI 生产力<br>双 ISP 解锁',
+        'badge': 'HOT 深度选型'
+    },
+    'airport-runaway-warning-2026': {
+        'style': 'background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);',
+        'content': '防跑路<br>避坑预警',
+        'badge': '避坑预警'
+    },
+    'hysteria2-vless-anytls-protocol-2026': {
+        'style': 'background: linear-gradient(135deg, #10b981 0%, #059669 100%);',
+        'content': '2026 协议演进<br>anytls / HY2',
+        'badge': '硬核科普'
+    },
+    'cost-per-gb-buying-guide-2026': {
+        'style': 'background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);',
+        'content': '流量算盘<br>¥/GB 折算',
+        'badge': '性价比算盘'
+    },
     'best-airports-2026': {
         'style': 'background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);',
         'content': '精选汇总<br>2026 梯子合集',
@@ -238,6 +274,11 @@ links = {
 }
 
 science_list = [
+    {'slug': '2026-august-airport-monthly-report', 'title': '2026年8月机场月报与选购指南：晚高峰专线连通率实测与防跑路避坑建议', 'date': '2026-08-27'},
+    {'slug': 'ai-productivity-airport-guide', 'title': '2026 AI 生产力机场节点选择指南：解锁 ChatGPT 4o 与 Claude 3.5 的稳定节点推荐与配置教程', 'date': '2026-08-27'},
+    {'slug': 'airport-runaway-warning-2026', 'title': '2026机场跑路黑名单与防避坑指南：盘点近期失联避坑名单与高可用防跑路方案', 'date': '2026-08-27'},
+    {'slug': 'hysteria2-vless-anytls-protocol-2026', 'title': '2026年翻墙协议科普：Hysteria2、VLESS-REALITY 与 anytls 协议特点解析与客户端选择', 'date': '2026-08-27'},
+    {'slug': 'cost-per-gb-buying-guide-2026', 'title': '2026年机场选购指南：看懂流量倍率规则、算清真实单价与选择性价比套餐', 'date': '2026-08-27'},
     {'slug': 'airport-guide-2026', 'title': '2026年机场排行榜：高性价比翻墙机场科普与横向评测', 'date': '2026-07-22'},
     {'slug': 'iplc-guide', 'title': 'IPLC/IEPL专线科普：4K不卡顿、游戏加速、专线机场完全指南', 'date': '2026-07-22'},
     {'slug': 'streaming-ai-guide', 'title': 'Netflix/ChatGPT/TikTok机场选择指南：流媒体与AI工具加速完全攻略', 'date': '2026-07-22'},
@@ -280,6 +321,11 @@ def write_index():
         
     original_slugs = [
         'best-airports-2026',
+        '2026-august-airport-monthly-report',
+        'ai-productivity-airport-guide',
+        'airport-runaway-warning-2026',
+        'hysteria2-vless-anytls-protocol-2026',
+        'cost-per-gb-buying-guide-2026',
         'sujie-review',
         'edge-review',
         'jilianyun-review',
