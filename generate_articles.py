@@ -329,47 +329,7 @@ article_list = [
       </blockquote>
     """
   },
-  {
-    'slug': 'best-airports-2026',
-    'title': '精选汇总：2026 年最值得推荐的稳定好用机场梯子合集',
-    'date': '2026-06-15',
-    'readTime': 8,
-    'views': 3120,
-    'categories': ['curated'],
-    'tags': ['机场评测', '最新节点分享', '如何订阅购买', '不限时长', '极连云', '光年梯', '速界机场', '边缘', '快狸'],
-    'excerpt': '面对市场上成千上万家机场，如何避免踩雷？我们根据过去一年的实测数据，筛选出了在速度、稳定度、性价比和客服售后等维度表现最优秀的几款机场。',
-    'content': """
-      <p>对于大部分用户来说，寻找一款稳定可靠的机场需要耗费大量的时间和精力。为此，我们团队通过长期监控、定期测速，结合广大网友的真实反馈，精选汇总了 2026 年最值得入手的几款机场，并按照不同的用户需求进行了分类推荐。</p>
-      
-      <h2>一、年度全能推荐：Wavetrans 机场</h2>
-      <p><strong>推荐理由：</strong>综合实力第一。全节点 IPLC 专线，在敏感期依然稳如磐石。完美支持全平台配置以及流媒体 4K 解锁，价格却仅相当于中转机场的价格，是名副其实的高性价比之王。</p>
-      <ul>
-        <li><strong>价格：</strong>15元 - 59元 / 月</li>
-        <li><strong>优势：</strong>100% IPLC 专线、极低延迟、适合联机游戏及高清视频。</li>
-      </ul>
-
-      <h2>二、速度与流媒体推荐：SpeedCloud 机场</h2>
-      <p><strong>推荐理由：</strong>如果你是 Netlfix、Disney+、TikTok 爱好者，或者日常需要上传下载大文件，SpeedCloud 提供的超大带宽和住宅 IP 节点将是绝佳选择。</p>
-      <ul>
-        <li><strong>价格：</strong>25元 - 79元 / 月</li>
-        <li><strong>优势：</strong>大带宽、原生住宅 IP 完美解锁流媒体、无惧封锁。</li>
-      </ul>
-
-      <h2>三、老牌稳健推荐：FastNet 机场</h2>
-      <p><strong>推荐理由：</strong>运营超过 5 年，抗风险能力拉满，属于买得安心、用得舒心的类型。客服支持 24 小时在线解答工单，全平台配置极度丝滑。</p>
-      <ul>
-        <li><strong>价格：</strong>20元 - 80元 / 月</li>
-        <li><strong>优势：</strong>超长运营周期、极佳的售后、高可用性。</li>
-      </ul>
-
-      <h2>四、极致性价比推荐：CheapSpeed 机场</h2>
-      <p><strong>推荐理由：</strong>学生党、轻度用户福利，一杯奶茶钱即可解决一个月的科学上网问题。</p>
-      <ul>
-        <li><strong>价格：</strong>9.9元/月起</li>
-        <li><strong>优势：</strong>价格极低，能满足基本 1080P 网页和日常查询。</li>
-      </ul>
-    """
-  },
+  
   {
     'slug': 'premium-airports-for-gaming',
     'title': '优质机场推荐：适合游戏加速与 4K 视频播放的低延迟机场',
@@ -648,13 +608,53 @@ def generate_article_html(article, index):
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
       
       <nav class="nav" id="nav-menu">
-        <a href="../index.html?filter=cheap" class="nav-link">便宜机场推荐</a>
-        <a href="premium-airports-for-gaming.html" class="nav-link">优质机场推荐</a>
-        <a href="established-airports-backup.html" class="nav-link">老牌机场推荐</a>
-        <a href="../index.html?filter=curated" class="nav-link">精选汇总</a>
-        <a href="../vpn-guide.html" class="nav-link">科学上网</a>
-        <a href="../about.html" class="nav-link">关于我们</a>
-        
+        <a href="../index.html" class="nav-link">主页</a>
+        <!-- Item 1: 机场推荐 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场推荐 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="cheap-airports.html" class="dropdown-item">便宜机场推荐</a>
+            <a href="premium-airports.html" class="dropdown-item">优质机场推荐</a>
+            <a href="kuaili-review.html" class="dropdown-item">老牌机场推荐</a>
+          </div>
+        </div>
+        <!-- Item 2: 机场资讯 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">机场资讯 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="best-airports-2026.html" class="dropdown-item">精选汇总</a>
+            <a href="../vpn-guide.html" class="dropdown-item">科普专栏</a>
+          </div>
+        </div>
+        <!-- Item 3: 更多 (Dropdown) -->
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" onclick="return false;">更多 <svg class="chevron-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></a>
+          <div class="dropdown-menu">
+            <a href="../archives.html" class="dropdown-item">文章归档</a>
+            <a href="../about.html" class="dropdown-item">关于我们</a>
+            <a href="#" class="dropdown-item" onclick="showFriendsModal(); return false;">友情链接</a>
+          </div>
+        </div>
+        <!-- Item 4: 伸缩搜索框 (Expandable Navbar Search) -->
+        <div class="nav-search-container" id="nav-search-container">
+          <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <input type="text" id="nav-search-input" class="nav-search-input" placeholder="输入关键字搜索机场...">
+          <div class="hot-search-popup" id="hot-search-popup">
+            <span class="hot-search-title">热门搜索：</span>
+            <div class="hot-search-tags">
+              <span class="hot-tag" onclick="performNavSearch('极连云')">极连云</span>
+              <span class="hot-tag" onclick="performNavSearch('边缘节点')">边缘节点</span>
+              <span class="hot-tag" onclick="performNavSearch('光年梯')">光年梯</span>
+              <span class="hot-tag" onclick="performNavSearch('快狸')">快狸</span>
+              <span class="hot-tag" onclick="performNavSearch('速界')">速界</span>
+              <span class="hot-tag" onclick="performNavSearch('瞬云')">瞬云</span>
+            </div>
+          </div>
+        </div>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
           <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
           <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>

@@ -159,9 +159,9 @@ original_card_styles = {
         'content': '瞬云机场<br>特惠年付小包',
         'badge': '便宜推荐'
     },
-    'huanyuyun-review': {
+    'jiuyun-review': {
         'style': 'background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);',
-        'content': '寰宇云<br>原生 IP 专线',
+        'content': '九云<br>原生 IP 专线',
         'badge': '老牌推荐'
     },
     'subscription-guide': {
@@ -324,6 +324,7 @@ def write_index():
         '2026-august-airport-monthly-report',
         'ai-productivity-airport-guide',
         'airport-runaway-warning-2026',
+        'jiuyun-review',
         'hysteria2-vless-anytls-protocol-2026',
         'cost-per-gb-buying-guide-2026',
         'sujie-review',
@@ -339,7 +340,6 @@ def write_index():
         'guangshuyun-review',
         'globalyun-review',
         'shunyun-review',
-        'huanyuyun-review',
         'subscription-guide'
     ]
     
@@ -368,7 +368,7 @@ def write_index():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>机场速递 (vpnstuijian.com) - 2026稳定安全高速便宜机场推荐与官网订阅评测</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="机场速递 (vpnstuijian.com) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
+  <meta name="description" content="机场速递 (vpnstuijian.com) 专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界等官网入口。">
   <meta name="keywords" content="极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, 机场推荐, 稳定机场, 安全翻墙, 高速中转, vpnstuijian.com">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://vpnstuijian.com/">
@@ -377,7 +377,7 @@ def write_index():
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vpnstuijian.com/">
   <meta property="og:title" content="机场速递 (vpnstuijian.com) - 2026稳定安全高速便宜机场推荐与官网订阅评测">
-  <meta property="og:description" content="专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界等官网入口。">
+  <meta property="og:description" content="专注于2026年最新稳定、安全、高速、便宜、高性价比机场推荐。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界等官网入口。">
   <meta property="og:image" content="https://i.ibb.co/tpkZpVhs/sujielogo.webp">
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -672,6 +672,13 @@ def write_index():
             </div>
           </div>
           <div class="featured-item">
+            <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/8nXGmSpy/jiuyunlogo.png" style="width: 100%; height: 100%; object-fit: cover;" alt="九云"></div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="articles/jiuyun-review.html">九云 机场测评：6元/月起的高性价比海外中转节点</a></h4>
+              <span class="featured-item-date">2026-09-17</span>
+            </div>
+          </div>
+          <div class="featured-item">
             <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/jkR2rZRw/shunyunlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="瞬云"></div>
             <div class="featured-item-content">
               <h4 class="featured-item-title"><a href="articles/shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
@@ -705,7 +712,7 @@ def write_index():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -758,7 +765,7 @@ def write_about():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>关于我们 - 机场速递博客 (vpnstuijian.com)</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="关于机场速递 (vpnstuijian.com) —— 我们的定位、测速准则、核心价值与联系方式。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界等高品质专线梯子官网入口。">
+  <meta name="description" content="关于机场速递 (vpnstuijian.com) —— 我们的定位、测速准则、核心价值与联系方式。提供极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界等高品质专线梯子官网入口。">
   <meta name="keywords" content="关于我们, 机场速递, 机场评测, 极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, vpnstuijian.com">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://vpnstuijian.com/about.html">
@@ -885,7 +892,7 @@ def write_about():
         <div class="article-body">
           <p>欢迎来到 <strong>机场速递 (vpnstuijian.com)</strong>。我们是一个专注于网络技术交流、加速网络优化、以及优质专线网络服务评测的独立媒体。</p>
           <h2>一、我们的使命</h2>
-          <p>安全、高速、平稳地获取海外学术信息与商用数据是每一位开发者、设计师、跨境电商以及外贸从业者的刚需。我们致力于通过真实、透明的评估测试，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>安全、高速、平稳地获取海外学术信息与商用数据是每一位开发者、设计师、跨境电商以及外贸从业者的刚需。我们致力于通过真实、透明的评估测试，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界官网订阅入口。</p>
           <p><em>声明：本站所有评测文章及教程仅供网络安全技术交流、学术研究与跨境合法商务使用，请严格遵守当地法律法规，切勿用于非法用途。</em></p>
         </div>
       </article>
@@ -925,7 +932,7 @@ def write_about():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>
@@ -984,7 +991,7 @@ def write_vpn_guide():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>网络订阅配置与下载指南 - 机场速递博客 (vpnstuijian.com)</title>
   <!-- SEO Meta Tags -->
-  <meta name="description" content="科普专栏配置购买一站式指南。涵盖电脑客户端、安卓客户端与iOS苹果客户端下载与通用一键订阅导入教程，推荐使用极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅服务。">
+  <meta name="description" content="科普专栏配置购买一站式指南。涵盖电脑客户端、安卓客户端与iOS苹果客户端下载与通用一键订阅导入教程，推荐使用极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界官网订阅服务。">
   <meta name="keywords" content="配置配置, 订阅下载, 客户端导入, 极连云, 光年梯, 边缘节点, 快狸, 光速云, 全球云, 瞬云, 寰宇云, 速界, vpnstuijian.com">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://vpnstuijian.com/vpn-guide.html">
@@ -1489,7 +1496,7 @@ def write_archives():
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于为用户提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、九云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>

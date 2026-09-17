@@ -13,10 +13,26 @@ links = {
     '全球云': 'https://haozevpn.gcvipaff.cc/#/?code=WRQJc2v4',
     '瞬云': 'https://aaa.jichang.best/#/register?code=ClNa0zPm',
     '寰宇云': 'https://vip3.huanyuyunbest.com/#/register?code=K6h5VWw2',
-    '速界': 'https://lqy001.speedworldaff.com/#/?code=C2v7kRVl'
-}
+    '速界': 'https://lqy001.speedworldaff.com/#/?code=C2v7kRVl',
+      '九云': 'https://888.jiuyundl.com/#/register?code=Mh1h2rKe'
+  }
 # The 13 articles
 article_list = [
+  {
+    'slug': 'jiuyun-review',
+    'title': '2024年度宝藏机场推荐：一杯奶茶钱解锁全球网络？九云机场深度全方位测评',
+    'date': '2026-09-17',
+    'readTime': 7,
+    'views': 512,
+    'categories': ['cheap', 'premium'],
+    'tags': ['机场评测', '最新节点分享', '九云', '不限时长', '流媒体解锁'],
+    'excerpt': '九云机场主打高性价比和灵活周期，最低月付仅需9元，更有99元300G的不限时套餐。全面解锁Netflix、ChatGPT，晚高峰稳定，是非常优秀的备用或主力机场选择。',
+    'content': '''
+      <!-- This content is a placeholder since the full HTML is already generated in articles/jiuyun-review.html -->
+      <p>Please see articles/jiuyun-review.html for full content.</p>
+    '''
+  },
+
   {
     'slug': 'jilianyun-review',
     'title': '极连云 机场测速与评测：高性价比 IEPL 专线推荐',
@@ -602,7 +618,7 @@ article_list = [
     'views': 2540,
     'categories': ['curated'],
     'tags': ['机场评测', '最新节点分享', '如何订阅购买', '不限时长', '极连云', '光年梯', '边缘', '快狸', '光速云', '全球云', '瞬云', '寰宇云', '速界'],
-    'excerpt': '如何挑选真实好用的机场？本篇精选汇总总结出 2026 年最值得推荐的 9 大主力专线机场：极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界。',
+    'excerpt': '如何挑选真实好用的机场？本篇精选汇总总结出 2026 年最值得推荐的 9 大主力专线机场：极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、极连云、速界。',
     'content': f"""
       <p>在如今复杂的国际网络环境和日益严格的流量指纹探测机制下，用户寻找到一款稳定、高速、且性价比出众的网络加速专线正变得越来越具有技术门槛。网络代理市场鱼龙混杂，很多仅拥有几台公网直连中继的小作坊机场打着“超高速、永久稳定”的幌子大肆招揽年付用户，随后往往在敏感时期一墙即崩、甚至直接跑路，让网民蒙受损失。为了打破这种行业乱局，本站编辑团队对市面上数十家主力机场进行了长达半年的稳定性和晚高峰吞吐率测试监控，精选出以下 <strong>2026 年最值得推荐的 9 大物理专线/Anycast 高速机场</strong> 大合集，希望能为您的网络消费决策提供最客观的参考指导。</p>
       <h2>一、2026年九大主力推荐机场核心优势横向对比</h2>
@@ -631,7 +647,7 @@ article_list = [
           </tr>
           <tr>
             <td><a href="{links['极连云']}" target="_blank"><strong>极连云 ↗</strong></a></td>
-            <td>¥15.50/月起</td>
+            <td>¥15.00/月起</td>
             <td>100GB - 1000GB</td>
             <td>全IEPL专线，极速晚高峰不卡顿，设备数不限</td>
           </tr>
@@ -640,6 +656,12 @@ article_list = [
             <td>¥18.00/月起</td>
             <td>110GB - 220GB</td>
             <td>突破流媒体解锁，全专线保障，高性价比</td>
+          </tr>
+          <tr>
+            <td><a href="{links['九云']}" target="_blank"><strong>九云 ↗</strong></a></td>
+            <td>¥9.00/月起</td>
+            <td>300GB - 不限量</td>
+            <td>高性价比，海外中转低延迟，流媒体全解锁</td>
           </tr>
           <tr>
             <td><a href="{links['快狸']}" target="_blank"><strong>快狸 ↗</strong></a></td>
@@ -665,12 +687,7 @@ article_list = [
             <td>59GB - 300GB</td>
             <td>Anycast高速高吞吐节点，大流量三年付折 25%</td>
           </tr>
-          <tr>
-            <td><a href="{links['寰宇云']}" target="_blank"><strong>寰宇云 ↗</strong></a></td>
-            <td>¥18.00/月起</td>
-            <td>60GB - 300GB</td>
-            <td>完全不限设备数量，原生 IP 全面解锁流媒体与 AI</td>
-          </tr>
+          
         </tbody>
       </table>
       <h2>二、根据您的实际使用场景做出最理性决策</h2>
@@ -692,10 +709,10 @@ article_list = [
     'readTime': 10,
     'views': 2090,
     'categories': ['cheap'],
-    'tags': ['免费vpn', '机场评测', '光年梯', '快狸', '光速云', '瞬云', '寰宇云', '速界'],
-    'excerpt': '预算有限？这里有月付 10-20 元左右即可起飞的高性价比便宜机场推荐，详细对比光年梯、快狸、瞬云、寰宇云及速界的低价套餐。',
+    'tags': ['免费vpn', '机场评测', '极连云', '九云', '光年梯', '快狸', '光速云', '瞬云', '速界'],
+    'excerpt': '预算有限？这里有月付 10-20 元左右即可起飞的高性价比便宜机场推荐，详细对比极连云、九云、光年梯、快狸、瞬云及速界的低价套餐。',
     'content': f"""
-      <p>寻找便宜机场并不等于必须妥协于卡顿、频繁断流、或者随时跑路。只要中转带宽分发充足，在 10-20 元这一最广泛的用户平价预算区间内，依然有很多体验极其出色的加速机场可供选择。今天，我们编辑团队精选了目前市场上在低资费档位表现最抢眼、稳定连通性高、无暗扣倍率陷阱的平价标杆品牌进行横向对比：<strong>光年梯</strong>、<strong>快狸</strong>、<strong>瞬云</strong>、<strong>寰宇云</strong> 以及 <strong>速界</strong>，帮助预算有限的学生党和科研工作者买到高可用专线节点。</p>
+      <p>寻找便宜机场并不等于必须妥协于卡顿、频繁断流、或者随时跑路。只要中转带宽分发充足，在 10-20 元这一最广泛的用户平价预算区间内，依然有很多体验极其出色的加速机场可供选择。今天，我们编辑团队精选了目前市场上在低资费档位表现最抢眼、稳定连通性高、无暗扣倍率陷阱的平价标杆品牌进行横向对比：<strong>极连云</strong>、<strong>九云</strong>、<strong>光年梯</strong>、<strong>快狸</strong>、<strong>瞬云</strong> 以及 <strong>速界</strong>，帮助预算有限的学生党和科研工作者买到高可用专线节点。</p>
       <h2>一、便宜低价套餐资费一览</h2>
       <p>点击下方表格中的套餐名称即可前往对应官网购买订阅：</p>
       <table>
@@ -710,32 +727,39 @@ article_list = [
         </thead>
         <tbody>
           <tr>
-            <td>寰宇云</td>
-            <td><a href="{links['寰宇云']}" target="_blank"><strong>限定年付小包 ↗</strong></a></td>
-            <td>¥79.00/年</td>
-            <td>60GB/月</td>
-            <td>折合每月仅¥6.58元，不限设备，原生住宅IP解锁</td>
+            <td>极连云</td>
+            <td><a href="{links['极连云']}" target="_blank"><strong>基础套餐 ↗</strong></a></td>
+            <td>¥15.50/月</td>
+            <td>100GB/月</td>
+            <td>全专线覆盖，设备数不限，性价比首选</td>
           </tr>
           <tr>
             <td>光年梯</td>
-            <td><a href="{links['光年梯']}" target="_blank"><strong>年付限时套餐 ↗</strong></a></td>
-            <td>¥89.00/年</td>
-            <td>50GB/月</td>
-            <td>折合每月7.4元，稳定物理专线中转</td>
+            <td><a href="{links['光年梯']}" target="_blank"><strong>光年梯 入门版 ↗</strong></a></td>
+            <td>¥18.00/月</td>
+            <td>110GB/月</td>
+            <td>突破IP风控，解锁奈飞/迪士尼，多设备可用</td>
           </tr>
           <tr>
             <td>速界</td>
-            <td><a href="{links['速界']}" target="_blank"><strong>年付体验包 ↗</strong></a></td>
-            <td>¥90.00/年</td>
-            <td>50GB/月</td>
-            <td>折合每月7.5元，物理专线不限速，设备连接数完全不封顶</td>
+            <td><a href="{links['速界']}" target="_blank"><strong>首月体验包 ↗</strong></a></td>
+            <td>¥15.00/月</td>
+            <td>30GB/月</td>
+            <td>首月特惠体验，适合轻度流量及新用户专线尝鲜</td>
+          </tr>
+          <tr>
+            <td>九云</td>
+            <td><a href="{links['九云']}" target="_blank"><strong>月付300g 聚财版 ↗</strong></a></td>
+            <td>¥9.00/月</td>
+            <td>300GB/月</td>
+            <td>高性价比，海外中转低延迟，流媒体全解锁</td>
           </tr>
           <tr>
             <td>瞬云</td>
-            <td><a href="{links['瞬云']}" target="_blank"><strong>限时年付小包 ↗</strong></a></td>
-            <td>¥99.00/年</td>
-            <td>59GB/月</td>
-            <td>Anycast高速高吞吐中转，带宽不限速</td>
+            <td><a href="{links['瞬云']}" target="_blank"><strong>行者 ↗</strong></a></td>
+            <td>¥20.00/月</td>
+            <td>150GB/月</td>
+            <td>提供 150G 月流量，支持 3 年付折上折</td>
           </tr>
           <tr>
             <td>快狸</td>
@@ -748,10 +772,11 @@ article_list = [
       </table>
       <h2>二、高性价比便宜套餐核心优势详析</h2>
       <ul>
-        <li><strong><a href="huanyuyun-review.html">寰宇云限定年包 (¥79/年)</a>：</strong> 这是目前全网低价专线中性价比最具杀伤力的选择。折合每个月仅需 6.58 元，即可拥有每月 60GB 的流量。更难得的是，寰宇云不设任何在线客户端及设备数的硬件锁，住宅 IP 广播支持解锁 Netflix 4K 及 ChatGPT，对学生党及外贸新手极具吸引力。</li>
-        <li><strong><a href="guangnianti-review.html">光年梯限时年包 (¥89/年)</a>：</strong> 折合每月 7.4 元。经典的专线优化，老牌质量保障。适合需要稳定下资料、作为备用防断网的主力通道。</li>
-        <li><strong><a href="sujie-review.html">速界年付体验包 (¥90/年)</a>：</strong> 年付 90 元，重置 9 折，所有档次套餐一律不限速且不限制设备数量，提供自研一键连接客户端，高可用性强。</li>
-        <li><strong><a href="shunyun-review.html">瞬云年付小包 (¥99/年)</a>：</strong> 瞬云主打高吞吐量 Anycast 智能多线寻址中转，虽然年付小包流量为 59GB，但因为出口主干不限速，能够带来极其酣畅的极速下载和视频缓冲速率。</li>
+        <li><strong><a href="jilianyun-review.html">极连云基础套餐 (¥15.50/月)</a>：</strong> 全网性价比最高的专线基础套餐，百兆大宽带覆盖，100GB 大流量完全不限制设备数，流媒体极速秒开。</li>
+        <li><strong><a href="guangnianti-review.html">光年梯入门版 (¥18/月)</a>：</strong> 每月 110GB 的大流量，经典的专线优化，老牌质量保障。适合需要稳定下资料、作为备用防断网的主力通道。</li>
+        <li><strong><a href="sujie-review.html">速界首月体验包 (¥15/月)</a>：</strong> 首月仅需 15 元体验，一律不限速且不限制设备数量，提供自研一键连接客户端，高可用性强。</li>
+        <li><strong><a href="jiuyun-review.html">九云月付300g聚财版 (¥9/月)</a>：</strong> 高性价比和灵活周期的完美结合。每月 9 元即可享受 300GB 的大流量，采用海外中转线路并智能路由择优，支持 Netflix 和 ChatGPT 等全流媒体/AI 解锁，是重度追剧和普通科研用户的极佳低价主力。</li>
+        <li><strong><a href="shunyun-review.html">瞬云行者套餐 (¥20/月)</a>：</strong> 提供 150GB 超大月流量，主打高吞吐量 Anycast 智能多线寻址中转，能够带来极其酣畅的极速下载和视频缓冲速率。</li>
         <li><strong><a href="kuaili-review.html">快狸月狸套餐 (¥15/月)</a>：</strong> 灵活的短周期月付标杆。15元，即充即用，不限设备，且自研了一键快速连接客户端，是新手体验的最优方案。</li>
       </ul>
       <h2>三、平价便宜机场的高可用优化技巧</h2>
@@ -799,12 +824,7 @@ article_list = [
             <td>¥30.50/月</td>
             <td>200GB/月</td>
           </tr>
-          <tr>
-            <td><a href="{links['寰宇云']}" target="_blank"><strong>寰宇云 ↗</strong></a></td>
-            <td>行星套餐</td>
-            <td>¥34.00/月</td>
-            <td>300GB/月</td>
-          </tr>
+          
           <tr>
             <td><a href="{links['全球云']}" target="_blank"><strong>全球云 ↗</strong></a></td>
             <td>不限时标准包</td>
@@ -1135,7 +1155,7 @@ def generate_article_html(article, index):
       <div class="footer-grid">
         <div class="footer-brand">
           <h3 class="footer-brand-title">机场速递</h3>
-          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、寰宇云、速界官网订阅入口。</p>
+          <p>vpnstuijian.com 专注于2026年最新高速、便宜、安全专线网络节点测速和评测。我们致力于打破虚假宣传，为您提供真实可靠的极连云、光年梯、边缘节点、快狸、光速云、全球云、瞬云、极连云、速界官网订阅入口。</p>
         </div>
         <div class="footer-links-col">
           <h4 class="footer-links-title">快捷导航</h4>

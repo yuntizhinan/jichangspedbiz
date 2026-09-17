@@ -72,6 +72,13 @@ def replace_text_globally():
             </div>
           </div>
           <div class="featured-item">
+            <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/8nXGmSpy/jiuyunlogo.png" style="width: 100%; height: 100%; object-fit: cover;" alt="九云"></div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="{prefix}jiuyun-review.html">九云 机场测评：6元/月起的高性价比海外中转节点</a></h4>
+              <span class="featured-item-date">2026-09-17</span>
+            </div>
+          </div>
+          <div class="featured-item">
             <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/jkR2rZRw/shunyunlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="瞬云"></div>
             <div class="featured-item-content">
               <h4 class="featured-item-title"><a href="{prefix}shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>
@@ -168,6 +175,13 @@ def replace_text_globally():
               </div>
             </div>
             <div class="featured-item">
+            <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/8nXGmSpy/jiuyunlogo.png" style="width: 100%; height: 100%; object-fit: cover;" alt="九云"></div>
+            <div class="featured-item-content">
+              <h4 class="featured-item-title"><a href="{prefix}jiuyun-review.html">九云 机场测评：6元/月起的高性价比海外中转节点</a></h4>
+              <span class="featured-item-date">2026-09-17</span>
+            </div>
+          </div>
+          <div class="featured-item">
               <div class="featured-item-img" style="background: #fff; display:flex; align-items:center; justify-content:center; border: 1px solid var(--border-color); overflow: hidden; border-radius: var(--radius-sm);"><img src="https://i.ibb.co/jkR2rZRw/shunyunlogo.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="瞬云"></div>
               <div class="featured-item-content">
                 <h4 class="featured-item-title"><a href="{prefix}shunyun-review.html">瞬云 机场测速评测：限时特惠年付小包与高带宽 ANYCAST 连接方案</a></h4>

@@ -545,12 +545,13 @@ window.showFriendsModal = function() {
         <h3 class="friends-modal-title">友情链接</h3>
         <p class="friends-modal-desc">欢迎各大网络技术、科学上网、极客分享博客交换友链。申请请发送邮件至：psytong@outlook.com</p>
         <div class="friends-links-grid">
-          <a href="https://19629.jlyvipaff.com/#/?code=zMHMPYDj" target="_blank" class="friend-link-item">极连云官网</a>
-          <a href="https://19629.gntaff.com/#/?code=AixFrykO" target="_blank" class="friend-link-item">光年梯官网</a>
-          <a href="https://zoio.edgenovaaff.cc/#/?code=Y65i2kCU" target="_blank" class="friend-link-item">边缘节点</a>
-          <a href="https://196295.kuailiaff.com/#/?code=tmUe2z1n" target="_blank" class="friend-link-item">快狸官网</a>
-          <a href="https://lqy001.speedworldaff.com/#/?code=C2v7kRVl" target="_blank" class="friend-link-item">速界官网</a>
-          <a href="https://aaa.jichang.best/#/register?code=ClNa0zPm" target="_blank" class="friend-link-item">瞬云官网</a>
+          <a href="https://clash-jichang.com" target="_blank" class="friend-link-item">道一博客</a>
+          <a href="https://vpnstuijian.net" target="_blank" class="friend-link-item">VPN推荐</a>
+          <a href="https://clashmac.vip" target="_blank" class="friend-link-item">科学上网知识库</a>
+          <a href="https://nodehub168.com" target="_blank" class="friend-link-item">云梯指南</a>
+          <a href="https://jichang-go.com" target="_blank" class="friend-link-item">机场GO</a>
+          <a href="https://yzrztop.com" target="_blank" class="friend-link-item">优质资源TOP</a>
+          <a href="https://jichang365.com" target="_blank" class="friend-link-item">机场365</a>
         </div>
         <button class="friends-modal-close" onclick="closeFriendsModal()">关闭</button>
       </div>
